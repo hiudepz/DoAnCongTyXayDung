@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +47,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDashboard.cs">
+    <Compile Include="Admin\BaoCao_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDashboard.Designer.cs">
-      <DependentUpon>frmDashboard.cs</DependentUpon>
+    <Compile Include="Admin\BaoCao_Admin.Designer.cs">
+      <DependentUpon>BaoCao_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CongTrinh_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CongTrinh_Admin.Designer.cs">
+      <DependentUpon>CongTrinh_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DashBoard_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\DashBoard_Admin.Designer.cs">
+      <DependentUpon>DashBoard_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NhanVien_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\NhanVien_Admin.Designer.cs">
+      <DependentUpon>NhanVien_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NhaThau_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\NhaThau_Admin.Designer.cs">
+      <DependentUpon>NhaThau_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PhanCong_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\PhanCong_Admin.Designer.cs">
+      <DependentUpon>PhanCong_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TienDo_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\TienDo_Admin.Designer.cs">
+      <DependentUpon>TienDo_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VatTu_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\VatTu_Admin.Designer.cs">
+      <DependentUpon>VatTu_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmVattu.cs">
       <SubType>Form</SubType>
@@ -60,8 +110,83 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmDashboard.resx">
-      <DependentUpon>frmDashboard.cs</DependentUpon>
+    <Compile Include="User\BaoCao_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\BaoCao_User.Designer.cs">
+      <DependentUpon>BaoCao_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\CongTrinh_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\CongTrinh_User.Designer.cs">
+      <DependentUpon>CongTrinh_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\DashBoard_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\DashBoard_User.Designer.cs">
+      <DependentUpon>DashBoard_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\NhanVien_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\NhanVien_User.Designer.cs">
+      <DependentUpon>NhanVien_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\NhaThau_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\NhaThau_User.Designer.cs">
+      <DependentUpon>NhaThau_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\PhanCong_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\PhanCong_User.Designer.cs">
+      <DependentUpon>PhanCong_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\TienDo_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\TienDo_User.Designer.cs">
+      <DependentUpon>TienDo_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\VatTu_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\VatTu_User.Designer.cs">
+      <DependentUpon>VatTu_User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include=".Designer.resx">
+      <DependentUpon>.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\BaoCao_Admin.resx">
+      <DependentUpon>BaoCao_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CongTrinh_Admin.resx">
+      <DependentUpon>CongTrinh_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\DashBoard_Admin.resx">
+      <DependentUpon>DashBoard_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\NhanVien_Admin.resx">
+      <DependentUpon>NhanVien_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\NhaThau_Admin.resx">
+      <DependentUpon>NhaThau_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\PhanCong_Admin.resx">
+      <DependentUpon>PhanCong_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\TienDo_Admin.resx">
+      <DependentUpon>TienDo_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\VatTu_Admin.resx">
+      <DependentUpon>VatTu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVattu.resx">
       <DependentUpon>frmVattu.cs</DependentUpon>
@@ -76,6 +201,30 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User\BaoCao_User.resx">
+      <DependentUpon>BaoCao_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\CongTrinh_User.resx">
+      <DependentUpon>CongTrinh_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\DashBoard_User.resx">
+      <DependentUpon>DashBoard_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\NhanVien_User.resx">
+      <DependentUpon>NhanVien_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\NhaThau_User.resx">
+      <DependentUpon>NhaThau_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\PhanCong_User.resx">
+      <DependentUpon>PhanCong_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\TienDo_User.resx">
+      <DependentUpon>TienDo_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\VatTu_User.resx">
+      <DependentUpon>VatTu_User.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,5 +254,6 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmDashboard: Form
+    public partial class Dashboard_User : Form
     {
-        public frmDashboard()
+        public Dashboard_User()
         {
             InitializeComponent();
 
@@ -37,6 +37,16 @@ namespace GUI
             vt.MdiParent = this;
             vt.Dock = DockStyle.Fill;
             vt.Show();
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
