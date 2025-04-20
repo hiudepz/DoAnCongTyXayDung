@@ -16,5 +16,26 @@ namespace GUI.Admin
         {
             InitializeComponent();
         }
+
+        private void congtrinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CongTrinh_Admin a = new CongTrinh_Admin();
+            a.MdiParent = this;
+            a.Show();
+        }
+
+        private void nhathauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhaThau_Admin a = new NhaThau_Admin();
+            a.MdiParent = this;
+            a.Show();
+        }
+
+        private void vattuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VatTu_Admin a = new VatTu_Admin();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }
