@@ -37,5 +37,24 @@ namespace GUI.Admin
             a.MdiParent = this;
             a.Show();
         }
+
+        private void nhancongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhanCong_Admin a = new NhanCong_Admin();
+            a.MdiParent = this;
+            a.Show();
+        }
+
+        private void DashBoard_Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TienDo_Admin a = new TienDo_Admin();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }

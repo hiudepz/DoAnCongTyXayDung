@@ -344,5 +344,15 @@ namespace GUI.Admin
             //    cbbNhathaucongtrinh_admin.Text = tenNhaThau;
             //}
         }
+
+        private void btnThemnhathaucongtrinh_admin_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnThemvatlieucongtrinh_admin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
