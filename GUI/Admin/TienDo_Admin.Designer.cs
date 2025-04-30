@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpNgayCaoNhat = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayCapNhat = new System.Windows.Forms.DateTimePicker();
             this.cbbCongTrinh = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.ChartTienDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -78,6 +78,7 @@
             this.btnLuu.TabIndex = 12;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // dgvTienDo
             // 
@@ -143,7 +144,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtpNgayCaoNhat);
+            this.groupBox1.Controls.Add(this.dtpNgayCapNhat);
             this.groupBox1.Controls.Add(this.cbbCongTrinh);
             this.groupBox1.Controls.Add(this.txtPhanTram);
             this.groupBox1.Controls.Add(this.txtMoTa);
@@ -158,12 +159,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tiến độ công trình ";
             // 
-            // dtpNgayCaoNhat
+            // dtpNgayCapNhat
             // 
-            this.dtpNgayCaoNhat.Location = new System.Drawing.Point(134, 80);
-            this.dtpNgayCaoNhat.Name = "dtpNgayCaoNhat";
-            this.dtpNgayCaoNhat.Size = new System.Drawing.Size(172, 22);
-            this.dtpNgayCaoNhat.TabIndex = 5;
+            this.dtpNgayCapNhat.Location = new System.Drawing.Point(134, 80);
+            this.dtpNgayCapNhat.Name = "dtpNgayCapNhat";
+            this.dtpNgayCapNhat.Size = new System.Drawing.Size(172, 22);
+            this.dtpNgayCapNhat.TabIndex = 5;
             // 
             // cbbCongTrinh
             // 
@@ -240,6 +241,6 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.ComboBox cbbCongTrinh;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartTienDo;
-        private System.Windows.Forms.DateTimePicker dtpNgayCaoNhat;
+        private System.Windows.Forms.DateTimePicker dtpNgayCapNhat;
     }
 }
