@@ -50,5 +50,9 @@ namespace BLL
         {
             return ctrDal.GetByCongTrinh(congTrinhId);
         }
+        public List<CongTrinh> GetAllCongTrinh()
+        {
+            return ctrDal.GetAllCongTrinh();
+        }
     }
 }

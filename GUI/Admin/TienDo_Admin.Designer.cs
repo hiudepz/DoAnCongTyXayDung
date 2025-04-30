@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -69,6 +69,7 @@
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -88,7 +89,7 @@
             this.dgvTienDo.Name = "dgvTienDo";
             this.dgvTienDo.RowHeadersWidth = 51;
             this.dgvTienDo.RowTemplate.Height = 24;
-            this.dgvTienDo.Size = new System.Drawing.Size(611, 324);
+            this.dgvTienDo.Size = new System.Drawing.Size(611, 343);
             this.dgvTienDo.TabIndex = 8;
             this.dgvTienDo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTienDo_CellContentClick);
             // 
@@ -183,23 +184,23 @@
             // 
             // ChartTienDo
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ChartTienDo.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ChartTienDo.Legends.Add(legend1);
-            this.ChartTienDo.Location = new System.Drawing.Point(629, 217);
+            chartArea2.Name = "ChartArea1";
+            this.ChartTienDo.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ChartTienDo.Legends.Add(legend2);
+            this.ChartTienDo.Location = new System.Drawing.Point(629, 206);
             this.ChartTienDo.Name = "ChartTienDo";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Tiến độ";
-            this.ChartTienDo.Series.Add(series1);
-            this.ChartTienDo.Size = new System.Drawing.Size(430, 300);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Tiến độ";
+            this.ChartTienDo.Series.Add(series2);
+            this.ChartTienDo.Size = new System.Drawing.Size(430, 343);
             this.ChartTienDo.TabIndex = 14;
             this.ChartTienDo.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Bảng theo dõi tiến độ ";
-            this.ChartTienDo.Titles.Add(title1);
+            title2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Bảng theo dõi tiến độ ";
+            this.ChartTienDo.Titles.Add(title2);
             // 
             // TienDo_Admin
             // 

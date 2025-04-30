@@ -33,6 +33,12 @@ namespace GUI.Admin
             dtpNgayCapNhat.CustomFormat = "dd/MM/yy";
             dtpNgayCapNhat.Format = DateTimePickerFormat.Custom;
             dtpNgayCapNhat.CustomFormat = "dd/MM/yy";
+            //LoadCongTrinh
+            cbbCongTrinh.DataSource = bll.GetAllCongTrinh();
+            cbbCongTrinh.ValueMember = "id";
+            cbbCongTrinh.DisplayMember = "ten";
+
+
         }
         public void LoadChart()
         {
@@ -67,38 +73,53 @@ namespace GUI.Admin
             int row = dgvTienDo.CurrentCell.RowIndex;
 
             // Gán giá trị, nếu null thì dùng chuỗi rỗng ""
-            cbbCongTrinh.Text = dgvTienDo.Rows[row].Cells[1].Value != null ? dgvTienDo.Rows[row].Cells[1].Value.ToString() : "";
+            cbbCongTrinh.SelectedValue = dgvTienDo.Rows[row].Cells[1].Value != null ? dgvTienDo.Rows[row].Cells[1].Value : "";
             dtpNgayCapNhat.Text = dgvTienDo.Rows[row].Cells[2].Value != null ? dgvTienDo.Rows[row].Cells[2].Value.ToString() : "";
             txtMoTa.Text = dgvTienDo.Rows[row].Cells[3].Value != null ? dgvTienDo.Rows[row].Cells[3].Value.ToString() : "";
             txtPhanTram.Text = dgvTienDo.Rows[row].Cells[4].Value != null ? dgvTienDo.Rows[row].Cells[4].Value.ToString() : "";
         }
 
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    var newprogress = new TienDo
-            //    {
-            //        cong_trinh_id = cbbCongTrinh.Text,
-                    
-            //        ngay_cap_nhat = dtpNgayCapNhat.Value,
-            //        mo_ta = txtMoTa.Text,
-            //        ngay_du_kien_ket_thuc = dtpNgayketthuc_admin.Value,
-            //        trang_thai = cbbTrangthai_admin.SelectedItem.ToString(),
-            //        tong_muc_dau_tu = nudTongmucdautu_admin.Value,    
-            //        hinh_anh = txtUrlcongtrinh_admin.Text
-            //    };
+            try
+            {
+                var newprogress = new TienDo
+                {
+                    cong_trinh_id = (int)cbbCongTrinh.SelectedValue,
 
-            //    if (ctrBLL.AddConstruction(newConstruction))
-            //    {
-            //        MessageBox.Show("Thêm thành công!");
-            //        dgvCongtrinh_admin.DataSource = ctrBLL.GetConstructionList(); // Refresh DataGridView
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Lỗi: " + ex.Message);
-            //}
+                    ngay_cap_nhat = dtpNgayCapNhat.Value,
+                    mo_ta = txtMoTa.Text,
+                    phan_tram_hoan_thanh = decimal.Parse(txtPhanTram.Text),
+                   
+                };
+
+                if (bll.AddProgress(newprogress))
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    dgvTienDo.DataSource = bll.GetProgressList(); // Refresh DataGridView
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            LoadChart();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvTienDo.CurrentRow == null) return;
+
+            int id = Convert.ToInt32(dgvTienDo.CurrentRow.Cells["id"].Value);
+            if (MessageBox.Show("Bạn chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (bll.DeleteProgress(id))
+                {
+                    dgvTienDo.DataSource = bll.GetProgressList();
+                }
+            }
+            LoadChart();
         }
     }
 }

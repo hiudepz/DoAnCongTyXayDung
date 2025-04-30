@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -84,7 +85,7 @@ namespace DAL
                     var existing = db.TienDos.FirstOrDefault(ct => ct.id == updatedProgress.id);
                     if (existing != null)
                     {
-
+                        
                         existing.cong_trinh_id = updatedProgress.cong_trinh_id;
                         existing.ngay_cap_nhat = updatedProgress.ngay_cap_nhat;
                         existing.mo_ta = updatedProgress.mo_ta;
@@ -106,7 +107,11 @@ namespace DAL
 
                 return false;
             }
+            
         }
-    
+        public List<CongTrinh> GetAllCongTrinh()
+        {
+            return db.CongTrinhs.ToList();
+        }
     }
 }
