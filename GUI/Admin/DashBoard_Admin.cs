@@ -37,5 +37,12 @@ namespace GUI.Admin
             a.MdiParent = this;
             a.Show();
         }
+
+        private void reportNhaThauCongTrinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportNTCT a = new reportNTCT();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }

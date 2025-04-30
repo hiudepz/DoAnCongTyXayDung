@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,6 +65,12 @@
     </Compile>
     <Compile Include="Admin\CongTrinh_Admin.Designer.cs">
       <DependentUpon>CongTrinh_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CongTrinh_NhaThau_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CongTrinh_NhaThau_Admin.Designer.cs">
+      <DependentUpon>CongTrinh_NhaThau_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\DashBoard_Admin.cs">
       <SubType>Form</SubType>
@@ -95,8 +108,25 @@
     <Compile Include="Admin\VatTu_Admin.Designer.cs">
       <DependentUpon>VatTu_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="DS_NhaThauTheoCongTrinh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_NhaThauTheoCongTrinh.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportNTCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportNTCT.Designer.cs">
+      <DependentUpon>reportNTCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptNhaThauCongTrinh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNhaThauCongTrinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="User\BaoCao_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +181,9 @@
     <EmbeddedResource Include="Admin\CongTrinh_Admin.resx">
       <DependentUpon>CongTrinh_Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CongTrinh_NhaThau_Admin.resx">
+      <DependentUpon>CongTrinh_NhaThau_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\DashBoard_Admin.resx">
       <DependentUpon>DashBoard_Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +212,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportNTCT.resx">
+      <DependentUpon>reportNTCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptNhaThauCongTrinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNhaThauCongTrinh.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\BaoCao_User.resx">
       <DependentUpon>BaoCao_User.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +243,17 @@
     <EmbeddedResource Include="User\VatTu_User.resx">
       <DependentUpon>VatTu_User.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DS_NhaThauTheoCongTrinh.xsc">
+      <DependentUpon>DS_NhaThauTheoCongTrinh.xsd</DependentUpon>
+    </None>
+    <None Include="DS_NhaThauTheoCongTrinh.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_NhaThauTheoCongTrinh.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_NhaThauTheoCongTrinh.xss">
+      <DependentUpon>DS_NhaThauTheoCongTrinh.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -234,6 +285,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\default_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

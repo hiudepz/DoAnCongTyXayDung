@@ -49,6 +49,7 @@
       <DependentUpon>CTYXAYDUNG.dbml</DependentUpon>
     </Compile>
     <Compile Include="DAL_Congtrinh_Admin.cs" />
+    <Compile Include="DAL_CT_NT_Admin.cs" />
     <Compile Include="DAL_Nhathau_Admin.cs" />
     <Compile Include="DAL_Vattu_Admin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +78,11 @@
     <None Include="CTYXAYDUNG.dbml.layout">
       <DependentUpon>CTYXAYDUNG.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CongTyXayDung.sql" />
+    <Content Include="DuLieu.sql" />
+    <Content Include="storedctvlxd.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

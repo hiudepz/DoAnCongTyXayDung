@@ -61,11 +61,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cbbTrangthai_admin = new System.Windows.Forms.ComboBox();
             this.dgvCongtrinh_admin = new System.Windows.Forms.DataGridView();
-            this.pbCongtrinh_admin = new System.Windows.Forms.PictureBox();
             this.txtUrlcongtrinh_admin = new System.Windows.Forms.TextBox();
             this.btnChonanhcongtrinh_admin = new System.Windows.Forms.Button();
             this.btnTimcongtrinh_admin = new System.Windows.Forms.Button();
             this.txtKeywordcongtrinh_admin = new System.Windows.Forms.TextBox();
+            this.pbCongtrinh_admin = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTongmucdautu_admin)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -289,6 +289,7 @@
             this.btnThemnhathaucongtrinh_admin.TabIndex = 5;
             this.btnThemnhathaucongtrinh_admin.Text = "Thêm";
             this.btnThemnhathaucongtrinh_admin.UseVisualStyleBackColor = true;
+            this.btnThemnhathaucongtrinh_admin.Click += new System.EventHandler(this.btnThemnhathaucongtrinh_admin_Click);
             // 
             // cbbNhathaucongtrinh_admin
             // 
@@ -432,17 +433,6 @@
             this.dgvCongtrinh_admin.TabIndex = 7;
             this.dgvCongtrinh_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCongtrinh_admin_CellContentClick);
             // 
-            // pbCongtrinh_admin
-            // 
-            this.pbCongtrinh_admin.Image = global::GUI.Properties.Resources.default_image;
-            this.pbCongtrinh_admin.Location = new System.Drawing.Point(1059, 349);
-            this.pbCongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
-            this.pbCongtrinh_admin.Name = "pbCongtrinh_admin";
-            this.pbCongtrinh_admin.Size = new System.Drawing.Size(225, 187);
-            this.pbCongtrinh_admin.TabIndex = 8;
-            this.pbCongtrinh_admin.TabStop = false;
-            this.pbCongtrinh_admin.Click += new System.EventHandler(this.pbCongtrinh_admin_Click);
-            // 
             // txtUrlcongtrinh_admin
             // 
             this.txtUrlcongtrinh_admin.Location = new System.Drawing.Point(866, 349);
@@ -479,6 +469,17 @@
             this.txtKeywordcongtrinh_admin.Name = "txtKeywordcongtrinh_admin";
             this.txtKeywordcongtrinh_admin.Size = new System.Drawing.Size(98, 20);
             this.txtKeywordcongtrinh_admin.TabIndex = 11;
+            // 
+            // pbCongtrinh_admin
+            // 
+            this.pbCongtrinh_admin.Image = global::GUI.Properties.Resources.default_image;
+            this.pbCongtrinh_admin.Location = new System.Drawing.Point(1059, 349);
+            this.pbCongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
+            this.pbCongtrinh_admin.Name = "pbCongtrinh_admin";
+            this.pbCongtrinh_admin.Size = new System.Drawing.Size(225, 187);
+            this.pbCongtrinh_admin.TabIndex = 8;
+            this.pbCongtrinh_admin.TabStop = false;
+            this.pbCongtrinh_admin.Click += new System.EventHandler(this.pbCongtrinh_admin_Click);
             // 
             // CongTrinh_Admin
             // 
