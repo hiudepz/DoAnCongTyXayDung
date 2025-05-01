@@ -38,16 +38,33 @@ namespace GUI.Admin
             a.Show();
         }
 
+
         private void reportNhaThauCongTrinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             reportNTCT a = new reportNTCT();
+
+        private void nhancongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhanCong_Admin a = new NhanCong_Admin();
+
             a.MdiParent = this;
             a.Show();
         }
 
+
         private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
         {
            TienDo_Admin a = new TienDo_Admin();
+
+        private void DashBoard_Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TienDo_Admin a = new TienDo_Admin();
+
             a.MdiParent = this;
             a.Show();
         }

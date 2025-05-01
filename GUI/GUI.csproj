@@ -78,11 +78,11 @@
     <Compile Include="Admin\DashBoard_Admin.Designer.cs">
       <DependentUpon>DashBoard_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\NhanVien_Admin.cs">
+    <Compile Include="Admin\NhanCong_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\NhanVien_Admin.Designer.cs">
-      <DependentUpon>NhanVien_Admin.cs</DependentUpon>
+    <Compile Include="Admin\NhanCong_Admin.Designer.cs">
+      <DependentUpon>NhanCong_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\NhaThau_Admin.cs">
       <SubType>Form</SubType>
@@ -187,8 +187,8 @@
     <EmbeddedResource Include="Admin\DashBoard_Admin.resx">
       <DependentUpon>DashBoard_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\NhanVien_Admin.resx">
-      <DependentUpon>NhanVien_Admin.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\NhanCong_Admin.resx">
+      <DependentUpon>NhanCong_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\NhaThau_Admin.resx">
       <DependentUpon>NhaThau_Admin.cs</DependentUpon>

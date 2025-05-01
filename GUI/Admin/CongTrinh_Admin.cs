@@ -348,6 +348,7 @@ namespace GUI.Admin
         private void btnThemnhathaucongtrinh_admin_Click(object sender, EventArgs e)
         {
 
+
             CongTrinh_NhaThau_Admin d = new CongTrinh_NhaThau_Admin();
             d.Show();
             //try
@@ -379,6 +380,14 @@ namespace GUI.Admin
         {
             CongTrinh_NhaThau_Admin d = new CongTrinh_NhaThau_Admin();
             d.Show();
+
+            
+        }
+
+        private void btnThemvatlieucongtrinh_admin_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }
