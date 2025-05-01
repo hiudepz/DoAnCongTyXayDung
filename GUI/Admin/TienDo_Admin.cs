@@ -13,13 +13,15 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace GUI.Admin
 {
-    public partial class TienDo_Admin: Form
+    public partial class TienDo_Admin : Form
     {
         private BLL_TienDo_Admin bll = new BLL_TienDo_Admin();
         public TienDo_Admin()
         {
             InitializeComponent();
         }
+
+
 
         private void TienDo_Admin_Load(object sender, EventArgs e)
         {
@@ -121,5 +123,6 @@ namespace GUI.Admin
             }
             LoadChart();
         }
+
     }
 }

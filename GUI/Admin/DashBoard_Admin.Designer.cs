@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hethongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baocaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportNhaThauCongTrinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhmucToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.congtrinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhathauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,9 +63,18 @@
             // 
             // baocaoToolStripMenuItem
             // 
+            this.baocaoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportNhaThauCongTrinhToolStripMenuItem});
             this.baocaoToolStripMenuItem.Name = "baocaoToolStripMenuItem";
             this.baocaoToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.baocaoToolStripMenuItem.Text = "Báo cáo";
+            // 
+            // reportNhaThauCongTrinhToolStripMenuItem
+            // 
+            this.reportNhaThauCongTrinhToolStripMenuItem.Name = "reportNhaThauCongTrinhToolStripMenuItem";
+            this.reportNhaThauCongTrinhToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.reportNhaThauCongTrinhToolStripMenuItem.Text = "Báo cáo quản lý công trình nhà thầu";
+            this.reportNhaThauCongTrinhToolStripMenuItem.Click += new System.EventHandler(this.reportNhaThauCongTrinhToolStripMenuItem_Click);
             // 
             // danhmucToolStripMenuItem
             // 
@@ -142,5 +152,6 @@
         private System.Windows.Forms.ToolStripMenuItem vattuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhancongToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiendoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportNhaThauCongTrinhToolStripMenuItem;
     }
 }

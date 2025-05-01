@@ -347,11 +347,46 @@ namespace GUI.Admin
 
         private void btnThemnhathaucongtrinh_admin_Click(object sender, EventArgs e)
         {
+
+
+            CongTrinh_NhaThau_Admin d = new CongTrinh_NhaThau_Admin();
+            d.Show();
+            //try
+            //{
+            //    var newConstruction = new NhaThau
+            //    {
+            //        ten_cong_ty = txtTencongty_Admin.Text,
+            //        ma_so_thue = txtMasothue_Admin.Text,
+            //        dia_chi = txtDiachi_Admin.Text,
+            //        nguoi_dai_dien = txtNguoidaidiennhathau_Admin.Text,
+            //        so_dien_thoai = txtSdtnhathau_Admin.Text,
+            //        email = txtEmailnhathau_Admin.Text,
+
+            //    };
+
+            //    if (bll.AddContractor(newConstruction))
+            //    {
+            //        MessageBox.Show("Thêm thành công!");
+            //        dgvCongtrinh_admin.DataSource = nhathau.GetContractorList(); // Refresh DataGridView
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Lỗi " + ex.Message);
+            //}
+        }
+
+        private void btnFrmCTNT_Click(object sender, EventArgs e)
+        {
+            CongTrinh_NhaThau_Admin d = new CongTrinh_NhaThau_Admin();
+            d.Show();
+
             
         }
 
         private void btnThemvatlieucongtrinh_admin_Click(object sender, EventArgs e)
         {
+
 
         }
     }
