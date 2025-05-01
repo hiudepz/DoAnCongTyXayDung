@@ -44,6 +44,7 @@
     <Compile Include="BLL_Congtrinh_Admin.cs" />
     <Compile Include="BLL_CT_NT_Admin.cs" />
     <Compile Include="BLL_Nhathau_Admin.cs" />
+    <Compile Include="BLL_Tiendo_Admin.cs" />
     <Compile Include="BLL_Vattu_Admin.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

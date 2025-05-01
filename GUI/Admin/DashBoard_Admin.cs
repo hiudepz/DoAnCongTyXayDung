@@ -44,5 +44,12 @@ namespace GUI.Admin
             a.MdiParent = this;
             a.Show();
         }
+
+        private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           TienDo_Admin a = new TienDo_Admin();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }

@@ -177,7 +177,8 @@
             // 
             // txtMacongtrinh_admin
             // 
-            this.txtMacongtrinh_admin.Location = new System.Drawing.Point(116, 25);
+            this.txtMacongtrinh_admin.Enabled = false;
+            this.txtMacongtrinh_admin.Location = new System.Drawing.Point(115, 20);
             this.txtMacongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
             this.txtMacongtrinh_admin.Name = "txtMacongtrinh_admin";
             this.txtMacongtrinh_admin.Size = new System.Drawing.Size(88, 20);

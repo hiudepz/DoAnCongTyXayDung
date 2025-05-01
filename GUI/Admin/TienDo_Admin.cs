@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace GUI.Admin
 {
-    public partial class TienDo_Admin: Form
+    public partial class TienDo_Admin : Form
     {
         public TienDo_Admin()
         {
             InitializeComponent();
         }
 
-       
     }
 }
