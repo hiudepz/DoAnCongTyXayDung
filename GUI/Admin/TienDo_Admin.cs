@@ -1,6 +1,4 @@
-﻿using BLL;
-using DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using BLL;
+using DAL;
 
 namespace GUI.Admin
 {
@@ -21,9 +21,7 @@ namespace GUI.Admin
             InitializeComponent();
         }
 
-
-
-        private void TienDo_Admin_Load(object sender, EventArgs e)
+        private void TienDo2_Admin_Load(object sender, EventArgs e)
         {
             //dgvTienDo.AutoGenerateColumns = false;
             dgvTienDo.DataSource = bll.GetProgressList();
@@ -31,16 +29,14 @@ namespace GUI.Admin
             dgvTienDo.Columns["CongTrinh"].Visible = false;
             LoadChart();
             //Format datetimepicker 01/12/25
-            dtpNgayCapNhat.Format = DateTimePickerFormat.Custom;
-            dtpNgayCapNhat.CustomFormat = "dd/MM/yy";
-            dtpNgayCapNhat.Format = DateTimePickerFormat.Custom;
-            dtpNgayCapNhat.CustomFormat = "dd/MM/yy";
+            dtpNgaycapnhattiendo.Format = DateTimePickerFormat.Custom;
+            dtpNgaycapnhattiendo.CustomFormat = "dd/MM/yy";
+            dtpNgaycapnhattiendo.Format = DateTimePickerFormat.Custom;
+            dtpNgaycapnhattiendo.CustomFormat = "dd/MM/yy";
             //LoadCongTrinh
-            cbbCongTrinh.DataSource = bll.GetAllCongTrinh();
-            cbbCongTrinh.ValueMember = "id";
-            cbbCongTrinh.DisplayMember = "ten";
-
-
+            cbbTiendoct.DataSource = bll.GetAllCongTrinh();
+            cbbTiendoct.ValueMember = "id";
+            cbbTiendoct.DisplayMember = "ten";
         }
         public void LoadChart()
         {
@@ -51,8 +47,8 @@ namespace GUI.Admin
 
             foreach (var item in data)
             {
-                
-                series.Points.AddXY(Hienten((int)item.cong_trinh_id) , item.phan_tram_hoan_thanh);
+
+                series.Points.AddXY(Hienten((int)item.cong_trinh_id), item.phan_tram_hoan_thanh);
             }
 
             ChartTienDo.Series.Add(series);
@@ -61,7 +57,7 @@ namespace GUI.Admin
         public string Hienten(int congTrinhId)
         {
             var congTrinh = bll.GetbyCongTrinh(congTrinhId).FirstOrDefault();
-            return congTrinh?? "Không xác định";
+            return congTrinh ?? "Không xác định";
         }
 
         private void dgvTienDo_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -75,12 +71,11 @@ namespace GUI.Admin
             int row = dgvTienDo.CurrentCell.RowIndex;
 
             // Gán giá trị, nếu null thì dùng chuỗi rỗng ""
-            cbbCongTrinh.SelectedValue = dgvTienDo.Rows[row].Cells[1].Value != null ? dgvTienDo.Rows[row].Cells[1].Value : "";
-            dtpNgayCapNhat.Text = dgvTienDo.Rows[row].Cells[2].Value != null ? dgvTienDo.Rows[row].Cells[2].Value.ToString() : "";
-            txtMoTa.Text = dgvTienDo.Rows[row].Cells[3].Value != null ? dgvTienDo.Rows[row].Cells[3].Value.ToString() : "";
-            txtPhanTram.Text = dgvTienDo.Rows[row].Cells[4].Value != null ? dgvTienDo.Rows[row].Cells[4].Value.ToString() : "";
+            cbbTiendoct.SelectedValue = dgvTienDo.Rows[row].Cells[1].Value != null ? dgvTienDo.Rows[row].Cells[1].Value : "";
+            dtpNgaycapnhattiendo.Text = dgvTienDo.Rows[row].Cells[2].Value != null ? dgvTienDo.Rows[row].Cells[2].Value.ToString() : "";
+            txtMotatiendo.Text = dgvTienDo.Rows[row].Cells[3].Value != null ? dgvTienDo.Rows[row].Cells[3].Value.ToString() : "";
+            txtPhantramhoanthanh.Text = dgvTienDo.Rows[row].Cells[4].Value != null ? dgvTienDo.Rows[row].Cells[4].Value.ToString() : "";
         }
-
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -88,12 +83,12 @@ namespace GUI.Admin
             {
                 var newprogress = new TienDo
                 {
-                    cong_trinh_id = (int)cbbCongTrinh.SelectedValue,
+                    cong_trinh_id = (int)cbbTiendoct.SelectedValue,
 
-                    ngay_cap_nhat = dtpNgayCapNhat.Value,
-                    mo_ta = txtMoTa.Text,
-                    phan_tram_hoan_thanh = decimal.Parse(txtPhanTram.Text),
-                   
+                    ngay_cap_nhat = dtpNgaycapnhattiendo.Value,
+                    mo_ta = txtMotatiendo.Text,
+                    phan_tram_hoan_thanh = decimal.Parse(txtPhantramhoanthanh.Text),
+
                 };
 
                 if (bll.AddProgress(newprogress))
@@ -123,6 +118,5 @@ namespace GUI.Admin
             }
             LoadChart();
         }
-
     }
 }

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Linq;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,16 +10,17 @@ namespace DAL
     public class DAL_TienDo_Admin
     {
         private CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
-        
+
         public List<TienDo> GetAllProgress()
         {
             try
             {
-                using (var db = new CTYXAYDUNGDataContext()) {
+                using (var db = new CTYXAYDUNGDataContext())
+                {
                     db.DeferredLoadingEnabled = false;
                     return db.TienDos.ToList() ?? new List<TienDo>();
                 }
-                
+
             }
             catch
             {
@@ -85,12 +85,12 @@ namespace DAL
                     var existing = db.TienDos.FirstOrDefault(ct => ct.id == updatedProgress.id);
                     if (existing != null)
                     {
-                        
+
                         existing.cong_trinh_id = updatedProgress.cong_trinh_id;
                         existing.ngay_cap_nhat = updatedProgress.ngay_cap_nhat;
                         existing.mo_ta = updatedProgress.mo_ta;
                         existing.phan_tram_hoan_thanh = updatedProgress.phan_tram_hoan_thanh;
-                       
+
 
                         //// Xử lý ngày hoàn thành nếu có
                         //if (updatedProgress.ngay_hoan_thanh.HasValue)
@@ -107,7 +107,7 @@ namespace DAL
 
                 return false;
             }
-            
+
         }
         public List<CongTrinh> GetAllCongTrinh()
         {
