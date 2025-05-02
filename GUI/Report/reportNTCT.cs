@@ -1,5 +1,6 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
+using GUI.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

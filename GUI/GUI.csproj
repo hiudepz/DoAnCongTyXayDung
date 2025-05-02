@@ -115,13 +115,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="reportNTCT.cs">
+    <Compile Include="Report\reportDanhSachVatTuVaTongChiPhi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reportNTCT.Designer.cs">
+    <Compile Include="Report\reportDanhSachVatTuVaTongChiPhi.Designer.cs">
+      <DependentUpon>reportDanhSachVatTuVaTongChiPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\reportNTCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\reportNTCT.Designer.cs">
       <DependentUpon>reportNTCT.cs</DependentUpon>
     </Compile>
-    <Compile Include="rptNhaThauCongTrinh.cs">
+    <Compile Include="Report\rptDanhSachVatTuVaTongChiPhi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDanhSachVatTuVaTongChiPhi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptNhaThauCongTrinh.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptNhaThauCongTrinh.rpt</DependentUpon>
@@ -212,10 +224,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="reportNTCT.resx">
+    <EmbeddedResource Include="Report\reportDanhSachVatTuVaTongChiPhi.resx">
+      <DependentUpon>reportDanhSachVatTuVaTongChiPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\reportNTCT.resx">
       <DependentUpon>reportNTCT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptNhaThauCongTrinh.rpt">
+    <EmbeddedResource Include="Report\rptDanhSachVatTuVaTongChiPhi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDanhSachVatTuVaTongChiPhi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptNhaThauCongTrinh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptNhaThauCongTrinh.cs</LastGenOutput>
     </EmbeddedResource>

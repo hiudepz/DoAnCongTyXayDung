@@ -1,4 +1,6 @@
-﻿namespace GUI
+﻿using GUI.Report;
+
+namespace GUI
 {
     partial class reportNTCT
     {
@@ -31,7 +33,7 @@
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.txtTimNhaThauTheoCongTrinh = new System.Windows.Forms.TextBox();
             this.btnTimNhaThauTheoCongTrinh = new System.Windows.Forms.Button();
-            this.rptNhaThauCongTrinh1 = new GUI.rptNhaThauCongTrinh();
+            this.rptNhaThauCongTrinh1 = new rptNhaThauCongTrinh();
             this.SuspendLayout();
             // 
             // crystalReportViewer1

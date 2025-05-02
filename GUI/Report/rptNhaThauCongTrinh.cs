@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GUI {
+namespace GUI.Report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace GUI {
         
         public override string FullResourceName {
             get {
-                return "GUI.rptNhaThauCongTrinh.rpt";
+                return "GUI.Report.rptNhaThauCongTrinh.rpt";
             }
             set {
                 // Do nothing

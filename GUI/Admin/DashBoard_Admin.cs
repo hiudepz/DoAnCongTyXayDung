@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.Report;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace GUI.Admin
 {
-    public partial class DashBoard_Admin: Form
+    public partial class DashBoard_Admin : Form
     {
         public DashBoard_Admin()
         {
@@ -42,6 +43,18 @@ namespace GUI.Admin
         private void reportNhaThauCongTrinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             reportNTCT a = new reportNTCT();
+            a.MdiParent= this;
+            a.Show();
+           
+        }
+
+        private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TienDo_Admin a = new TienDo_Admin();
+
+               a.MdiParent = this;
+                a.Show();
+        }
 
         private void nhancongToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -51,22 +64,38 @@ namespace GUI.Admin
             a.Show();
         }
 
-
-        private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void reportDanhSachVatTuVaTongChiPhiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           TienDo_Admin a = new TienDo_Admin();
-
-        private void DashBoard_Admin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TienDo_Admin a = new TienDo_Admin();
+            reportDanhSachVatTuVaTongChiPhi a = new reportDanhSachVatTuVaTongChiPhi();
 
             a.MdiParent = this;
             a.Show();
         }
+
+        //private void nhancongToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    NhanCong_Admin a = new NhanCong_Admin();
+
+        //    a.MdiParent = this;
+        //    a.Show();
+        //}
+
+
+        //private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //   TienDo_Admin a = new TienDo_Admin();
+
+        //private void DashBoard_Admin_Load(object sender, EventArgs e)
+        //{
+
+        //}
+
+        //private void tiendoToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    TienDo_Admin a = new TienDo_Admin();
+
+        //    a.MdiParent = this;
+        //    a.Show();
+        //}
     }
 }

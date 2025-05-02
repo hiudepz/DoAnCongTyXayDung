@@ -70,6 +70,7 @@
             this.btnSuanhathau_Admin.TabIndex = 9;
             this.btnSuanhathau_Admin.Text = "Sửa";
             this.btnSuanhathau_Admin.UseVisualStyleBackColor = true;
+            this.btnSuanhathau_Admin.Click += new System.EventHandler(this.btnSuanhathau_Admin_Click_1);
             // 
             // btnXoanhathau_Admin
             // 
@@ -80,6 +81,7 @@
             this.btnXoanhathau_Admin.TabIndex = 11;
             this.btnXoanhathau_Admin.Text = "Xoá";
             this.btnXoanhathau_Admin.UseVisualStyleBackColor = true;
+            this.btnXoanhathau_Admin.Click += new System.EventHandler(this.btnXoanhathau_Admin_Click_1);
             // 
             // btnThemnhathau_Admin
             // 

@@ -73,7 +73,9 @@ namespace GUI.Admin
             }
         }
 
-        private void btnXoanhathau_Admin_Click(object sender, EventArgs e)
+      
+
+        private void btnXoanhathau_Admin_Click_1(object sender, EventArgs e)
         {
             if (dgvNhathau_Admin.CurrentRow == null) return;
 
@@ -87,7 +89,7 @@ namespace GUI.Admin
             }
         }
 
-        private void btnSuanhathau_Admin_Click(object sender, EventArgs e)
+        private void btnSuanhathau_Admin_Click_1(object sender, EventArgs e)
         {
             if (dgvNhathau_Admin.CurrentRow == null)
             {
@@ -111,7 +113,7 @@ namespace GUI.Admin
                     so_dien_thoai = txtSdtnhathau_Admin.Text,
 
                     email = txtEmailnhathau_Admin.Text,
-                 
+
                 };
 
                 // Gọi BLL để cập nhật

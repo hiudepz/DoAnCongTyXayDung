@@ -91,7 +91,7 @@
         <classShapeMoniker Id="bad8662f-cd68-429e-9f78-6106f4e717f2" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.375 : 4.62577123076923); (6.5 : 4.62577123076923)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.375 : 4.62577123076923); (6.5 : 4.62577123076923)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CTYXAYDUNGDataContext/CongTrinh/CongTrinh_TienDo" />
       <nodes>
         <classShapeMoniker Id="1827b642-039c-43f7-a6d5-8723749e45cf" />
