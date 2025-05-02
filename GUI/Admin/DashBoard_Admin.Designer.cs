@@ -32,13 +32,13 @@
             this.hethongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baocaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportNhaThauCongTrinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhmucToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.congtrinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhathauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vattuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhancongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiendoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,9 +74,16 @@
             // reportNhaThauCongTrinhToolStripMenuItem
             // 
             this.reportNhaThauCongTrinhToolStripMenuItem.Name = "reportNhaThauCongTrinhToolStripMenuItem";
-            this.reportNhaThauCongTrinhToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.reportNhaThauCongTrinhToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
             this.reportNhaThauCongTrinhToolStripMenuItem.Text = "Báo cáo quản lý công trình nhà thầu";
             this.reportNhaThauCongTrinhToolStripMenuItem.Click += new System.EventHandler(this.reportNhaThauCongTrinhToolStripMenuItem_Click);
+            // 
+            // reportDanhSachVatTuVaTongChiPhiToolStripMenuItem
+            // 
+            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem.Name = "reportDanhSachVatTuVaTongChiPhiToolStripMenuItem";
+            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem.Text = "Báo cáo danh sách vật tư và tổng chi phí";
+            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem.Click += new System.EventHandler(this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem_Click);
             // 
             // danhmucToolStripMenuItem
             // 
@@ -93,44 +100,37 @@
             // congtrinhToolStripMenuItem
             // 
             this.congtrinhToolStripMenuItem.Name = "congtrinhToolStripMenuItem";
-            this.congtrinhToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.congtrinhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.congtrinhToolStripMenuItem.Text = "Công trình";
             this.congtrinhToolStripMenuItem.Click += new System.EventHandler(this.congtrinhToolStripMenuItem_Click);
             // 
             // nhathauToolStripMenuItem
             // 
             this.nhathauToolStripMenuItem.Name = "nhathauToolStripMenuItem";
-            this.nhathauToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.nhathauToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nhathauToolStripMenuItem.Text = "Nhà thầu";
             this.nhathauToolStripMenuItem.Click += new System.EventHandler(this.nhathauToolStripMenuItem_Click);
             // 
             // vattuToolStripMenuItem
             // 
             this.vattuToolStripMenuItem.Name = "vattuToolStripMenuItem";
-            this.vattuToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.vattuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vattuToolStripMenuItem.Text = "Vật tư";
             this.vattuToolStripMenuItem.Click += new System.EventHandler(this.vattuToolStripMenuItem_Click);
             // 
             // nhancongToolStripMenuItem
             // 
             this.nhancongToolStripMenuItem.Name = "nhancongToolStripMenuItem";
-            this.nhancongToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.nhancongToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nhancongToolStripMenuItem.Text = "Nhân công";
             this.nhancongToolStripMenuItem.Click += new System.EventHandler(this.nhancongToolStripMenuItem_Click);
             // 
             // tiendoToolStripMenuItem
             // 
             this.tiendoToolStripMenuItem.Name = "tiendoToolStripMenuItem";
-            this.tiendoToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.tiendoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tiendoToolStripMenuItem.Text = "Tiến độ";
             this.tiendoToolStripMenuItem.Click += new System.EventHandler(this.tiendoToolStripMenuItem_Click);
-            // 
-            // reportDanhSachVatTuVaTongChiPhiToolStripMenuItem
-            // 
-            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem.Name = "reportDanhSachVatTuVaTongChiPhiToolStripMenuItem";
-            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
-            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem.Text = "Báo cáo danh sách vật tư và tổng chi phí";
-            this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem.Click += new System.EventHandler(this.reportDanhSachVatTuVaTongChiPhiToolStripMenuItem_Click);
             // 
             // DashBoard_Admin
             // 

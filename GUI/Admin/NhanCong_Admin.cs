@@ -75,7 +75,7 @@ namespace GUI.Admin
         {
             if (dgvNhancong_Admin.CurrentRow == null)
             {
-                MessageBox.Show("Vui lòng chọn vật tư cần sửa");
+                MessageBox.Show("Vui lòng chọn dòng hợp lệ ");
                 return;
             }
 

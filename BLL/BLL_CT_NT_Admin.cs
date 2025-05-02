@@ -25,6 +25,10 @@ namespace BLL
         {
             return dal.GetAllCTNT();
         }
+        public bool XoaNhaThauVaoCongTrinh(CongTrinh_NhaThau dto)
+        {
+            return dal.Delete(dto);
+        }
         public bool ThemNhaThauVaoCongTrinh(CongTrinh_NhaThau dto)
         {
             return dal.Insert(dto);

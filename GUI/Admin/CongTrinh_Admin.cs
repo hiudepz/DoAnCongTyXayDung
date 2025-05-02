@@ -28,6 +28,10 @@ namespace GUI.Admin
             //vattu but in contruction
             dgvVattubencongtrinh_admin.DataSource= vattu.GetMaterialList();
             dgvVattubencongtrinh_admin.Columns["id"].Visible = false;
+            //dgvVattubencongtrinh_admin.Columns["don_vi"].Visible = false;
+            dgvVattubencongtrinh_admin.Columns["don_gia"].Visible = false;
+            dgvVattubencongtrinh_admin.Columns["nha_cung_cap"].Visible = false;
+            dgvVattubencongtrinh_admin.Columns["hinh_anh"].Visible = false;
             //Load nhathau's data to dgv
             dgvNhathaubencongtrinh_admin.DataSource = nhathau.GetContractorList();
             // hide the thing for who dont wants to know
@@ -320,29 +324,29 @@ namespace GUI.Admin
 
         private void dgvVattubencongtrinh_admin_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (dgvVattubencongtrinh_admin.DataSource == null || dgvVattubencongtrinh_admin.Rows.Count == 0 || dgvVattubencongtrinh_admin.CurrentCell == null)
-            //{
-            //    MessageBox.Show("Không có dữ liệu để chọn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+            if (dgvVattubencongtrinh_admin.DataSource == null || dgvVattubencongtrinh_admin.Rows.Count == 0 || dgvVattubencongtrinh_admin.CurrentCell == null)
+            {
+                MessageBox.Show("Không có dữ liệu để chọn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            //int row = dgvNhathaubencongtrinh_admin.CurrentCell.RowIndex;
+            int row = dgvVattubencongtrinh_admin.CurrentCell.RowIndex;
 
-            //// Lấy dòng được chọn
-            //DataGridViewRow selectedRow = dgvNhathaubencongtrinh_admin.Rows[e.RowIndex];
+            // Lấy dòng được chọn
+            DataGridViewRow selectedRow = dgvVattubencongtrinh_admin.Rows[e.RowIndex];
 
-            //// Lấy giá trị tên nhà thầu từ cột "ten_cong_ty"
-            //string tenNhaThau = selectedRow.Cells["ten_cong_ty"].Value?.ToString();
+            // Lấy giá trị tên nhà thầu từ cột "ten"
+            string tenVatTu = selectedRow.Cells["ten"].Value?.ToString();
 
-            //// Rfresh ComboBox
-            //if (!string.IsNullOrEmpty(tenNhaThau))
-            //{
+            // Rfresh ComboBox
+            if (!string.IsNullOrEmpty(tenVatTu))
+            {
 
-            //    cbbNhathaucongtrinh_admin.SelectedItem = tenNhaThau;
+                cbbVatlieucongtrinh_admin.SelectedItem = tenVatTu;
 
 
-            //    cbbNhathaucongtrinh_admin.Text = tenNhaThau;
-            //}
+                cbbVatlieucongtrinh_admin.Text = tenVatTu;
+            }
         }
 
         private void btnThemnhathaucongtrinh_admin_Click(object sender, EventArgs e)
@@ -387,7 +391,8 @@ namespace GUI.Admin
         private void btnThemvatlieucongtrinh_admin_Click(object sender, EventArgs e)
         {
 
-
+            CongTrinh_VatTu_Admin d = new CongTrinh_VatTu_Admin();
+            d.Show();
         }
     }
 }

@@ -30,11 +30,28 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.txtTimNhaThauTheoCongTrinh = new System.Windows.Forms.TextBox();
             this.btnTimNhaThauTheoCongTrinh = new System.Windows.Forms.Button();
-            this.rptNhaThauCongTrinh1 = new rptNhaThauCongTrinh();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.rptNhaThauCongTrinh1 = new GUI.Report.rptNhaThauCongTrinh();
             this.SuspendLayout();
+            // 
+            // txtTimNhaThauTheoCongTrinh
+            // 
+            this.txtTimNhaThauTheoCongTrinh.Location = new System.Drawing.Point(358, 36);
+            this.txtTimNhaThauTheoCongTrinh.Name = "txtTimNhaThauTheoCongTrinh";
+            this.txtTimNhaThauTheoCongTrinh.Size = new System.Drawing.Size(100, 20);
+            this.txtTimNhaThauTheoCongTrinh.TabIndex = 1;
+            // 
+            // btnTimNhaThauTheoCongTrinh
+            // 
+            this.btnTimNhaThauTheoCongTrinh.Location = new System.Drawing.Point(492, 36);
+            this.btnTimNhaThauTheoCongTrinh.Name = "btnTimNhaThauTheoCongTrinh";
+            this.btnTimNhaThauTheoCongTrinh.Size = new System.Drawing.Size(75, 23);
+            this.btnTimNhaThauTheoCongTrinh.TabIndex = 2;
+            this.btnTimNhaThauTheoCongTrinh.Text = "Search";
+            this.btnTimNhaThauTheoCongTrinh.UseVisualStyleBackColor = true;
+            this.btnTimNhaThauTheoCongTrinh.Click += new System.EventHandler(this.btnTimNhaThauTheoCongTrinh_Click);
             // 
             // crystalReportViewer1
             // 
@@ -46,24 +63,7 @@ namespace GUI
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ReportSource = this.rptNhaThauCongTrinh1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(1055, 538);
-            this.crystalReportViewer1.TabIndex = 0;
-            // 
-            // txtTimNhaThauTheoCongTrinh
-            // 
-            this.txtTimNhaThauTheoCongTrinh.Location = new System.Drawing.Point(358, 36);
-            this.txtTimNhaThauTheoCongTrinh.Name = "txtTimNhaThauTheoCongTrinh";
-            this.txtTimNhaThauTheoCongTrinh.Size = new System.Drawing.Size(100, 20);
-            this.txtTimNhaThauTheoCongTrinh.TabIndex = 1;
-            // 
-            // btnTimNhaThauTheoCongTrinh
-            // 
-            this.btnTimNhaThauTheoCongTrinh.Location = new System.Drawing.Point(358, 63);
-            this.btnTimNhaThauTheoCongTrinh.Name = "btnTimNhaThauTheoCongTrinh";
-            this.btnTimNhaThauTheoCongTrinh.Size = new System.Drawing.Size(75, 23);
-            this.btnTimNhaThauTheoCongTrinh.TabIndex = 2;
-            this.btnTimNhaThauTheoCongTrinh.Text = "Search";
-            this.btnTimNhaThauTheoCongTrinh.UseVisualStyleBackColor = true;
-            this.btnTimNhaThauTheoCongTrinh.Click += new System.EventHandler(this.btnTimNhaThauTheoCongTrinh_Click);
+            this.crystalReportViewer1.TabIndex = 3;
             // 
             // reportNTCT
             // 
@@ -82,10 +82,9 @@ namespace GUI
         }
 
         #endregion
-
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.TextBox txtTimNhaThauTheoCongTrinh;
         private System.Windows.Forms.Button btnTimNhaThauTheoCongTrinh;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private rptNhaThauCongTrinh rptNhaThauCongTrinh1;
     }
 }

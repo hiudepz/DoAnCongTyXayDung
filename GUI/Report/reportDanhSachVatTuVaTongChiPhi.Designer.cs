@@ -28,23 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.rptDanhSachVatTuVaTongChiPhi1 = new GUI.Report.rptDanhSachVatTuVaTongChiPhi();
             this.txtTenCongTrinh = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.rptDanhSachVatTuVaTongChiPhi1 = new GUI.Report.rptDanhSachVatTuVaTongChiPhi();
             this.SuspendLayout();
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.rptDanhSachVatTuVaTongChiPhi1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.crystalReportViewer1.TabIndex = 0;
             // 
             // txtTenCongTrinh
             // 
@@ -63,16 +51,29 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.rptDanhSachVatTuVaTongChiPhi1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(956, 450);
+            this.crystalReportViewer1.TabIndex = 0;
+            // 
             // reportDanhSachVatTuVaTongChiPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(956, 450);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtTenCongTrinh);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "reportDanhSachVatTuVaTongChiPhi";
             this.Text = "reportDanhSachVatTuVaTongChiPhi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,8 +82,8 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private rptDanhSachVatTuVaTongChiPhi rptDanhSachVatTuVaTongChiPhi1;
         private System.Windows.Forms.TextBox txtTenCongTrinh;
         private System.Windows.Forms.Button btnSearch;
+        private rptDanhSachVatTuVaTongChiPhi rptDanhSachVatTuVaTongChiPhi1;
     }
 }

@@ -90,5 +90,15 @@ namespace GUI.Admin
             txtVaitro.Text = dgvCT_NT_Admin.Rows[row].Cells[2].Value != null ? dgvCT_NT_Admin.Rows[row].Cells[2].Value.ToString() : "";
            
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
