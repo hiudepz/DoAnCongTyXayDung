@@ -68,4 +68,14 @@ VALUES
 ('user2', 'ghijkl', N'Tran Thi B', '0967543210', 'user2@example.com', N'User');
 GO
 
+select * from CongTrinh
+
+select * from PhanCong
+
+select * from 
+
+select * from NguoiDung
+
+select * from NguoiDung
+
 select * from NguoiDung
