@@ -1,6 +1,8 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data.Linq;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -12,20 +14,27 @@ namespace DAL
     {
         private CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
 
-        public List<TienDo> GetAllProgress()
+        public List<DTO_TienDo> GetAllProgress()
         {
             try
             {
-                using (var db = new CTYXAYDUNGDataContext())
-                {
-                    db.DeferredLoadingEnabled = false;
-                    return db.TienDos.ToList() ?? new List<TienDo>();
-                }
+                var query = from td in db.TienDos
+                            join ct in db.CongTrinhs on td.cong_trinh_id equals ct.id
+                            select new DTO_TienDo
+                            {
+                                Id = td.id,
+                                CongTrinhId = (int)td.cong_trinh_id,
+                                NgayCapNhat = (DateTime)td.ngay_cap_nhat,
+                                MoTa = td.mo_ta,
+                                PhanTramHoanThanh = (decimal)td.phan_tram_hoan_thanh,
+                                TenCongTrinh = ct.ten // Giả sử trường tên công trình là ten_cong_trinh
+                            };
 
+                return query.ToList();
             }
             catch
             {
-                return new List<TienDo>(); // return to empty instead null
+                return new List<DTO_TienDo>();
             }
 
         }
@@ -114,5 +123,30 @@ namespace DAL
         {
             return db.CongTrinhs.ToList();
         }
+        public List<DTO_TienDo> GetAllProgressTK(string keyword = "")
+        {
+            try
+            {
+                var query = from td in db.TienDos
+                            join ct in db.CongTrinhs on td.cong_trinh_id equals ct.id
+                            where string.IsNullOrEmpty(keyword) || ct.ten.Contains(keyword)
+                            select new DTO_TienDo
+                            {
+                                Id = td.id,
+                                CongTrinhId = (int)td.cong_trinh_id,
+                                NgayCapNhat = (DateTime)td.ngay_cap_nhat,
+                                MoTa = td.mo_ta,
+                                PhanTramHoanThanh = (decimal)td.phan_tram_hoan_thanh,
+                                TenCongTrinh = ct.ten
+                            };
+
+                return query.ToList();
+            }
+            catch
+            {
+                return new List<DTO_TienDo>();
+            }
+        }
+
     }
 }
