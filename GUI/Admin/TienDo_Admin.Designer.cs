@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.button1 = new System.Windows.Forms.Button();
             this.txtPhantramhoanthanh = new System.Windows.Forms.TextBox();
             this.txtMotatiendo = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(733, 6);
+            this.button1.Location = new System.Drawing.Point(753, 225);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -184,37 +184,39 @@
             this.cbbTiendoct.Name = "cbbTiendoct";
             this.cbbTiendoct.Size = new System.Drawing.Size(129, 24);
             this.cbbTiendoct.TabIndex = 4;
+            this.cbbTiendoct.SelectedIndexChanged += new System.EventHandler(this.cbbTiendoct_SelectedIndexChanged);
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(576, 7);
+            this.textBox7.Location = new System.Drawing.Point(618, 225);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(129, 22);
             this.textBox7.TabIndex = 17;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // ChartTienDo
             // 
-            chartArea4.Name = "ChartArea1";
-            this.ChartTienDo.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.ChartTienDo.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.ChartTienDo.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ChartTienDo.Legends.Add(legend2);
             this.ChartTienDo.Location = new System.Drawing.Point(836, 254);
             this.ChartTienDo.Margin = new System.Windows.Forms.Padding(4);
             this.ChartTienDo.Name = "ChartTienDo";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Tiến độ";
-            this.ChartTienDo.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Tiến độ";
+            this.ChartTienDo.Series.Add(series2);
             this.ChartTienDo.Size = new System.Drawing.Size(573, 422);
             this.ChartTienDo.TabIndex = 21;
             this.ChartTienDo.Text = "chart1";
-            title4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "Title1";
-            title4.Text = "Bảng theo dõi tiến độ ";
-            this.ChartTienDo.Titles.Add(title4);
+            title2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Bảng theo dõi tiến độ ";
+            this.ChartTienDo.Titles.Add(title2);
             // 
-            // TienDo2_Admin
+            // TienDo_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,7 +228,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.ChartTienDo);
-            this.Name = "TienDo2_Admin";
+            this.Name = "TienDo_Admin";
             this.Text = "TienDo2_Admin";
             this.Load += new System.EventHandler(this.TienDo2_Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTienDo)).EndInit();

@@ -142,6 +142,9 @@ namespace DAL
                 return false;
             }
         }
-
-    }
+        public List<CongTrinh> TimKiem(string tukhoa)
+        {
+            return db.CongTrinhs.Where(t => t.ten.Contains(tukhoa)).ToList();  
+        }
+     }
 }

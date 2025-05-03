@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace BLL
     {
         private DAL_TienDo_Admin ctrDal = new DAL_TienDo_Admin();
 
-        public List<TienDo> GetProgressList()
+        public List<DTO_TienDo> GetProgressList()
         {
             return ctrDal.GetAllProgress();
         }
@@ -54,5 +55,10 @@ namespace BLL
         {
             return ctrDal.GetAllCongTrinh();
         }
+        public List<DTO_TienDo> GetAllProgressTK(string keyword)
+        {
+            return ctrDal.GetAllProgressTK(keyword);
+        }
+
     }
 }

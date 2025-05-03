@@ -161,6 +161,11 @@ namespace GUI.Admin
                 MessageBox.Show("Hãy xóa bản ghi rồi thêm mới");
             }
 
-        } 
+        }
+
+        private void txtKeywordcongtrinh_admin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -50,8 +50,6 @@ namespace DAL
             {
                 return new List<NhanCong>(); // return to empty instead null
             }
-
-
         }
 
         //public List<string> GetAllStatus()

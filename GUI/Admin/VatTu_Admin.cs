@@ -200,5 +200,24 @@ namespace GUI.Admin
             pbVattu.SizeMode = PictureBoxSizeMode.Zoom; // Hiển thị ảnh vừa khung
             pbVattu.BorderStyle = BorderStyle.FixedSingle;
         }
+
+        private void txtKeywordcongtrinh_admin_TextChanged(object sender, EventArgs e)
+        {
+            string tuKhoa = txtKeywordcongtrinh_admin.Text.Trim().ToLower();
+
+            if (string.IsNullOrEmpty(tuKhoa))
+            {
+                // Nếu ô tìm kiếm bị xoá trắng → hiện danh sách gốc
+                dgvVattu.DataSource = bll.GetMaterialList();
+            }
+            else
+            {
+                // Lọc theo từ khoá
+                tuKhoa = txtKeywordcongtrinh_admin.Text.Trim();
+                var ketQua = bll.TimKiem(tuKhoa);
+                dgvVattu.DataSource = ketQua;
+            }
+
+        }
     }
 }

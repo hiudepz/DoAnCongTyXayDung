@@ -36,13 +36,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbbCongTrinh = new System.Windows.Forms.ComboBox();
             this.dgvNhanCong = new System.Windows.Forms.DataGridView();
+            this.ChckNhanCong = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnPhanCong = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvBangPhanCong = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.ChckNhanCong = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanCong)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -129,9 +129,16 @@
             this.dgvNhanCong.TabIndex = 1;
             this.dgvNhanCong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanCong_CellContentClick);
             // 
+            // ChckNhanCong
+            // 
+            this.ChckNhanCong.HeaderText = "Chọn";
+            this.ChckNhanCong.MinimumWidth = 6;
+            this.ChckNhanCong.Name = "ChckNhanCong";
+            this.ChckNhanCong.Width = 125;
+            // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(934, 42);
+            this.btnTimKiem.Location = new System.Drawing.Point(964, 185);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
             this.btnTimKiem.TabIndex = 14;
@@ -140,7 +147,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(777, 43);
+            this.txtSearch.Location = new System.Drawing.Point(826, 185);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(130, 22);
             this.txtSearch.TabIndex = 13;
@@ -180,17 +187,10 @@
             this.groupBox3.Controls.Add(this.dgvBangPhanCong);
             this.groupBox3.Location = new System.Drawing.Point(538, 213);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(517, 329);
+            this.groupBox3.Size = new System.Drawing.Size(506, 329);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bảng Phân Công";
-            // 
-            // ChckNhanCong
-            // 
-            this.ChckNhanCong.HeaderText = "Chọn";
-            this.ChckNhanCong.MinimumWidth = 6;
-            this.ChckNhanCong.Name = "ChckNhanCong";
-            this.ChckNhanCong.Width = 125;
             // 
             // PhanCong_Admin
             // 

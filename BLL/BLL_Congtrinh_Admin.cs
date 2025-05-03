@@ -49,5 +49,9 @@ namespace BLL
             return ctrDal.UpdateConstruction(construction);
         }
 
+        public List<CongTrinh> TimKiem(string tukhoa)
+        {
+            return ctrDal.TimKiem(tukhoa);
+        }
     }
 }

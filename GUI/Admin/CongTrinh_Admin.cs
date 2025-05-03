@@ -394,5 +394,30 @@ namespace GUI.Admin
             CongTrinh_VatTu_Admin d = new CongTrinh_VatTu_Admin();
             d.Show();
         }
+
+        private void btnTimcongtrinh_admin_Click(object sender, EventArgs e)
+        {
+            string tuKhoa = txtTimKiem.Text.Trim();
+            var ketQua = ctrBLL.TimKiem(tuKhoa);
+            dgvCongtrinh_admin.DataSource = ketQua;
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string tuKhoa = txtTimKiem.Text.Trim().ToLower();
+
+            if (string.IsNullOrEmpty(tuKhoa))
+            {
+                // Nếu ô tìm kiếm bị xoá trắng → hiện danh sách gốc
+                dgvCongtrinh_admin.DataSource = ctrBLL.GetConstructionList();
+            }
+            else
+            {
+                // Lọc theo từ khoá
+                tuKhoa = txtTimKiem.Text.Trim();
+                var ketQua = ctrBLL.TimKiem(tuKhoa);
+                dgvCongtrinh_admin.DataSource = ketQua;
+            }
+        }
     }
 }

@@ -44,6 +44,7 @@
     <Compile Include="BLL_Congtrinh_Admin.cs" />
     <Compile Include="BLL_CT_NT_Admin.cs" />
     <Compile Include="BLL_CT_VT_Admin.cs" />
+    <Compile Include="BLL_DangNhap.cs" />
     <Compile Include="BLL_Nhathau_Admin.cs" />
     <Compile Include="BLL_NhanCong_Admin.cs" />
     <Compile Include="BLL_Nhathau_Admin.cs" />
@@ -57,6 +58,10 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{5a1e3ca8-b657-46dc-a76f-ef59e7ecd057}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\baitapcuahieu\HK4\CN.Net\DoAnCongTyXayDung\DTO\DTO.csproj">
+      <Project>{8e86d4d6-9ede-4ec3-9477-a410f988ac90}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
