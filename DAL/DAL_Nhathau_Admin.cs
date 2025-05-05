@@ -134,6 +134,11 @@ namespace DAL
 
                 return false;
             }
+
+        }
+        public List<NhaThau> TimKiem(string tukhoa)
+        {
+            return db.NhaThaus.Where(t => t.ten_cong_ty.Contains(tukhoa)).ToList();
         }
     }
 }

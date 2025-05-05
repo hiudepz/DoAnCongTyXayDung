@@ -45,7 +45,7 @@ namespace BLL
             return ctrDal.UpdateMaterial(material);
         }
 
-        public List<CongTrinh> TimKiem(string tukhoa)
+        public List<VatTu> TimKiem(string tukhoa)
         {
             return ctrDal.TimKiem(tukhoa);
         }

@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,8 +60,8 @@ namespace GUI.Admin
 
 
             dgvCT_NT_Admin.DataSource=b.LayDanhSachCTNT();
-            dgvCT_NT_Admin.Columns["CongTrinh"].Visible = false;
-            dgvCT_NT_Admin.Columns["NhaThau"].Visible = false;
+            //dgvCT_NT_Admin.Columns["CongTrinh"].Visible = false;
+            //dgvCT_NT_Admin.Columns["NhaThau"].Visible = false;
         }
 
         private void dgvCT_NT_Admin_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -74,20 +75,21 @@ namespace GUI.Admin
             int row = dgvCT_NT_Admin.CurrentCell.RowIndex;
 
             // Gán giá trị, nếu null thì dùng chuỗi rỗng ""
-           
+
 
             // Lấy ID từ dòng được chọn
-            if (int.TryParse(dgvCT_NT_Admin.Rows[row].Cells[0].Value?.ToString(), out int idCT))
-            {
-                cbbIdCT.SelectedValue = idCT; // Gán vào ComboBox sẽ tự hiển thị tên
-            }
+            //if (int.TryParse(dgvCT_NT_Admin.Rows[row].Cells[0].Value?.ToString(), out int idCT))
+            //{
+            //    cbbIdCT.SelectedValue = idCT; // Gán vào ComboBox sẽ tự hiển thị tên
+            //}
+            cbbIdCT.Text = dgvCT_NT_Admin.Rows[row].Cells[0].Value?.ToString(); // Gán vào ComboBox sẽ tự hiển thị tên
 
-            if (int.TryParse(dgvCT_NT_Admin.Rows[row].Cells[1].Value?.ToString(), out int idNT))
-            {
-                cbbIdNT.SelectedValue = idNT;
-            }
-
-            txtVaitro.Text = dgvCT_NT_Admin.Rows[row].Cells[2].Value != null ? dgvCT_NT_Admin.Rows[row].Cells[2].Value.ToString() : "";
+            //if (int.TryParse(dgvCT_NT_Admin.Rows[row].Cells[1].Value?.ToString(), out int idNT))
+            //{
+            //    cbbIdNT.SelectedValue = idNT;
+            //}
+            cbbIdNT.Text = dgvCT_NT_Admin.Rows[row].Cells[1].Value?.ToString();
+           txtVaitro.Text = dgvCT_NT_Admin.Rows[row].Cells[2].Value != null ? dgvCT_NT_Admin.Rows[row].Cells[2].Value.ToString() : "";
            
         }
 
@@ -99,6 +101,16 @@ namespace GUI.Admin
         private void btnSua_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtKeywordcongtrinh_admin_TextChanged(object sender, EventArgs e)
+        {
+            LoadTienDo(txtKeywordcongtrinh_admin.Text.Trim());
+        }
+        private void LoadTienDo(string keyword = "")
+        {
+            List<DTO_CongTrinh_NhaThau> ds = b.GetAllTK(keyword);
+            dgvCT_NT_Admin.DataSource = ds;
         }
     }
 }

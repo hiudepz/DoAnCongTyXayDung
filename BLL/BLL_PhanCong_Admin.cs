@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,14 @@ namespace BLL
     {
         private DAL_PhanCong_Admin ctrDal = new DAL_PhanCong_Admin();
 
-        public List<PhanCong> GetPhanCongList()
+        public List<DTO_PhanCong> GetPhanCongList()
         {
             return ctrDal.GetAllPhanCong();
         }
-       
+        public List<DTO_PhanCong> GetPhanCongListTK(string keyword = "")
+        {
+            return ctrDal.GetAllPhanCongTK(keyword);
+        }
 
         //public List<string> GetStatusList()
         //{
@@ -36,8 +40,13 @@ namespace BLL
 
         //    return ctrDal.DeletePhanCong(id);
         //}
-
-
-         
+        public bool DeletePhanCong(int congTrinhId, int nhanCongId, DateTime start)
+        {
+            if (start > DateTime.Now)
+            {
+                throw new Exception("Không thể xóa phân công chưa bắt đầu");
+            }
+            return ctrDal.DeletePhanCong(congTrinhId, nhanCongId, start);
+        }
     }
 }

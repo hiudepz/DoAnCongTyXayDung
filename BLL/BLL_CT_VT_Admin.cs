@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace BLL
             return dal.GetAllVatTu();
         }
 
-        public List<CongTrinh_VatTu> LayDanhSachCTVT()
+        public List<DTO_CongTrinh_VatTu> LayDanhSachCTVT()
         {
             return dal.GetAllCTVT();
         }
@@ -36,6 +37,10 @@ namespace BLL
         public bool XoaVatTuVaoCongTrinh(CongTrinh_VatTu dto)
         {
             return dal.Delete(dto);
+        }
+        public List<DTO_CongTrinh_VatTu> GetAllTK(string keyword)
+        {
+            return dal.GetAllCTVTTK(keyword);
         }
     }
 }

@@ -47,7 +47,6 @@
     <Compile Include="BLL_DangNhap.cs" />
     <Compile Include="BLL_Nhathau_Admin.cs" />
     <Compile Include="BLL_NhanCong_Admin.cs" />
-    <Compile Include="BLL_Nhathau_Admin.cs" />
     <Compile Include="BLL_PhanCong_Admin.cs" />
     <Compile Include="BLL_TienDo_Admin.cs" />
     <Compile Include="BLL_Vattu_Admin.cs" />

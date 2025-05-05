@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace GUI.Admin
@@ -131,6 +132,24 @@ namespace GUI.Admin
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi cập nhật: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            string tuKhoa = textBox7.Text.Trim().ToLower();
+
+            if (string.IsNullOrEmpty(tuKhoa))
+            {
+                // Nếu ô tìm kiếm bị xoá trắng → hiện danh sách gốc
+                dgvNhathau_Admin.DataSource = bll.GetContractorList();
+            }
+            else
+            {
+                // Lọc theo từ khoá
+                tuKhoa = textBox7.Text.Trim();
+                var ketQua = bll.TimKiem(tuKhoa);
+                dgvNhathau_Admin.DataSource = ketQua;
             }
         }
     }

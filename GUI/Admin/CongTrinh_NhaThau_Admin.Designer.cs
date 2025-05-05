@@ -47,7 +47,7 @@
             // 
             this.cbbIdCT.FormattingEnabled = true;
             this.cbbIdCT.Location = new System.Drawing.Point(165, 86);
-            this.cbbIdCT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbIdCT.Margin = new System.Windows.Forms.Padding(4);
             this.cbbIdCT.Name = "cbbIdCT";
             this.cbbIdCT.Size = new System.Drawing.Size(160, 24);
             this.cbbIdCT.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             this.cbbIdNT.FormattingEnabled = true;
             this.cbbIdNT.Location = new System.Drawing.Point(165, 160);
-            this.cbbIdNT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbIdNT.Margin = new System.Windows.Forms.Padding(4);
             this.cbbIdNT.Name = "cbbIdNT";
             this.cbbIdNT.Size = new System.Drawing.Size(160, 24);
             this.cbbIdNT.TabIndex = 1;
@@ -64,7 +64,7 @@
             // txtVaitro
             // 
             this.txtVaitro.Location = new System.Drawing.Point(419, 87);
-            this.txtVaitro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVaitro.Margin = new System.Windows.Forms.Padding(4);
             this.txtVaitro.Name = "txtVaitro";
             this.txtVaitro.Size = new System.Drawing.Size(132, 22);
             this.txtVaitro.TabIndex = 2;
@@ -72,7 +72,7 @@
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(165, 270);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 3;
@@ -86,7 +86,7 @@
             this.dgvCT_NT_Admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCT_NT_Admin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCT_NT_Admin.Location = new System.Drawing.Point(0, 369);
-            this.dgvCT_NT_Admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCT_NT_Admin.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCT_NT_Admin.Name = "dgvCT_NT_Admin";
             this.dgvCT_NT_Admin.RowHeadersWidth = 51;
             this.dgvCT_NT_Admin.Size = new System.Drawing.Size(1067, 185);
@@ -126,7 +126,7 @@
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(293, 270);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 28);
             this.btnXoa.TabIndex = 6;
@@ -137,7 +137,7 @@
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(433, 268);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 28);
             this.btnSua.TabIndex = 7;
@@ -162,6 +162,7 @@
             this.txtKeywordcongtrinh_admin.Name = "txtKeywordcongtrinh_admin";
             this.txtKeywordcongtrinh_admin.Size = new System.Drawing.Size(129, 22);
             this.txtKeywordcongtrinh_admin.TabIndex = 13;
+            this.txtKeywordcongtrinh_admin.TextChanged += new System.EventHandler(this.txtKeywordcongtrinh_admin_TextChanged);
             // 
             // CongTrinh_NhaThau_Admin
             // 
@@ -180,7 +181,7 @@
             this.Controls.Add(this.txtVaitro);
             this.Controls.Add(this.cbbIdNT);
             this.Controls.Add(this.cbbIdCT);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CongTrinh_NhaThau_Admin";
             this.Text = "CongTrinh_NhaThau";
             this.Load += new System.EventHandler(this.CongTrinh_NhaThau_Admin_Load);

@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace BLL
 
         public List<CongTrinh> LayDanhSachCongTrinh()
         {
-            return dal.GetAllCongTrinh();
+            return dal.GetAllCT();
         }
 
         public List<NhaThau> LayDanhSachNhaThau()
@@ -21,7 +22,7 @@ namespace BLL
             return dal.GetAllNhaThau();
         }
 
-        public List<CongTrinh_NhaThau> LayDanhSachCTNT()
+        public List<DTO_CongTrinh_NhaThau> LayDanhSachCTNT()
         {
             return dal.GetAllCTNT();
         }
@@ -32,6 +33,10 @@ namespace BLL
         public bool ThemNhaThauVaoCongTrinh(CongTrinh_NhaThau dto)
         {
             return dal.Insert(dto);
+        }
+        public List<DTO_CongTrinh_NhaThau> GetAllTK(string keyword)
+        {
+            return dal.GetAllCTNTTK(keyword);
         }
     }
 }

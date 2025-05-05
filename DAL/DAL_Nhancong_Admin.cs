@@ -138,5 +138,9 @@ namespace DAL
 
 
         }
+        public List<NhanCong> TimKiem(string tukhoa)
+        {
+            return db.NhanCongs.Where(t => t.ho_ten.Contains(tukhoa)).ToList();
+        }
     }
 }

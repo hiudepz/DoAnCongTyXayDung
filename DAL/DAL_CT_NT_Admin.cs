@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,27 @@ namespace DAL
     public class DAL_CT_NT_Admin
     {
         CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
-        public List<CongTrinh> GetAllCongTrinh()
+        public List<DTO_CongTrinh_NhaThau> GetAllCTNT()
         {
-            return db.CongTrinhs.Distinct().ToList();
+            try
+            {
+                var query = from ct_nt in db.CongTrinh_NhaThaus
+                            join ct in db.CongTrinhs on ct_nt.cong_trinh_id equals ct.id
+                            join nt in db.NhaThaus on ct_nt.nha_thau_id equals nt.id
+                            
+                            select new DTO_CongTrinh_NhaThau
+                            {
+                                TenCongTrinh = ct.ten, // Giả sử trường tên công trình là ten_cong_trinh
+                                TenNhaThau = nt.ten_cong_ty,
+                                VaiTro = ct_nt.vai_tro,
+                            };
+
+                return query.ToList();
+            }
+            catch
+            {
+                return new List<DTO_CongTrinh_NhaThau>();
+            }
         }
 
         public List<NhaThau> GetAllNhaThau()
@@ -19,9 +38,9 @@ namespace DAL
             return db.NhaThaus.Distinct().ToList();
         }
 
-        public List<CongTrinh_NhaThau> GetAllCTNT()
+        public List<CongTrinh> GetAllCT()
         {
-            return db.CongTrinh_NhaThaus.Distinct().ToList();
+            return db.CongTrinhs.Distinct().ToList();
         }
 
         public bool Delete(CongTrinh_NhaThau dto)
@@ -78,6 +97,28 @@ namespace DAL
                     return false;
                 }
             }
+        public List<DTO_CongTrinh_NhaThau> GetAllCTNTTK(string keyword = "")
+        {
+            try
+            {
+                var query = from ct_nt in db.CongTrinh_NhaThaus
+                            join ct in db.CongTrinhs on ct_nt.cong_trinh_id equals ct.id
+                            join nt in db.NhaThaus on ct_nt.nha_thau_id equals nt.id
+                            where string.IsNullOrEmpty(keyword) || ct.ten.Contains(keyword)
+                            select new DTO_CongTrinh_NhaThau
+                            {
+                                TenCongTrinh = ct.ten, // Giả sử trường tên công trình là ten_cong_trinh
+                                TenNhaThau = nt.ten_cong_ty,
+                                VaiTro = ct_nt.vai_tro,
+                            };
+
+                return query.ToList();
+            }
+            catch
+            {
+                return new List<DTO_CongTrinh_NhaThau>();
+            }
         }
     
+}    
 }

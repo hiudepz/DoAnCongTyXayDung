@@ -1,6 +1,8 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,20 +12,28 @@ namespace DAL
     {
         private CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
 
-        public List<PhanCong> GetAllPhanCong()
+        public List<DTO_PhanCong> GetAllPhanCong()
         {
             try
             {
-                using (var db = new CTYXAYDUNGDataContext())
-                {
-                    db.DeferredLoadingEnabled = false;
-                    return db.PhanCongs.ToList() ?? new List<PhanCong>();
-                }
+                var query = from pc in db.PhanCongs
+                            join ct in db.CongTrinhs on pc.cong_trinh_id equals ct.id
+                            join nc in db.NhanCongs on pc.nhan_cong_id equals nc.id
+                            select new DTO_PhanCong
+                            {                              
+                                CongTrinhId = pc.cong_trinh_id,
+                                NhanCongId = pc.nhan_cong_id,
+                                NgayBatDau = pc.ngay_bat_dau,
+                                NgayKetThuc = pc.ngay_bat_dau,
+                                TenCongTrinh = ct.ten,
+                                TenNhanCong = nc.ho_ten // Giả sử trường tên công trình là ten_cong_trinh
+                            };
 
+                return query.ToList();
             }
             catch
             {
-                return new List<PhanCong>(); // return to empty instead null
+                return new List<DTO_PhanCong>();
             }
 
         }
@@ -58,24 +68,27 @@ namespace DAL
             }
         }
 
-        //public bool DeletePhanCong(int id) //Xóa phân công
-        //{
-        //    try
-        //    {
-        //        var contractor = db.PhanCongs.FirstOrDefault(ct => ct.id == id);
-        //        if (contractor != null)
-        //        {
-        //            db.PhanCongs.DeleteOnSubmit(contractor);
-        //            db.SubmitChanges();
-        //            return true;
-        //        }
-        //        return false;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return false;
-        //    }
-        //}
+        public bool DeletePhanCong(int congTrinhId, int nhanCongId,DateTime start) //Xóa phân công
+        {
+            try
+            {
+                var phanCong = db.PhanCongs.FirstOrDefault(p =>
+                p.cong_trinh_id == congTrinhId &&
+                p.nhan_cong_id == nhanCongId  &&
+                p.ngay_bat_dau == start);
+                if (phanCong != null)
+                {
+                    db.PhanCongs.DeleteOnSubmit(phanCong);
+                    db.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
         // Update PhanCong
         //public bool UpdatePhanCong(PhanCong updatedPhanCong) //Sua
@@ -91,7 +104,7 @@ namespace DAL
         //                existing.cong_trinh_id = updatedPhanCong.cong_trinh_id;
         //                existing.ngay_cap_nhat = updatedPhanCong.ngay_cap_nhat;
         //                existing.ngay_cap_nhat = updatedPhanCong.ngay_cap_nhat;
-                        
+
 
 
         //                //// Xử lý ngày hoàn thành nếu có
@@ -115,6 +128,33 @@ namespace DAL
         //{
         //    return db.CongTrinhs.ToList();
         //}
+        public List<DTO_PhanCong> GetAllPhanCongTK(string keyword = "")
+        {
+            try
+            {
+                var query = from pc in db.PhanCongs
+                            join ct in db.CongTrinhs on pc.cong_trinh_id equals ct.id
+                            join nc in db.NhanCongs on pc.nhan_cong_id equals nc.id
+                            where string.IsNullOrEmpty(keyword) || ct.ten.Contains(keyword)
+                            select new DTO_PhanCong
+                            {
+                                CongTrinhId = pc.cong_trinh_id,
+                                NhanCongId = pc.nhan_cong_id,
+                                NgayBatDau = pc.ngay_bat_dau,
+                                NgayKetThuc = pc.ngay_bat_dau,
+                                TenCongTrinh = ct.ten,
+                                TenNhanCong = nc.ho_ten // Giả sử trường tên công trình là ten_cong_trinh
+                            };
+
+                return query.ToList();
+            }
+            catch
+            {
+                return new List<DTO_PhanCong>();
+            }
+
+        }
+
     }
 }
 

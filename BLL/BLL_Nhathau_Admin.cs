@@ -55,5 +55,9 @@ namespace BLL
 
             return ctrDal.UpdateContractor(contractor);
         }
+        public List<NhaThau> TimKiem(string tukhoa)
+        {
+            return ctrDal.TimKiem(tukhoa);
+        }
     }
 }

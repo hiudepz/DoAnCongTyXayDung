@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,8 +42,9 @@ namespace GUI.Admin
         private void dgvNhanCong_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-
         }
+
+
 
         private void btnPhanCong_Click(object sender, EventArgs e)
         {
@@ -92,5 +94,58 @@ namespace GUI.Admin
             
             
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int congTrinhId = int.Parse(txtCongTrinhIdvs.Text);
+                int nhanCongId = int.Parse(txtIdNhanCongvs.Text);
+                DateTime ngayBatDau = dtpstartvs.Value;
+
+               
+                bool result = bllPHanCong.DeletePhanCong(congTrinhId, nhanCongId, ngayBatDau);
+
+                if (result)
+                {
+                    MessageBox.Show("Xóa phân công thành công!");
+                    LoadDanhSachPhanCong(); // Refresh danh sách
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy phân công để xóa");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+        public void LoadDanhSachPhanCong()
+        {
+            dgvBangPhanCong.DataSource = bllPHanCong.GetPhanCongList();
+        }
+
+        private void dgvBangPhanCong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvBangPhanCong.DataSource == null || dgvBangPhanCong.Rows.Count == 0 || dgvBangPhanCong.CurrentCell == null)
+            {
+                MessageBox.Show("Không có dữ liệu để chọn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int row = dgvBangPhanCong.CurrentCell.RowIndex;
+
+            // Gán giá trị, nếu null thì dùng chuỗi rỗng ""
+            txtCongTrinhIdvs.Text = dgvBangPhanCong.Rows[row].Cells[0].Value != null ? dgvBangPhanCong.Rows[row].Cells[0].Value.ToString() : "";
+            txtIdNhanCongvs.Text = dgvBangPhanCong.Rows[row].Cells[1].Value != null ? dgvBangPhanCong.Rows[row].Cells[1].Value.ToString() : "";
+            dtpstartvs.Text = dgvBangPhanCong.Rows[row].Cells[2].Value != null ? dgvBangPhanCong.Rows[row].Cells[2].Value.ToString() : "";
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dgvBangPhanCong.DataSource = bllPHanCong.GetPhanCongListTK(txtSearch.Text.Trim());
+        }
+        
     }
 }

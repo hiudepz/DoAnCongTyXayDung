@@ -39,5 +39,9 @@ namespace BLL
 
             return bll.UpdateMember(Member);
         }
+        public List<NhanCong> TimKiem(string tukhoa)
+        {
+            return bll.TimKiem(tukhoa);
+        }
     }
 }

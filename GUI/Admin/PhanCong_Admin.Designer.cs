@@ -43,11 +43,17 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvBangPhanCong = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.txtIdNhanCongvs = new System.Windows.Forms.TextBox();
+            this.dtpstartvs = new System.Windows.Forms.DateTimePicker();
+            this.txtCongTrinhIdvs = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanCong)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangPhanCong)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,7 +66,7 @@
             this.groupBox1.Controls.Add(this.cbbCongTrinh);
             this.groupBox1.Location = new System.Drawing.Point(260, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(459, 147);
+            this.groupBox1.Size = new System.Drawing.Size(459, 136);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phân Công Nhân Vien";
@@ -151,10 +157,11 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(130, 22);
             this.txtSearch.TabIndex = 13;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnPhanCong
             // 
-            this.btnPhanCong.Location = new System.Drawing.Point(793, 108);
+            this.btnPhanCong.Location = new System.Drawing.Point(544, 185);
             this.btnPhanCong.Name = "btnPhanCong";
             this.btnPhanCong.Size = new System.Drawing.Size(91, 23);
             this.btnPhanCong.TabIndex = 16;
@@ -181,6 +188,7 @@
             this.dgvBangPhanCong.RowTemplate.Height = 24;
             this.dgvBangPhanCong.Size = new System.Drawing.Size(495, 302);
             this.dgvBangPhanCong.TabIndex = 2;
+            this.dgvBangPhanCong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBangPhanCong_CellContentClick);
             // 
             // groupBox3
             // 
@@ -192,11 +200,56 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bảng Phân Công";
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(904, 129);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // txtIdNhanCongvs
+            // 
+            this.txtIdNhanCongvs.Location = new System.Drawing.Point(45, 49);
+            this.txtIdNhanCongvs.Name = "txtIdNhanCongvs";
+            this.txtIdNhanCongvs.Size = new System.Drawing.Size(149, 22);
+            this.txtIdNhanCongvs.TabIndex = 19;
+            // 
+            // dtpstartvs
+            // 
+            this.dtpstartvs.Location = new System.Drawing.Point(45, 77);
+            this.dtpstartvs.Name = "dtpstartvs";
+            this.dtpstartvs.Size = new System.Drawing.Size(200, 22);
+            this.dtpstartvs.TabIndex = 20;
+            // 
+            // txtCongTrinhIdvs
+            // 
+            this.txtCongTrinhIdvs.Location = new System.Drawing.Point(45, 21);
+            this.txtCongTrinhIdvs.Name = "txtCongTrinhIdvs";
+            this.txtCongTrinhIdvs.Size = new System.Drawing.Size(149, 22);
+            this.txtCongTrinhIdvs.TabIndex = 19;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtCongTrinhIdvs);
+            this.groupBox4.Controls.Add(this.dtpstartvs);
+            this.groupBox4.Controls.Add(this.txtIdNhanCongvs);
+            this.groupBox4.Location = new System.Drawing.Point(750, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(253, 111);
+            this.groupBox4.TabIndex = 21;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Phân công";
+            // 
             // PhanCong_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnPhanCong);
@@ -212,6 +265,8 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangPhanCong)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +289,10 @@
         private System.Windows.Forms.DataGridView dgvBangPhanCong;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ChckNhanCong;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.TextBox txtIdNhanCongvs;
+        private System.Windows.Forms.DateTimePicker dtpstartvs;
+        private System.Windows.Forms.TextBox txtCongTrinhIdvs;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }

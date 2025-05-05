@@ -72,7 +72,7 @@ select * from CongTrinh
 
 select * from PhanCong
 
-select * from 
+select * from TienDo
 
 select * from NguoiDung
 

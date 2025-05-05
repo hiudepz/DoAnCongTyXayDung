@@ -41,7 +41,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhancong_Admin)).BeginInit();
@@ -181,13 +181,14 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // btnTimKiem
+            // txtTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(823, 178);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(129, 22);
-            this.btnTimKiem.TabIndex = 3;
+            this.txtTimKiem.Location = new System.Drawing.Point(845, 178);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(129, 22);
+            this.txtTimKiem.TabIndex = 3;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // button1
             // 
@@ -210,7 +211,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvNhancong_Admin);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.txtTimKiem);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NhanCong_Admin";
             this.Text = "NhanVien_Admin";
@@ -239,7 +240,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox btnTimKiem;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button button1;
     }
 }

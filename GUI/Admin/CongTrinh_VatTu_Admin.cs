@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,8 +63,8 @@ namespace GUI.Admin
 
 
             dgvCT_VT_Admin.DataSource = b.LayDanhSachCTVT();
-            dgvCT_VT_Admin.Columns["CongTrinh"].Visible = false;
-            dgvCT_VT_Admin.Columns["VatTu"].Visible = false;
+            //dgvCT_VT_Admin.Columns["CongTrinh"].Visible = false;
+            //dgvCT_VT_Admin.Columns["VatTu"].Visible = false;
             dtpNgaysudung.Format=DateTimePickerFormat.Custom;
             dtpNgaysudung.CustomFormat= "dd/MM/yy";
         }
@@ -82,16 +83,10 @@ namespace GUI.Admin
 
 
             // Lấy ID từ dòng được chọn
-            if (int.TryParse(dgvCT_VT_Admin.Rows[row].Cells[0].Value?.ToString(), out int idCT))
-            {
-                cbbIdCT.SelectedValue = idCT; // Gán vào ComboBox sẽ tự hiển thị tên
-            }
-
-            if (int.TryParse(dgvCT_VT_Admin.Rows[row].Cells[1].Value?.ToString(), out int idVT))
-            {
-                cbbIdVT.SelectedValue = idVT;
-            }
-
+           
+                cbbIdCT.Text = dgvCT_VT_Admin.Rows[row].Cells[0].Value?.ToString(); // Gán vào ComboBox sẽ tự hiển thị tên
+                cbbIdVT.Text = dgvCT_VT_Admin.Rows[row].Cells[0].Value?.ToString();
+            
             txtSoluong.Text = dgvCT_VT_Admin.Rows[row].Cells[2].Value != null ? dgvCT_VT_Admin.Rows[row].Cells[2].Value.ToString() : "";
             txtDongia.Text = dgvCT_VT_Admin.Rows[row].Cells[3].Value != null ? dgvCT_VT_Admin.Rows[row].Cells[3].Value.ToString() : "";
             dtpNgaysudung.Text = dgvCT_VT_Admin.Rows[row].Cells[4].Value != null ? dgvCT_VT_Admin.Rows[row].Cells[4].Value.ToString() : "";
@@ -165,7 +160,12 @@ namespace GUI.Admin
 
         private void txtKeywordcongtrinh_admin_TextChanged(object sender, EventArgs e)
         {
-
+            LoadTienDo(txtKeywordcongtrinh_admin.Text.Trim());
+        }
+        private void LoadTienDo(string keyword = "")
+        {
+            List<DTO_CongTrinh_VatTu> ds = b.GetAllTK(keyword);
+            dgvCT_VT_Admin.DataSource = ds;
         }
     }
 }
