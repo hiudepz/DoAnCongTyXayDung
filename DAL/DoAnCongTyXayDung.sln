@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "..\BLL\BLL.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "..\GUI\GUI.csproj", "{1C5D5E1D-509C-4490-95E9-7600B7B354F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "D:\baitapcuahieu\HK4\CN.Net\DoAnCongTyXayDung\DTO\DTO.csproj", "{8E86D4D6-9EDE-4EC3-9477-A410F988AC90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "..\DTO\DTO.csproj", "{8E86D4D6-9EDE-4EC3-9477-A410F988AC90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
