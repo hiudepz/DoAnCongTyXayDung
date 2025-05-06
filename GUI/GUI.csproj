@@ -181,11 +181,11 @@
     <Compile Include="User\DashBoard_User.Designer.cs">
       <DependentUpon>DashBoard_User.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\NhanVien_User.cs">
+    <Compile Include="User\NhanCong_User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\NhanVien_User.Designer.cs">
-      <DependentUpon>NhanVien_User.cs</DependentUpon>
+    <Compile Include="User\NhanCong_User.Designer.cs">
+      <DependentUpon>NhanCong_User.cs</DependentUpon>
     </Compile>
     <Compile Include="User\NhaThau_User.cs">
       <SubType>Form</SubType>
@@ -283,8 +283,8 @@
     <EmbeddedResource Include="User\DashBoard_User.resx">
       <DependentUpon>DashBoard_User.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\NhanVien_User.resx">
-      <DependentUpon>NhanVien_User.cs</DependentUpon>
+    <EmbeddedResource Include="User\NhanCong_User.resx">
+      <DependentUpon>NhanCong_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\NhaThau_User.resx">
       <DependentUpon>NhaThau_User.cs</DependentUpon>
@@ -336,6 +336,10 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{5a1e3ca8-b657-46dc-a76f-ef59e7ecd057}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{8e86d4d6-9ede-4ec3-9477-a410f988ac90}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

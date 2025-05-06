@@ -60,7 +60,7 @@ namespace DAL
     #endregion
 		
 		public CTYXAYDUNGDataContext() : 
-				base(global::DAL.Properties.Settings.Default.CongTyXayDungConnectionString1, mappingSource)
+				base(global::DAL.Properties.Settings.Default.CongTyXayDungConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

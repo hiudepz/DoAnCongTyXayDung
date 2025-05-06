@@ -92,5 +92,11 @@
     <Content Include="DuLieu.sql" />
     <Content Include="storedctvlxd.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{8e86d4d6-9ede-4ec3-9477-a410f988ac90}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
