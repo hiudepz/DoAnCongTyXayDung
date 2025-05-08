@@ -1,4 +1,5 @@
 ﻿using GUI.Admin;
+using GUI.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashBoard_Admin());
+            Application.Run(new Login());
         }
     }
 }

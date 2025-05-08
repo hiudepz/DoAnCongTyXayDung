@@ -134,3 +134,73 @@ EXEC sp_TimNhaThauTheoCongTrinh N'';
 select * from CongTrinh_NhaThau
 SELECT id, ten as ten_cong_trinh FROM CongTrinh;
 SELECT id, ten_cong_ty FROM NhaThau;
+
+
+--DanhSachNhanCong_TheoCongTrinh
+CREATE PROCEDURE sp_DanhSachNhanCong_TheoCongTrinh
+    @CongTrinhID INT
+AS
+BEGIN
+    SELECT 
+        nc.id AS MaNhanCong,
+        nc.ho_ten AS HoTen,
+        nc.chuc_vu AS ChucVu,
+        nc.luong_ngay AS LuongNgay,
+        pc.ngay_bat_dau AS NgayBatDau,
+        pc.ngay_ket_thuc AS NgayKetThuc
+    FROM PhanCong pc
+    INNER JOIN NhanCong nc ON pc.nhan_cong_id = nc.id
+    WHERE pc.cong_trinh_id = @CongTrinhID
+END
+
+EXEC sp_DanhSachNhanCong_TheoCongTrinh N'1';
+
+--TienDo_TheoCongTrinh
+CREATE PROCEDURE sp_TienDo_TheoCongTrinh
+    @CongTrinhID INT
+AS
+BEGIN
+    SELECT 
+		ct.ten AS "Tên Công Trình",
+        td.ngay_cap_nhat AS NgayCapNhat,
+        td.phan_tram_hoan_thanh AS TienDo,
+        td.mo_ta AS MoTa
+    FROM TienDo td
+	  INNER JOIN CongTrinh ct ON td.cong_trinh_id = ct.id
+    WHERE td.cong_trinh_id = @CongTrinhID
+    ORDER BY td.ngay_cap_nhat ASC
+END
+
+EXEC sp_TienDo_TheoCongTrinh N'2';
+
+--ChiPhiTong_TheoCongTrinh
+CREATE PROCEDURE sp_ChiPhiTong_TheoCongTrinh
+    @CongTrinhID INT
+AS
+BEGIN
+    -- Tổng chi phí vật tư
+    DECLARE @ChiPhiVatTu DECIMAL(18,2) = (
+        SELECT SUM(so_luong * don_gia)
+        FROM CongTrinh_VatTu
+        WHERE cong_trinh_id = @CongTrinhID
+    );
+
+    -- Tổng chi phí nhân công
+    DECLARE @ChiPhiNhanCong DECIMAL(18,2) = (
+        SELECT SUM(DATEDIFF(DAY, pc.ngay_bat_dau, pc.ngay_ket_thuc) * nc.luong_ngay)
+        FROM PhanCong pc
+        INNER JOIN NhanCong nc ON pc.nhan_cong_id = nc.id
+        WHERE pc.cong_trinh_id = @CongTrinhID
+    );
+
+    -- Trả kết quả tổng hợp
+    SELECT 
+		ct.ten AS "Tên Công Trình",
+        @ChiPhiVatTu AS "Tổng Chi Phí Vật Tư",
+        @ChiPhiNhanCong AS "Tổng Chi Phí Nhân Công",
+        (@ChiPhiVatTu + @ChiPhiNhanCong) AS "Tổng Chi Phí"
+		FROM CongTrinh ct
+		WHERE ct.id = @CongTrinhID
+END
+
+EXEC sp_ChiPhiTong_TheoCongTrinh N'1';

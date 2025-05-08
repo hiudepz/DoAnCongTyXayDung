@@ -32,7 +32,7 @@ namespace GUI.User
             dtpDateEnd.CustomFormat = "dd/MM/yy";
             //Load Data 
             dgvBangPhanCong.DataSource = bllPHanCong.GetPhanCongList();
-            dgvNhanCong.DataSource = bllNhanCong.GetMemberList();
+            //dgvNhanCong.DataSource = bllNhanCong.GetMemberList();
             //LoadCongTrinh
             cbbCongTrinh.DataSource = bllCongTrinh.GetConstructionList();
             cbbCongTrinh.ValueMember = "id";

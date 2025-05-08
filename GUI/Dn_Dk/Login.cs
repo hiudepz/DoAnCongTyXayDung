@@ -60,5 +60,10 @@ namespace GUI
         {
             new EditPassWord().Show();
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
