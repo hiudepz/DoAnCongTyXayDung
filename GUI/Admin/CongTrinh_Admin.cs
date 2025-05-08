@@ -145,13 +145,18 @@ namespace GUI.Admin
         private void btnThemcongtrinh_admin_Click(object sender, EventArgs e)
         {
             //string MaCongTrinh = txtMacongtrinh_admin.Text.Trim(); // hoặc lấy từ session đăng nhập
-            //string TenCongTrinh= txtTencongtrinh_admin.Text.Trim();
+            //string TenCongTrinh = txtTencongtrinh_admin.Text.Trim();
             //string Diadiem = txtDiadiem_admin.Text.Trim();
             //string ChuDauTu = txtChudautu_admin.Text.Trim();
+            //decimal TongMucDauTu = nudTongmucdautu_admin.Value;
 
             //StringBuilder loi = new StringBuilder();
-            //if (string.IsNullOrWhiteSpace(matKhauCu))
-            //    loi.AppendLine("- Vui lòng nhập mật khẩu hiện tại.");
+            //if (string.IsNullOrWhiteSpace(MaCongTrinh))
+            //    loi.AppendLine("- Vui lòng không để trống");
+            //if (string.IsNullOrWhiteSpace(TenCongTrinh))
+            //    loi.AppendLine("- Vui lòng không để trống");
+            //if (decimal.Is(TenCongTrinh))
+            //    loi.AppendLine("- Vui lòng không để trống");
             //if (matKhauMoi.Length < 6)
             //    loi.AppendLine("- Mật khẩu mới phải từ 6 ký tự trở lên.");
             //if (matKhauMoi != xacNhan)

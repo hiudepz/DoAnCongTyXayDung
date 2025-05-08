@@ -79,3 +79,5 @@ select * from NhaThau
 select * from NhanCong
 
 select * from CongTrinh_NhaThau
+
+select * from NguoiDung

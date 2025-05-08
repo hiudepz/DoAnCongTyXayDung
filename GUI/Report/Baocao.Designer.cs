@@ -103,9 +103,9 @@
             this.crystalReportViewerAll.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewerAll.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewerAll.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.crystalReportViewerAll.Location = new System.Drawing.Point(0, 111);
+            this.crystalReportViewerAll.Location = new System.Drawing.Point(0, 302);
             this.crystalReportViewerAll.Name = "crystalReportViewerAll";
-            this.crystalReportViewerAll.Size = new System.Drawing.Size(1882, 922);
+            this.crystalReportViewerAll.Size = new System.Drawing.Size(1882, 731);
             this.crystalReportViewerAll.TabIndex = 15;
             // 
             // Baocao

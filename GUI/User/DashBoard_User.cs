@@ -20,9 +20,9 @@ namespace GUI.User
 
         private void reportNhaThauCongTrinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportNTCT a = new reportNTCT();
-            a.MdiParent = this;
-            a.Show();
+            //reportNTCT a = new reportNTCT();
+            //a.MdiParent = this;
+            //a.Show();
         }
 
         private void congtrinhToolStripMenuItem_Click(object sender, EventArgs e)

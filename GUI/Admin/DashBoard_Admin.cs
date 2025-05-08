@@ -43,9 +43,9 @@ namespace GUI.Admin
 
         private void reportNhaThauCongTrinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportNTCT a = new reportNTCT();
-            a.MdiParent = this;
-            a.Show();
+            //reportNTCT a = new reportNTCT();
+            //a.MdiParent = this;
+            //a.Show();
         }
 
         private void nhancongToolStripMenuItem_Click(object sender, EventArgs e)

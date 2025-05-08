@@ -1,5 +1,7 @@
 ﻿using BLL;
 using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+using GUI.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,12 +30,28 @@ namespace GUI.User
         {
 
         }
-
+        //private void btnSearch_Click(object sender, EventArgs e)
+        //{
+        //    rptDanhSachVatTuVaTongChiPhi t = new rptDanhSachVatTuVaTongChiPhi();
+        //    ParameterValues pars = new ParameterValues();
+        //    ParameterDiscreteValue pa = new ParameterDiscreteValue();
+        //    pa.Value = txtTenCongTrinh.Text;
+        //    pars.Add(pa);
+        //    t.DataDefinition.ParameterFields["@tenCongTrinh"].ApplyCurrentValues(pars);
+        //    crystalReportViewer1.ReportSource = t;
+        //    //Kiểm tra nếu ko thấy 
+        //    if (t.Rows.Count == 0)
+        //    {
+        //        MessageBox.Show($"Không tìm thấy {txtTenCongTrinh.Text}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //    }
+        //}
         private void BaoCao_User_Load(object sender, EventArgs e)
         {
             cbbLoaiBaoCao.Items.Add("Danh sách nhân công theo công trình");
             cbbLoaiBaoCao.Items.Add("Báo cáo tiến độ theo công trình");
             cbbLoaiBaoCao.Items.Add("Báo cáo chi phí tổng");
+            cbbLoaiBaoCao.Items.Add("Báo cáo danh sách vật tư và tổng chi phí theo công trình");
+            cbbLoaiBaoCao.Items.Add("Báo cáo nhà thầu theo công trình");
             cbbCongTrinh.DataSource = bll.GetConstructionList();
             cbbCongTrinh.ValueMember  = "id";
             cbbCongTrinh.DisplayMember = "ten";
@@ -59,6 +77,14 @@ namespace GUI.User
                 case "Báo cáo chi phí tổng":
                     report.Load(@"C:\Users\Nguyenthithanhthao\source\repos\hiudepz\DoAnCongTyXayDung\GUI\Report\ChiPhiTongTheoIdCongTrinh.rpt");
                     report.SetParameterValue("@CongTrinhID", Convert.ToInt32(cbbCongTrinh.SelectedValue));
+                    break;
+                case "Báo cáo danh sách vật tư và tổng chi phí theo công trình":
+                    report.Load(@"C:\Users\Nguyenthithanhthao\source\repos\hiudepz\DoAnCongTyXayDung\GUI\Report\rptDanhSachVatTuVaTongChiPhi.rpt");
+                    report.SetParameterValue("@CongTrinhID", Convert.ToInt32(cbbCongTrinh.SelectedValue));
+                    break;
+                case "Báo cáo nhà thầu theo công trình":
+                    report.Load(@"C:\Users\Nguyenthithanhthao\source\repos\hiudepz\DoAnCongTyXayDung\GUI\Report\rptNhaThauCongTrinh.rpt");
+                    report.SetParameterValue("@IdCongTrinh", Convert.ToInt32(cbbCongTrinh.SelectedValue));
                     break;
             }
 

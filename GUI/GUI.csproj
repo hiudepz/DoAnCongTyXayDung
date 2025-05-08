@@ -145,12 +145,6 @@
     <Compile Include="Report\reportDanhSachVatTuVaTongChiPhi.Designer.cs">
       <DependentUpon>reportDanhSachVatTuVaTongChiPhi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\reportNTCT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\reportNTCT.Designer.cs">
-      <DependentUpon>reportNTCT.cs</DependentUpon>
-    </Compile>
     <Compile Include="Report\rptDanhSachNhanCongTheoCongTrinh.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -276,9 +270,6 @@
     <EmbeddedResource Include="Report\reportDanhSachVatTuVaTongChiPhi.resx">
       <DependentUpon>reportDanhSachVatTuVaTongChiPhi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\reportNTCT.resx">
-      <DependentUpon>reportNTCT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\rptDanhSachNhanCongTheoCongTrinh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDanhSachNhanCongTheoCongTrinh.cs</LastGenOutput>
@@ -371,6 +362,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP %281%29.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
