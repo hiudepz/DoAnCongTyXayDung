@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.button1 = new System.Windows.Forms.Button();
             this.txtPhantramhoanthanh = new System.Windows.Forms.TextBox();
             this.txtMotatiendo = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(753, 225);
+            this.button1.Location = new System.Drawing.Point(992, 225);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -80,8 +80,8 @@
             // 
             this.dgvTienDo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTienDo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTienDo.Location = new System.Drawing.Point(13, 254);
-            this.dgvTienDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTienDo.Location = new System.Drawing.Point(252, 254);
+            this.dgvTienDo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTienDo.Name = "dgvTienDo";
             this.dgvTienDo.RowHeadersWidth = 51;
             this.dgvTienDo.RowTemplate.Height = 24;
@@ -135,7 +135,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(93, 31);
+            this.groupBox1.Location = new System.Drawing.Point(252, 65);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -147,7 +147,7 @@
             // dtpNgaycapnhattiendo
             // 
             this.dtpNgaycapnhattiendo.Location = new System.Drawing.Point(136, 78);
-            this.dtpNgaycapnhattiendo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgaycapnhattiendo.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgaycapnhattiendo.Name = "dtpNgaycapnhattiendo";
             this.dtpNgaycapnhattiendo.Size = new System.Drawing.Size(168, 22);
             this.dtpNgaycapnhattiendo.TabIndex = 5;
@@ -163,7 +163,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(619, 225);
+            this.textBox7.Location = new System.Drawing.Point(858, 225);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(129, 22);
@@ -172,30 +172,30 @@
             // 
             // ChartTienDo
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ChartTienDo.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.ChartTienDo.Legends.Add(legend2);
-            this.ChartTienDo.Location = new System.Drawing.Point(836, 254);
-            this.ChartTienDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            chartArea1.Name = "ChartArea1";
+            this.ChartTienDo.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ChartTienDo.Legends.Add(legend1);
+            this.ChartTienDo.Location = new System.Drawing.Point(1140, 254);
+            this.ChartTienDo.Margin = new System.Windows.Forms.Padding(4);
             this.ChartTienDo.Name = "ChartTienDo";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Tiến độ";
-            this.ChartTienDo.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Tiến độ";
+            this.ChartTienDo.Series.Add(series1);
             this.ChartTienDo.Size = new System.Drawing.Size(573, 422);
             this.ChartTienDo.TabIndex = 21;
             this.ChartTienDo.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "Bảng theo dõi tiến độ ";
-            this.ChartTienDo.Titles.Add(title2);
+            title1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Bảng theo dõi tiến độ ";
+            this.ChartTienDo.Titles.Add(title1);
             // 
             // TienDo_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1423, 682);
+            this.ClientSize = new System.Drawing.Size(1924, 1033);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvTienDo);
             this.Controls.Add(this.groupBox1);

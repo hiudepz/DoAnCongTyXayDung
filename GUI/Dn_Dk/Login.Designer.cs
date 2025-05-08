@@ -85,7 +85,7 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(327, 228);
+            this.btnDangNhap.Location = new System.Drawing.Point(490, 195);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(92, 37);
             this.btnDangNhap.TabIndex = 3;
@@ -95,9 +95,9 @@
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(425, 228);
+            this.btnDangKy.Location = new System.Drawing.Point(588, 277);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(85, 37);
+            this.btnDangKy.Size = new System.Drawing.Size(67, 26);
             this.btnDangKy.TabIndex = 3;
             this.btnDangKy.Text = "Đăng Ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(531, 228);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(489, 277);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
-            this.btnDoiMatKhau.Size = new System.Drawing.Size(124, 37);
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(95, 26);
             this.btnDoiMatKhau.TabIndex = 4;
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
             this.btnDoiMatKhau.UseVisualStyleBackColor = true;
@@ -140,6 +140,7 @@
             this.Name = "Login";
             this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

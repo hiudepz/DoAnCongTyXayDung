@@ -50,7 +50,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(980, 177);
+            this.button1.Location = new System.Drawing.Point(1368, 276);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -63,12 +63,12 @@
             this.dgvNhathau_user.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhathau_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhathau_user.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvNhathau_user.Location = new System.Drawing.Point(0, 204);
+            this.dgvNhathau_user.Location = new System.Drawing.Point(0, 388);
             this.dgvNhathau_user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvNhathau_user.Name = "dgvNhathau_user";
             this.dgvNhathau_user.RowHeadersWidth = 51;
             this.dgvNhathau_user.RowTemplate.Height = 24;
-            this.dgvNhathau_user.Size = new System.Drawing.Size(1067, 350);
+            this.dgvNhathau_user.Size = new System.Drawing.Size(1924, 645);
             this.dgvNhathau_user.TabIndex = 8;
             this.dgvNhathau_user.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhathau_user_CellContentClick);
             // 
@@ -188,7 +188,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(97, 31);
+            this.groupBox1.Location = new System.Drawing.Point(485, 130);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -199,7 +199,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(845, 177);
+            this.textBox7.Location = new System.Drawing.Point(1233, 276);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(129, 22);
@@ -210,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1924, 1033);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvNhathau_user);
             this.Controls.Add(this.groupBox1);

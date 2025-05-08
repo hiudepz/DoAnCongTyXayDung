@@ -60,7 +60,7 @@
             // 
             // pbVattu
             // 
-            this.pbVattu.Location = new System.Drawing.Point(756, 178);
+            this.pbVattu.Location = new System.Drawing.Point(1116, 199);
             this.pbVattu.Margin = new System.Windows.Forms.Padding(4);
             this.pbVattu.Name = "pbVattu";
             this.pbVattu.Size = new System.Drawing.Size(153, 121);
@@ -70,7 +70,7 @@
             // 
             // nudMuctonkhotoithieu
             // 
-            this.nudMuctonkhotoithieu.Location = new System.Drawing.Point(749, 85);
+            this.nudMuctonkhotoithieu.Location = new System.Drawing.Point(1109, 106);
             this.nudMuctonkhotoithieu.Margin = new System.Windows.Forms.Padding(4);
             this.nudMuctonkhotoithieu.Maximum = new decimal(new int[] {
             -1530494976,
@@ -83,7 +83,7 @@
             // 
             // nudSoluongtonkho
             // 
-            this.nudSoluongtonkho.Location = new System.Drawing.Point(749, 36);
+            this.nudSoluongtonkho.Location = new System.Drawing.Point(1109, 57);
             this.nudSoluongtonkho.Margin = new System.Windows.Forms.Padding(4);
             this.nudSoluongtonkho.Maximum = new decimal(new int[] {
             1410065408,
@@ -96,7 +96,7 @@
             // 
             // txtDonvitinh
             // 
-            this.txtDonvitinh.Location = new System.Drawing.Point(387, 36);
+            this.txtDonvitinh.Location = new System.Drawing.Point(747, 57);
             this.txtDonvitinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonvitinh.Name = "txtDonvitinh";
             this.txtDonvitinh.Size = new System.Drawing.Size(132, 22);
@@ -104,7 +104,7 @@
             // 
             // txtDongia
             // 
-            this.txtDongia.Location = new System.Drawing.Point(387, 85);
+            this.txtDongia.Location = new System.Drawing.Point(747, 106);
             this.txtDongia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDongia.Name = "txtDongia";
             this.txtDongia.Size = new System.Drawing.Size(132, 22);
@@ -112,7 +112,7 @@
             // 
             // txtManhacc
             // 
-            this.txtManhacc.Location = new System.Drawing.Point(141, 135);
+            this.txtManhacc.Location = new System.Drawing.Point(501, 156);
             this.txtManhacc.Margin = new System.Windows.Forms.Padding(4);
             this.txtManhacc.Name = "txtManhacc";
             this.txtManhacc.Size = new System.Drawing.Size(132, 22);
@@ -120,7 +120,7 @@
             // 
             // txtTenvattu
             // 
-            this.txtTenvattu.Location = new System.Drawing.Point(141, 84);
+            this.txtTenvattu.Location = new System.Drawing.Point(501, 105);
             this.txtTenvattu.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenvattu.Name = "txtTenvattu";
             this.txtTenvattu.Size = new System.Drawing.Size(132, 22);
@@ -128,7 +128,7 @@
             // 
             // txtMavattu
             // 
-            this.txtMavattu.Location = new System.Drawing.Point(141, 34);
+            this.txtMavattu.Location = new System.Drawing.Point(501, 55);
             this.txtMavattu.Margin = new System.Windows.Forms.Padding(4);
             this.txtMavattu.Name = "txtMavattu";
             this.txtMavattu.Size = new System.Drawing.Size(132, 22);
@@ -137,7 +137,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(576, 94);
+            this.label8.Location = new System.Drawing.Point(936, 115);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 16);
@@ -147,7 +147,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(576, 44);
+            this.label7.Location = new System.Drawing.Point(936, 65);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 16);
@@ -157,7 +157,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(797, 159);
+            this.label6.Location = new System.Drawing.Point(1157, 180);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 16);
@@ -167,7 +167,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 94);
+            this.label5.Location = new System.Drawing.Point(659, 115);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
@@ -177,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(299, 44);
+            this.label4.Location = new System.Drawing.Point(659, 65);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
@@ -187,7 +187,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 143);
+            this.label3.Location = new System.Drawing.Point(388, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 16);
@@ -197,7 +197,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 94);
+            this.label2.Location = new System.Drawing.Point(388, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 16);
@@ -207,7 +207,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 46);
+            this.label1.Location = new System.Drawing.Point(395, 67);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 16);
@@ -216,7 +216,7 @@
             // 
             // btnSuavattu
             // 
-            this.btnSuavattu.Location = new System.Drawing.Point(340, 271);
+            this.btnSuavattu.Location = new System.Drawing.Point(700, 292);
             this.btnSuavattu.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuavattu.Name = "btnSuavattu";
             this.btnSuavattu.Size = new System.Drawing.Size(100, 28);
@@ -227,7 +227,7 @@
             // 
             // btnXoavattu
             // 
-            this.btnXoavattu.Location = new System.Drawing.Point(203, 271);
+            this.btnXoavattu.Location = new System.Drawing.Point(563, 292);
             this.btnXoavattu.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoavattu.Name = "btnXoavattu";
             this.btnXoavattu.Size = new System.Drawing.Size(100, 28);
@@ -238,7 +238,7 @@
             // 
             // btnThemvattu
             // 
-            this.btnThemvattu.Location = new System.Drawing.Point(75, 271);
+            this.btnThemvattu.Location = new System.Drawing.Point(435, 292);
             this.btnThemvattu.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemvattu.Name = "btnThemvattu";
             this.btnThemvattu.Size = new System.Drawing.Size(100, 28);
@@ -252,17 +252,17 @@
             this.dgvVattu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVattu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVattu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvVattu.Location = new System.Drawing.Point(0, 348);
+            this.dgvVattu.Location = new System.Drawing.Point(0, 508);
             this.dgvVattu.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVattu.Name = "dgvVattu";
             this.dgvVattu.RowHeadersWidth = 51;
-            this.dgvVattu.Size = new System.Drawing.Size(1067, 206);
+            this.dgvVattu.Size = new System.Drawing.Size(1924, 525);
             this.dgvVattu.TabIndex = 7;
             this.dgvVattu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVattu_CellContentClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(603, 199);
+            this.button1.Location = new System.Drawing.Point(963, 220);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
@@ -273,7 +273,7 @@
             // 
             // txtUrlanhvattu_Admin
             // 
-            this.txtUrlanhvattu_Admin.Location = new System.Drawing.Point(589, 235);
+            this.txtUrlanhvattu_Admin.Location = new System.Drawing.Point(949, 256);
             this.txtUrlanhvattu_Admin.Margin = new System.Windows.Forms.Padding(4);
             this.txtUrlanhvattu_Admin.Name = "txtUrlanhvattu_Admin";
             this.txtUrlanhvattu_Admin.Size = new System.Drawing.Size(132, 22);
@@ -281,7 +281,7 @@
             // 
             // btnTimcongtrinh_admin
             // 
-            this.btnTimcongtrinh_admin.Location = new System.Drawing.Point(984, 319);
+            this.btnTimcongtrinh_admin.Location = new System.Drawing.Point(1344, 340);
             this.btnTimcongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimcongtrinh_admin.Name = "btnTimcongtrinh_admin";
             this.btnTimcongtrinh_admin.Size = new System.Drawing.Size(75, 23);
@@ -291,7 +291,7 @@
             // 
             // txtKeywordcongtrinh_admin
             // 
-            this.txtKeywordcongtrinh_admin.Location = new System.Drawing.Point(849, 319);
+            this.txtKeywordcongtrinh_admin.Location = new System.Drawing.Point(1209, 340);
             this.txtKeywordcongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKeywordcongtrinh_admin.Name = "txtKeywordcongtrinh_admin";
             this.txtKeywordcongtrinh_admin.Size = new System.Drawing.Size(129, 22);
@@ -302,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1924, 1033);
             this.Controls.Add(this.btnTimcongtrinh_admin);
             this.Controls.Add(this.txtKeywordcongtrinh_admin);
             this.Controls.Add(this.pbVattu);

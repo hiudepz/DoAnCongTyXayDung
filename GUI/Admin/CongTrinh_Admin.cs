@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -143,6 +144,24 @@ namespace GUI.Admin
 
         private void btnThemcongtrinh_admin_Click(object sender, EventArgs e)
         {
+            //string MaCongTrinh = txtMacongtrinh_admin.Text.Trim(); // hoặc lấy từ session đăng nhập
+            //string TenCongTrinh= txtTencongtrinh_admin.Text.Trim();
+            //string Diadiem = txtDiadiem_admin.Text.Trim();
+            //string ChuDauTu = txtChudautu_admin.Text.Trim();
+
+            //StringBuilder loi = new StringBuilder();
+            //if (string.IsNullOrWhiteSpace(matKhauCu))
+            //    loi.AppendLine("- Vui lòng nhập mật khẩu hiện tại.");
+            //if (matKhauMoi.Length < 6)
+            //    loi.AppendLine("- Mật khẩu mới phải từ 6 ký tự trở lên.");
+            //if (matKhauMoi != xacNhan)
+            //    loi.AppendLine("- Xác nhận mật khẩu không khớp.");
+
+            //if (loi.Length > 0)
+            //{
+            //    MessageBox.Show("Vui lòng kiểm tra lại:\n" + loi.ToString(), "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
             try
             {
                 var newConstruction = new CongTrinh

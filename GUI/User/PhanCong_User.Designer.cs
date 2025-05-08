@@ -57,7 +57,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbbCongTrinh);
-            this.groupBox1.Location = new System.Drawing.Point(260, 43);
+            this.groupBox1.Location = new System.Drawing.Point(574, 188);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -120,7 +120,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(964, 185);
+            this.btnTimKiem.Location = new System.Drawing.Point(1278, 330);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
@@ -130,7 +130,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(827, 185);
+            this.txtSearch.Location = new System.Drawing.Point(1141, 330);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(129, 22);
@@ -152,7 +152,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvBangPhanCong);
-            this.groupBox3.Location = new System.Drawing.Point(153, 214);
+            this.groupBox3.Location = new System.Drawing.Point(467, 359);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -190,7 +190,7 @@
             this.groupBox4.Controls.Add(this.txtCongTrinhIdvs);
             this.groupBox4.Controls.Add(this.dtpstartvs);
             this.groupBox4.Controls.Add(this.txtIdNhanCongvs);
-            this.groupBox4.Location = new System.Drawing.Point(749, 12);
+            this.groupBox4.Location = new System.Drawing.Point(1063, 157);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1924, 1033);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnTimKiem);

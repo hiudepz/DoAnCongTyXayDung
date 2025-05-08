@@ -92,5 +92,12 @@ namespace GUI.Admin
                 new Login().Show();
             }
         }
+
+        private void phânCôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhanCong_Admin a = new PhanCong_Admin();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }

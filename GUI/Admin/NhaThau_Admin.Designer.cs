@@ -53,7 +53,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(980, 177);
+            this.button1.Location = new System.Drawing.Point(1363, 242);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -63,7 +63,7 @@
             // 
             // btnSuanhathau_Admin
             // 
-            this.btnSuanhathau_Admin.Location = new System.Drawing.Point(301, 158);
+            this.btnSuanhathau_Admin.Location = new System.Drawing.Point(653, 241);
             this.btnSuanhathau_Admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSuanhathau_Admin.Name = "btnSuanhathau_Admin";
             this.btnSuanhathau_Admin.Size = new System.Drawing.Size(75, 23);
@@ -74,7 +74,7 @@
             // 
             // btnXoanhathau_Admin
             // 
-            this.btnXoanhathau_Admin.Location = new System.Drawing.Point(195, 158);
+            this.btnXoanhathau_Admin.Location = new System.Drawing.Point(547, 241);
             this.btnXoanhathau_Admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoanhathau_Admin.Name = "btnXoanhathau_Admin";
             this.btnXoanhathau_Admin.Size = new System.Drawing.Size(75, 23);
@@ -85,7 +85,7 @@
             // 
             // btnThemnhathau_Admin
             // 
-            this.btnThemnhathau_Admin.Location = new System.Drawing.Point(97, 158);
+            this.btnThemnhathau_Admin.Location = new System.Drawing.Point(449, 241);
             this.btnThemnhathau_Admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemnhathau_Admin.Name = "btnThemnhathau_Admin";
             this.btnThemnhathau_Admin.Size = new System.Drawing.Size(75, 23);
@@ -99,12 +99,12 @@
             this.dgvNhathau_Admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhathau_Admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhathau_Admin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvNhathau_Admin.Location = new System.Drawing.Point(0, 204);
+            this.dgvNhathau_Admin.Location = new System.Drawing.Point(0, 426);
             this.dgvNhathau_Admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvNhathau_Admin.Name = "dgvNhathau_Admin";
             this.dgvNhathau_Admin.RowHeadersWidth = 51;
             this.dgvNhathau_Admin.RowTemplate.Height = 24;
-            this.dgvNhathau_Admin.Size = new System.Drawing.Size(1067, 350);
+            this.dgvNhathau_Admin.Size = new System.Drawing.Size(1924, 607);
             this.dgvNhathau_Admin.TabIndex = 8;
             this.dgvNhathau_Admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhathau_Admin_CellContentClick);
             // 
@@ -224,7 +224,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(97, 31);
+            this.groupBox1.Location = new System.Drawing.Point(452, 106);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -235,7 +235,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(845, 177);
+            this.textBox7.Location = new System.Drawing.Point(1228, 242);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(129, 22);
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1924, 1033);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSuanhathau_Admin);
             this.Controls.Add(this.btnXoanhathau_Admin);
@@ -257,6 +257,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NhaThau_Admin";
             this.Text = "NhaThau_Admin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.NhaThau_Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhathau_Admin)).EndInit();
             this.groupBox1.ResumeLayout(false);

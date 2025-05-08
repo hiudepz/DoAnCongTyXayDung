@@ -167,5 +167,10 @@ namespace GUI.Admin
             List<DTO_CongTrinh_VatTu> ds = b.GetAllTK(keyword);
             dgvCT_VT_Admin.DataSource = ds;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

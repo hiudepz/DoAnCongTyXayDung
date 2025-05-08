@@ -54,7 +54,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(753, 225);
+            this.button1.Location = new System.Drawing.Point(925, 224);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -80,7 +80,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(257, 193);
+            this.btnXoa.Location = new System.Drawing.Point(348, 186);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 28);
@@ -91,7 +91,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(126, 193);
+            this.btnLuu.Location = new System.Drawing.Point(217, 186);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 28);
@@ -104,7 +104,7 @@
             // 
             this.dgvTienDo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTienDo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTienDo.Location = new System.Drawing.Point(13, 254);
+            this.dgvTienDo.Location = new System.Drawing.Point(185, 253);
             this.dgvTienDo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTienDo.Name = "dgvTienDo";
             this.dgvTienDo.RowHeadersWidth = 51;
@@ -159,7 +159,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(94, 31);
+            this.groupBox1.Location = new System.Drawing.Point(185, 24);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -188,7 +188,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(618, 225);
+            this.textBox7.Location = new System.Drawing.Point(790, 224);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(129, 22);
@@ -201,7 +201,7 @@
             this.ChartTienDo.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.ChartTienDo.Legends.Add(legend2);
-            this.ChartTienDo.Location = new System.Drawing.Point(836, 254);
+            this.ChartTienDo.Location = new System.Drawing.Point(1160, 254);
             this.ChartTienDo.Margin = new System.Windows.Forms.Padding(4);
             this.ChartTienDo.Name = "ChartTienDo";
             series2.ChartArea = "ChartArea1";
@@ -220,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1423, 682);
+            this.ClientSize = new System.Drawing.Size(1924, 1033);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnLuu);
@@ -230,6 +230,7 @@
             this.Controls.Add(this.ChartTienDo);
             this.Name = "TienDo_Admin";
             this.Text = "TienDo2_Admin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TienDo2_Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTienDo)).EndInit();
             this.groupBox1.ResumeLayout(false);
