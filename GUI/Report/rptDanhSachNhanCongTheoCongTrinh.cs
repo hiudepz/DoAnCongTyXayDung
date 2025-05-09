@@ -16,14 +16,14 @@ namespace GUI.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptDanhSachVatTuVaTongChiPhi : ReportClass {
+    public class rptDanhSachNhanCongTheoCongTrinh : ReportClass {
         
-        public rptDanhSachVatTuVaTongChiPhi() {
+        public rptDanhSachNhanCongTheoCongTrinh() {
         }
         
         public override string ResourceName {
             get {
-                return "rptDanhSachVatTuVaTongChiPhi.rpt";
+                return "rptDanhSachNhanCongTheoCongTrinh.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace GUI.Report {
         
         public override string FullResourceName {
             get {
-                return "GUI.Report.rptDanhSachVatTuVaTongChiPhi.rpt";
+                return "GUI.Report.rptDanhSachNhanCongTheoCongTrinh.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace GUI.Report {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_CongTrinhId {
+        public CrystalDecisions.Shared.IParameterField Parameter_CongTrinhID {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,9 +98,9 @@ namespace GUI.Report {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptDanhSachVatTuVaTongChiPhi : Component, ICachedReport {
+    public class CachedrptDanhSachNhanCongTheoCongTrinh : Component, ICachedReport {
         
-        public CachedrptDanhSachVatTuVaTongChiPhi() {
+        public CachedrptDanhSachNhanCongTheoCongTrinh() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace GUI.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptDanhSachVatTuVaTongChiPhi rpt = new rptDanhSachVatTuVaTongChiPhi();
+            rptDanhSachNhanCongTheoCongTrinh rpt = new rptDanhSachNhanCongTheoCongTrinh();
             rpt.Site = this.Site;
             return rpt;
         }

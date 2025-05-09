@@ -19,11 +19,7 @@ namespace DAL
         {
             return db.VatTus.Distinct().ToList();
         }
-
-        //public List<CongTrinh_VatTu> GetAllCTVT()
-        //{
-        //    return db.CongTrinh_VatTus.Distinct().ToList();
-        //}
+  
         public bool Delete(CongTrinh_VatTu what)
         {
             try

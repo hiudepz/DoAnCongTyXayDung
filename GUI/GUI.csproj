@@ -54,12 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\BaoCao_Admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\BaoCao_Admin.Designer.cs">
-      <DependentUpon>BaoCao_Admin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\CongTrinh_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,17 +133,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ChiPhiTongTheoIdCongTrinh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChiPhiTongTheoIdCongTrinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\reportDanhSachVatTuVaTongChiPhi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report\reportDanhSachVatTuVaTongChiPhi.Designer.cs">
       <DependentUpon>reportDanhSachVatTuVaTongChiPhi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\reportNTCT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\reportNTCT.Designer.cs">
-      <DependentUpon>reportNTCT.cs</DependentUpon>
+    <Compile Include="Report\rptDanhSachNhanCongTheoCongTrinh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDanhSachNhanCongTheoCongTrinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rptDanhSachVatTuVaTongChiPhi.cs">
       <AutoGen>True</AutoGen>
@@ -163,11 +163,17 @@
       <DependentUpon>rptNhaThauCongTrinh.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="User\BaoCao_User.cs">
+    <Compile Include="Report\rptTienDoCongTrinhTheoIdCongTrinh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTienDoCongTrinhTheoIdCongTrinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Baocao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\BaoCao_User.Designer.cs">
-      <DependentUpon>BaoCao_User.cs</DependentUpon>
+    <Compile Include="Report\Baocao.Designer.cs">
+      <DependentUpon>Baocao.cs</DependentUpon>
     </Compile>
     <Compile Include="User\CongTrinh_User.cs">
       <SubType>Form</SubType>
@@ -211,9 +217,6 @@
     <Compile Include="User\VatTu_User.Designer.cs">
       <DependentUpon>VatTu_User.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin\BaoCao_Admin.resx">
-      <DependentUpon>BaoCao_Admin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\CongTrinh_Admin.resx">
       <DependentUpon>CongTrinh_Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,11 +263,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\ChiPhiTongTheoIdCongTrinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ChiPhiTongTheoIdCongTrinh.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\reportDanhSachVatTuVaTongChiPhi.resx">
       <DependentUpon>reportDanhSachVatTuVaTongChiPhi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\reportNTCT.resx">
-      <DependentUpon>reportNTCT.cs</DependentUpon>
+    <EmbeddedResource Include="Report\rptDanhSachNhanCongTheoCongTrinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDanhSachNhanCongTheoCongTrinh.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rptDanhSachVatTuVaTongChiPhi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -274,8 +282,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptNhaThauCongTrinh.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\BaoCao_User.resx">
-      <DependentUpon>BaoCao_User.cs</DependentUpon>
+    <EmbeddedResource Include="Report\rptTienDoCongTrinhTheoIdCongTrinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTienDoCongTrinhTheoIdCongTrinh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Baocao.resx">
+      <DependentUpon>Baocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\CongTrinh_User.resx">
       <DependentUpon>CongTrinh_User.cs</DependentUpon>
@@ -350,6 +362,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP %281%29.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

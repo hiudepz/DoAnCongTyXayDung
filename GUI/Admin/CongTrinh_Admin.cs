@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -48,7 +49,7 @@ namespace GUI.Admin
             // Định dạng cột (tuỳ chọn)
             dgvNhathaubencongtrinh_admin.Columns["ten_cong_ty"].Width = 150;
             dgvNhathaubencongtrinh_admin.Columns["ma_so_thue"].Width = 150;
-            //cbbTrangthai_admin
+            //cbbNhaThau_admin
             try
             {
                 // Gọi BLL để lấy danh sách trạng thái
@@ -63,6 +64,29 @@ namespace GUI.Admin
                 // pick the first value if need
                 if (cbbNhathaucongtrinh_admin.Items.Count > 0)
                     cbbNhathaucongtrinh_admin.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải danh sách trạng thái: " + ex.Message,
+                                "Lỗi",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            //cbbVatTu
+            try
+            {
+                // Gọi BLL để lấy danh sách trạng thái
+                List<string> danhSachContractor = vattu.GetNameMaterialList();
+
+                // assign date to combobox
+                cbbVatlieucongtrinh_admin.DataSource = danhSachContractor;
+
+                // only choose no text
+                cbbVatlieucongtrinh_admin.DropDownStyle = ComboBoxStyle.DropDownList;
+
+                // pick the first value if need
+                if (cbbVatlieucongtrinh_admin.Items.Count > 0)
+                    cbbVatlieucongtrinh_admin.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -143,6 +167,7 @@ namespace GUI.Admin
 
         private void btnThemcongtrinh_admin_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 var newConstruction = new CongTrinh

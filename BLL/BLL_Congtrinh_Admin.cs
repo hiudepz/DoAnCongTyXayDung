@@ -27,8 +27,22 @@ namespace BLL
         {
             // Validate 
             if (construction.ngay_du_kien_ket_thuc < construction.ngay_bat_dau)
+            {
                 throw new Exception("Ngày kết thúc phải sau ngày bắt đầu");
-
+            }
+                
+            if (string.IsNullOrEmpty(construction.ten))
+            {
+                throw new Exception("Không để trống tên");
+            }
+            if (string.IsNullOrEmpty(construction.dia_diem))
+            {
+                throw new Exception("Không để trống địa chỉ");
+            }
+            if (string.IsNullOrEmpty(construction.chu_dau_tu))
+            {
+                throw new Exception("Không để trống chủ đầu tư");
+            }
             return ctrDal.AddConstruction(construction);
         }
 
@@ -45,7 +59,18 @@ namespace BLL
             // valite date
             if (construction.ngay_du_kien_ket_thuc < construction.ngay_bat_dau)
                 throw new Exception("Ngày kết thúc phải sau ngày bắt đầu");
-
+            if (string.IsNullOrEmpty(construction.ten))
+            {
+                throw new Exception("Không để trống tên");
+            }
+            if (string.IsNullOrEmpty(construction.dia_diem))
+            {
+                throw new Exception("Không để trống địa chỉ");
+            }
+            if (string.IsNullOrEmpty(construction.chu_dau_tu))
+            {
+                throw new Exception("Không để trống chủ đầu tư");
+            }
             return ctrDal.UpdateConstruction(construction);
         }
 

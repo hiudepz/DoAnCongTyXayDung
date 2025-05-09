@@ -60,13 +60,14 @@ namespace DAL
         {
             try
             {
+            
                 CongTrinh_NhaThau entity = new CongTrinh_NhaThau
                 {
                     cong_trinh_id = what.cong_trinh_id,
                     nha_thau_id = what.nha_thau_id,
                     vai_tro = what.vai_tro
                 };
-
+                
                 db.CongTrinh_NhaThaus.InsertOnSubmit(entity);
                 db.SubmitChanges();
                 return true;
@@ -81,21 +82,22 @@ namespace DAL
                 try
                 {
                     var existing = db.CongTrinh_NhaThaus.FirstOrDefault(nt=>nt.cong_trinh_id==what.cong_trinh_id && nt.nha_thau_id==what.nha_thau_id);
-                    CongTrinh_NhaThau entity = new CongTrinh_NhaThau
-                    {
-                        cong_trinh_id = what.cong_trinh_id,
-                        nha_thau_id = what.nha_thau_id,
-                        vai_tro = what.vai_tro
-                    };
-
-                    db.CongTrinh_NhaThaus.InsertOnSubmit(entity);
+                   
+                if(existing != null)
+                {
+                    existing.vai_tro = what.vai_tro;
                     db.SubmitChanges();
                     return true;
+                }
+                      
+                    
+                    
                 }
                 catch
                 {
                     return false;
                 }
+            return false;
             }
         public List<DTO_CongTrinh_NhaThau> GetAllCTNTTK(string keyword = "")
         {

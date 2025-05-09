@@ -74,8 +74,10 @@ select * from PhanCong
 
 select * from TienDo
 
-select * from NguoiDung
+select * from NhaThau
 
-select * from NguoiDung
+select * from NhanCong
+
+select * from CongTrinh_NhaThau
 
 select * from NguoiDung

@@ -22,11 +22,17 @@ namespace BLL
 
         //}
 
-
+        public List<string> GetNameMaterialList()
+        {
+            return ctrDal.GetAllNameMaterials();
+        }
         public bool AddMaterial(VatTu material)
         {
-         
 
+            if (string.IsNullOrEmpty(material.ten))
+            {
+                throw new Exception("Không được để trống tên");
+            }
             return ctrDal.AddMaterial(material);
         }
 

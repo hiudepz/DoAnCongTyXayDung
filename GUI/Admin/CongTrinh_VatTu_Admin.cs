@@ -27,24 +27,31 @@ namespace GUI.Admin
             decimal.TryParse(txtDongia.Text, out decimal donGia);
 
             DateTime ngaySuDung = dtpNgaysudung.Value;
+            try
+            {
 
-            CongTrinh_VatTu dto = new CongTrinh_VatTu
-            {
-                cong_trinh_id = (int)cbbIdCT.SelectedValue,
-                vat_tu_id = (int)cbbIdVT.SelectedValue,
-                so_luong = soLuong,
-                don_gia = donGia,
-                ngay_su_dung = ngaySuDung
-            };
 
-            if (b.ThemVatTuVaoCongTrinh(dto))
+                CongTrinh_VatTu dto = new CongTrinh_VatTu
+                {
+                    cong_trinh_id = (int)cbbIdCT.SelectedValue,
+                    vat_tu_id = (int)cbbIdVT.SelectedValue,
+                    so_luong = soLuong,
+                    don_gia = donGia,
+                    ngay_su_dung = ngaySuDung
+                };
+
+                if (b.ThemVatTuVaoCongTrinh(dto))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    dgvCT_VT_Admin.DataSource = b.LayDanhSachCTVT();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
+            }catch(Exception ex)
             {
-                MessageBox.Show("Thêm thành công");
-                dgvCT_VT_Admin.DataSource = b.LayDanhSachCTVT();
-            }
-            else
-            {
-                MessageBox.Show("Thêm thất bại");
+                MessageBox.Show("Lỗi " + ex.Message);
             }
         }
 
@@ -85,7 +92,7 @@ namespace GUI.Admin
             // Lấy ID từ dòng được chọn
            
                 cbbIdCT.Text = dgvCT_VT_Admin.Rows[row].Cells[0].Value?.ToString(); // Gán vào ComboBox sẽ tự hiển thị tên
-                cbbIdVT.Text = dgvCT_VT_Admin.Rows[row].Cells[0].Value?.ToString();
+                cbbIdVT.Text = dgvCT_VT_Admin.Rows[row].Cells[1].Value?.ToString();
             
             txtSoluong.Text = dgvCT_VT_Admin.Rows[row].Cells[2].Value != null ? dgvCT_VT_Admin.Rows[row].Cells[2].Value.ToString() : "";
             txtDongia.Text = dgvCT_VT_Admin.Rows[row].Cells[3].Value != null ? dgvCT_VT_Admin.Rows[row].Cells[3].Value.ToString() : "";
@@ -101,22 +108,25 @@ namespace GUI.Admin
             }
 
             DateTime ngaySuDung = dtpNgaysudung.Value;
+            var confirm = MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (confirm == DialogResult.Yes)
+            {
+                var dto = new CongTrinh_VatTu
+                {
+                    cong_trinh_id = (int)cbbIdCT.SelectedValue,
+                    vat_tu_id = (int)cbbIdVT.SelectedValue,
+                    ngay_su_dung = ngaySuDung
+                };
 
-            var dto = new CongTrinh_VatTu
-            {
-                cong_trinh_id = (int)cbbIdCT.SelectedValue,
-                vat_tu_id = (int)cbbIdVT.SelectedValue,
-                ngay_su_dung = ngaySuDung
-            };
-
-            if (b.XoaVatTuVaoCongTrinh(dto))
-            {
-                MessageBox.Show("Xóa thành công!");
-                dgvCT_VT_Admin.DataSource = b.LayDanhSachCTVT();
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại!");
+                if (b.XoaVatTuVaoCongTrinh(dto))
+                {
+                    MessageBox.Show("Xóa thành công!");
+                    dgvCT_VT_Admin.DataSource = b.LayDanhSachCTVT();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                }
             }
         }
 
@@ -136,25 +146,28 @@ namespace GUI.Admin
             }
 
             DateTime ngaySuDung = dtpNgaysudung.Value;
+          
 
-            var dto = new CongTrinh_VatTu
-            {
-                cong_trinh_id = (int)cbbIdCT.SelectedValue,
-                vat_tu_id = (int)cbbIdVT.SelectedValue,
-                so_luong = soLuong,
-                don_gia = donGia,
-                ngay_su_dung = ngaySuDung
-            };
 
-            if (b.SuaVatTuVaoCongTrinh(dto))
-            {
-                MessageBox.Show("Cập nhật thành công!");
-                dgvCT_VT_Admin.DataSource = b.LayDanhSachCTVT();
-            }
-            else
-            {
-                MessageBox.Show("Hãy xóa bản ghi rồi thêm mới");
-            }
+                var dto = new CongTrinh_VatTu
+                {
+                    cong_trinh_id = (int)cbbIdCT.SelectedValue,
+                    vat_tu_id = (int)cbbIdVT.SelectedValue,
+                    so_luong = soLuong,
+                    don_gia = donGia,
+                    ngay_su_dung = ngaySuDung
+                };
+
+                if (b.SuaVatTuVaoCongTrinh(dto))
+                {
+                    MessageBox.Show("Cập nhật thành công!");
+                    dgvCT_VT_Admin.DataSource = b.LayDanhSachCTVT();
+                }
+                else
+                {
+                    MessageBox.Show("Đã đụng vào vùng cấm, hãy xóa bản ghi rồi thêm mới");
+                }
+            
 
         }
 
@@ -166,6 +179,11 @@ namespace GUI.Admin
         {
             List<DTO_CongTrinh_VatTu> ds = b.GetAllTK(keyword);
             dgvCT_VT_Admin.DataSource = ds;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

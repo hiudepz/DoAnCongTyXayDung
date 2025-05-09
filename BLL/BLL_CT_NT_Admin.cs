@@ -32,7 +32,19 @@ namespace BLL
         }
         public bool ThemNhaThauVaoCongTrinh(CongTrinh_NhaThau dto)
         {
+            if(string.IsNullOrEmpty(dto.vai_tro))
+            {
+                throw new Exception("Vai trò không được để trống");
+            }
             return dal.Insert(dto);
+        }
+        public bool SuaNhaThauVaCongTrinh(CongTrinh_NhaThau dto)
+        {
+            if (string.IsNullOrEmpty(dto.vai_tro))
+            {
+                throw new Exception("Vai trò không được để trống");
+            }
+            return dal.Update(dto);
         }
         public List<DTO_CongTrinh_NhaThau> GetAllTK(string keyword)
         {

@@ -90,7 +90,7 @@ namespace GUI.Report {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_tenCongTrinh {
+        public CrystalDecisions.Shared.IParameterField Parameter_IdCongTrinh {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }

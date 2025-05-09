@@ -1,4 +1,5 @@
 ﻿using GUI.Report;
+using GUI.User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,9 +43,9 @@ namespace GUI.Admin
 
         private void reportNhaThauCongTrinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportNTCT a = new reportNTCT();
-            a.MdiParent = this;
-            a.Show();
+            //reportNTCT a = new reportNTCT();
+            //a.MdiParent = this;
+            //a.Show();
         }
 
         private void nhancongToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,9 +71,31 @@ namespace GUI.Admin
         private void reportDanhSachVatTuVaTongChiPhiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             reportDanhSachVatTuVaTongChiPhi a = new reportDanhSachVatTuVaTongChiPhi();
+            a.MdiParent = this;
+            a.Show();
+        }
 
+        private void bảngBáoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Baocao a = new Baocao();
+            a.MdiParent = this;
+            a.Show();
+        }
 
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult ds = MessageBox.Show("Bạn có muốn quay về trang đăng nhập", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (ds == DialogResult.Yes)
+            {
+                // Hiển thị lại form Login
+                this.Hide();
+                new Login().Show();
+            }
+        }
 
+        private void phânCôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhanCong_Admin a = new PhanCong_Admin();
             a.MdiParent = this;
             a.Show();
         }

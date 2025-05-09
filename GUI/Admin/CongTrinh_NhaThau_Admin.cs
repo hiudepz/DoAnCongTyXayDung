@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace GUI.Admin
 {
@@ -23,24 +24,31 @@ namespace GUI.Admin
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            CongTrinh_NhaThau dto = new CongTrinh_NhaThau
+            try
             {
-                cong_trinh_id = (int)cbbIdCT.SelectedValue,
-                nha_thau_id = (int)cbbIdNT.SelectedValue,
-                vai_tro = txtVaitro.Text
-            };
 
-            if (b.ThemNhaThauVaoCongTrinh(dto))
+
+                CongTrinh_NhaThau dto = new CongTrinh_NhaThau
+                {
+                    cong_trinh_id = (int)cbbIdCT.SelectedValue,
+                    nha_thau_id = (int)cbbIdNT.SelectedValue,
+                    vai_tro = txtVaitro.Text
+                };
+
+                if (b.ThemNhaThauVaoCongTrinh(dto))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    dgvCT_NT_Admin.DataSource = b.LayDanhSachCTNT();
+                }
+
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
+            }catch (Exception ex)
             {
-                MessageBox.Show("Thêm thành công");
-                dgvCT_NT_Admin.DataSource = b.LayDanhSachCTNT();
+                MessageBox.Show("Lỗi " + ex.Message);
             }
-               
-            else
-            {
-                MessageBox.Show("Thêm thất bại");
-            }
-                
 
 
         }
@@ -82,25 +90,82 @@ namespace GUI.Admin
             //{
             //    cbbIdCT.SelectedValue = idCT; // Gán vào ComboBox sẽ tự hiển thị tên
             //}
-            cbbIdCT.Text = dgvCT_NT_Admin.Rows[row].Cells[0].Value?.ToString(); // Gán vào ComboBox sẽ tự hiển thị tên
-
+            //cbbIdCT.Text = dgvCT_NT_Admin.Rows[row].Cells[0].Value?.ToString(); // Gán vào ComboBox sẽ tự hiển thị tên
+            //cbbIdNT.Text = dgvCT_NT_Admin.Rows[row].Cells[1].Value?.ToString();
             //if (int.TryParse(dgvCT_NT_Admin.Rows[row].Cells[1].Value?.ToString(), out int idNT))
             //{
             //    cbbIdNT.SelectedValue = idNT;
             //}
-            cbbIdNT.Text = dgvCT_NT_Admin.Rows[row].Cells[1].Value?.ToString();
-           txtVaitro.Text = dgvCT_NT_Admin.Rows[row].Cells[2].Value != null ? dgvCT_NT_Admin.Rows[row].Cells[2].Value.ToString() : "";
+            // Lấy ID từ DataGridView
+            var tenCT = dgvCT_NT_Admin.Rows[e.RowIndex].Cells[0].Value?.ToString();
+            var tenNT = dgvCT_NT_Admin.Rows[e.RowIndex].Cells[1].Value?.ToString();
+            
+            cbbIdCT.SelectedItem = b.LayDanhSachCongTrinh().FirstOrDefault(ct => ct.ten == tenCT);
+            cbbIdNT.SelectedItem = b.LayDanhSachNhaThau().FirstOrDefault(nt => nt.ten_cong_ty == tenNT);
+            txtVaitro.Text = dgvCT_NT_Admin.Rows[row].Cells[2].Value != null ? dgvCT_NT_Admin.Rows[row].Cells[2].Value.ToString() : "";
            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var confirm = MessageBox.Show("Bạn có chắc chắn xóa","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+                if (confirm == DialogResult.Yes)
+                {
+
+
+                    var dto = new CongTrinh_NhaThau
+                    {
+                        cong_trinh_id = (int)cbbIdCT.SelectedValue,
+                        nha_thau_id = (int)cbbIdNT.SelectedValue,
+                        vai_tro = txtVaitro.Text
+                    };
+
+                    if (b.XoaNhaThauVaoCongTrinh(dto))
+                    {
+                        MessageBox.Show("Xóa thành công!");
+                        dgvCT_NT_Admin.DataSource = b.LayDanhSachCTNT();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại!");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi "+ ex.Message,"Thông báo");
+            }
 
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var existing = new CongTrinh_NhaThau
+                {
+                    cong_trinh_id = (int)cbbIdCT.SelectedValue,
+                    nha_thau_id = (int)cbbIdNT.SelectedValue,
+                    vai_tro = txtVaitro.Text
+                };
 
+                if(existing != null)
+                {
+                    b.SuaNhaThauVaCongTrinh(existing);
+                    MessageBox.Show("Cập nhật thành công");
+                    dgvCT_NT_Admin.DataSource = b.LayDanhSachCTNT();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
         }
 
         private void txtKeywordcongtrinh_admin_TextChanged(object sender, EventArgs e)

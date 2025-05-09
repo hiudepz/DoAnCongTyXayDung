@@ -28,10 +28,26 @@ namespace BLL
         }
         public bool SuaVatTuVaoCongTrinh(CongTrinh_VatTu dto)
         {
+            if (dto.don_gia < 0)
+            {
+                throw new Exception("Đơn giá phải lớn hơn 0");
+            }
+            if (dto.so_luong < 0)
+            {
+                throw new Exception("Số lượng phải lớn hơn 0");
+            }
             return dal.Update(dto);
         }
         public bool ThemVatTuVaoCongTrinh(CongTrinh_VatTu dto)
         {
+            if (dto.don_gia <0)
+            {
+                throw new Exception("Đơn giá phải lớn hơn 0");
+            }
+            if (dto.so_luong < 0)
+            {
+                throw new Exception("Số lượng phải lớn hơn 0");
+            }
             return dal.Insert(dto);
         }
         public bool XoaVatTuVaoCongTrinh(CongTrinh_VatTu dto)
