@@ -100,6 +100,7 @@ namespace GUI.Admin
 
             try
             {
+                
                 // Lấy ID từ dòng được chọn
                 int id = Convert.ToInt32(dgvNhathau_Admin.CurrentRow.Cells["id"].Value);
 

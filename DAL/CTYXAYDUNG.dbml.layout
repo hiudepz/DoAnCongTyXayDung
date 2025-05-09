@@ -63,7 +63,7 @@
         <classShapeMoniker Id="d54bd046-818d-4d01-b658-391e801c0312" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.375 : 6.88701835596955); (3.72232443490112 : 7.23434279087067 : JumpStart); (3.84017556509888 : 7.35219392106843 : JumpEnd); (3.875 : 7.38701835596955); (3.875 : 8.63544840494792); (4.125 : 8.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3.375 : 6.88701835596955); (3.875 : 7.38701835596955); (3.875 : 8.63544840494792); (4.125 : 8.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CTYXAYDUNGDataContext/CongTrinh/CongTrinh_CongTrinh_VatTu" />
       <nodes>
         <classShapeMoniker Id="1827b642-039c-43f7-a6d5-8723749e45cf" />

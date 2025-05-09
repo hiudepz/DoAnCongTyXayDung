@@ -171,6 +171,7 @@ namespace GUI.Admin
 
         private void btnXoacongtrinh_admin_Click(object sender, EventArgs e)
         {
+            
             if (dgvCongtrinh_admin.CurrentRow == null) return;
 
             int id = Convert.ToInt32(dgvCongtrinh_admin.CurrentRow.Cells["id"].Value);

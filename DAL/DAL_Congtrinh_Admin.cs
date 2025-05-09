@@ -13,31 +13,7 @@ namespace DAL
         public List<CongTrinh> GetAllConstruction()
         {
 
-            //try
-            //{
-            //    using (var db = new CTYXAYDUNGDataContext())
-            //    {
-            //        return db.CongTrinhs
-            //               .Select(ct => new CongTrinh 
-            //               {
-            //                   id = ct.id,
-            //                   ten = ct.ten,
-            //                   dia_diem = ct.dia_diem,
-            //                   chu_dau_tu = ct.chu_dau_tu,
-            //                   ngay_bat_dau = ct.ngay_bat_dau,
-            //                   ngay_du_kien_ket_thuc = ct.ngay_du_kien_ket_thuc,
-            //                   trang_thai = ct.trang_thai,
-            //                   tong_muc_dau_tu = ct.tong_muc_dau_tu,
-            //                   hinh_anh = ct.hinh_anh
-
-            //               })
-            //               .ToList();
-            //    }
-            //}
-            //catch
-            //{
-            //    return new List<CongTrinh>();// return to empty instead null
-            //}
+       
 
             try
             {
