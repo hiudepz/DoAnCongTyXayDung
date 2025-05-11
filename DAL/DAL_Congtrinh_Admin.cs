@@ -67,14 +67,20 @@ namespace DAL
         {
             try
             {
+                db.CongTrinh_NhaThaus.DeleteAllOnSubmit(db.CongTrinh_NhaThaus.Where(x => x.cong_trinh_id == id));
+                db.CongTrinh_VatTus.DeleteAllOnSubmit(db.CongTrinh_VatTus.Where(x => x.cong_trinh_id == id));
+                db.PhanCongs.DeleteAllOnSubmit(db.PhanCongs.Where(x => x.cong_trinh_id == id));
+                db.TienDos.DeleteAllOnSubmit(db.TienDos.Where(x => x.cong_trinh_id == id));
                 var construction = db.CongTrinhs.FirstOrDefault(ct => ct.id == id);
-                if (construction != null)
-                {
+                //if (construction != null)
+                //{
+
                     db.CongTrinhs.DeleteOnSubmit(construction);
                     db.SubmitChanges();
                     return true;
-                }
-                return false;
+
+                //}
+                //return false;
             }
             catch (Exception)
             {

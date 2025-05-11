@@ -100,7 +100,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 38);
+            this.groupBox1.Location = new System.Drawing.Point(32, 31);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -236,7 +236,7 @@
             // 
             // btnSuacongtrinh_admin
             // 
-            this.btnSuacongtrinh_admin.Location = new System.Drawing.Point(217, 386);
+            this.btnSuacongtrinh_admin.Location = new System.Drawing.Point(237, 379);
             this.btnSuacongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSuacongtrinh_admin.Name = "btnSuacongtrinh_admin";
             this.btnSuacongtrinh_admin.Size = new System.Drawing.Size(75, 23);
@@ -251,11 +251,11 @@
             this.groupBox2.Controls.Add(this.cbbNhathaucongtrinh_admin);
             this.groupBox2.Controls.Add(this.dgvNhathaubencongtrinh_admin);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Location = new System.Drawing.Point(311, 38);
+            this.groupBox2.Location = new System.Drawing.Point(331, 31);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(292, 261);
+            this.groupBox2.Size = new System.Drawing.Size(743, 261);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chọn Nhà Thầu";
@@ -282,13 +282,14 @@
             // 
             // dgvNhathaubencongtrinh_admin
             // 
+            this.dgvNhathaubencongtrinh_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhathaubencongtrinh_admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhathaubencongtrinh_admin.Location = new System.Drawing.Point(72, 25);
             this.dgvNhathaubencongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvNhathaubencongtrinh_admin.Name = "dgvNhathaubencongtrinh_admin";
             this.dgvNhathaubencongtrinh_admin.RowHeadersWidth = 51;
             this.dgvNhathaubencongtrinh_admin.RowTemplate.Height = 24;
-            this.dgvNhathaubencongtrinh_admin.Size = new System.Drawing.Size(205, 148);
+            this.dgvNhathaubencongtrinh_admin.Size = new System.Drawing.Size(614, 148);
             this.dgvNhathaubencongtrinh_admin.TabIndex = 1;
             this.dgvNhathaubencongtrinh_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhathaubencongtrinh_admin_CellContentClick);
             // 
@@ -303,7 +304,7 @@
             // 
             // btnThemcongtrinh_admin
             // 
-            this.btnThemcongtrinh_admin.Location = new System.Drawing.Point(12, 386);
+            this.btnThemcongtrinh_admin.Location = new System.Drawing.Point(32, 379);
             this.btnThemcongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemcongtrinh_admin.Name = "btnThemcongtrinh_admin";
             this.btnThemcongtrinh_admin.Size = new System.Drawing.Size(75, 23);
@@ -314,7 +315,7 @@
             // 
             // btnXoacongtrinh_admin
             // 
-            this.btnXoacongtrinh_admin.Location = new System.Drawing.Point(109, 386);
+            this.btnXoacongtrinh_admin.Location = new System.Drawing.Point(129, 379);
             this.btnXoacongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoacongtrinh_admin.Name = "btnXoacongtrinh_admin";
             this.btnXoacongtrinh_admin.Size = new System.Drawing.Size(75, 23);
@@ -329,11 +330,11 @@
             this.groupBox3.Controls.Add(this.btnThemvatlieucongtrinh_admin);
             this.groupBox3.Controls.Add(this.dgvVattubencongtrinh_admin);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(311, 343);
+            this.groupBox3.Location = new System.Drawing.Point(1201, 31);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(292, 266);
+            this.groupBox3.Size = new System.Drawing.Size(543, 266);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chọn Vật Tư";
@@ -360,13 +361,14 @@
             // 
             // dgvVattubencongtrinh_admin
             // 
+            this.dgvVattubencongtrinh_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVattubencongtrinh_admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVattubencongtrinh_admin.Location = new System.Drawing.Point(73, 21);
             this.dgvVattubencongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvVattubencongtrinh_admin.Name = "dgvVattubencongtrinh_admin";
             this.dgvVattubencongtrinh_admin.RowHeadersWidth = 51;
             this.dgvVattubencongtrinh_admin.RowTemplate.Height = 24;
-            this.dgvVattubencongtrinh_admin.Size = new System.Drawing.Size(205, 160);
+            this.dgvVattubencongtrinh_admin.Size = new System.Drawing.Size(421, 160);
             this.dgvVattubencongtrinh_admin.TabIndex = 1;
             this.dgvVattubencongtrinh_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVattubencongtrinh_admin_CellContentClick);
             // 
@@ -382,7 +384,7 @@
             // cbbTrangthai_admin
             // 
             this.cbbTrangthai_admin.FormattingEnabled = true;
-            this.cbbTrangthai_admin.Location = new System.Drawing.Point(165, 343);
+            this.cbbTrangthai_admin.Location = new System.Drawing.Point(185, 336);
             this.cbbTrangthai_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTrangthai_admin.Name = "cbbTrangthai_admin";
             this.cbbTrangthai_admin.Size = new System.Drawing.Size(120, 24);
@@ -392,18 +394,19 @@
             // 
             this.dgvCongtrinh_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCongtrinh_admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCongtrinh_admin.Location = new System.Drawing.Point(609, 38);
+            this.dgvCongtrinh_admin.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvCongtrinh_admin.Location = new System.Drawing.Point(0, 718);
             this.dgvCongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCongtrinh_admin.Name = "dgvCongtrinh_admin";
             this.dgvCongtrinh_admin.RowHeadersWidth = 51;
             this.dgvCongtrinh_admin.RowTemplate.Height = 24;
-            this.dgvCongtrinh_admin.Size = new System.Drawing.Size(1115, 370);
+            this.dgvCongtrinh_admin.Size = new System.Drawing.Size(1924, 315);
             this.dgvCongtrinh_admin.TabIndex = 7;
             this.dgvCongtrinh_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCongtrinh_admin_CellContentClick);
             // 
             // txtUrlcongtrinh_admin
             // 
-            this.txtUrlcongtrinh_admin.Location = new System.Drawing.Point(1155, 430);
+            this.txtUrlcongtrinh_admin.Location = new System.Drawing.Point(1111, 527);
             this.txtUrlcongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUrlcongtrinh_admin.Name = "txtUrlcongtrinh_admin";
             this.txtUrlcongtrinh_admin.Size = new System.Drawing.Size(225, 22);
@@ -411,7 +414,7 @@
             // 
             // btnChonanhcongtrinh_admin
             // 
-            this.btnChonanhcongtrinh_admin.Location = new System.Drawing.Point(1043, 430);
+            this.btnChonanhcongtrinh_admin.Location = new System.Drawing.Point(999, 527);
             this.btnChonanhcongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChonanhcongtrinh_admin.Name = "btnChonanhcongtrinh_admin";
             this.btnChonanhcongtrinh_admin.Size = new System.Drawing.Size(75, 23);
@@ -422,7 +425,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(1649, 11);
+            this.btnTimKiem.Location = new System.Drawing.Point(1669, 4);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
@@ -433,7 +436,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(1514, 11);
+            this.txtTimKiem.Location = new System.Drawing.Point(1534, 4);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(129, 22);
@@ -443,10 +446,11 @@
             // pbCongtrinh_admin
             // 
             this.pbCongtrinh_admin.Image = global::GUI.Properties.Resources.default_image;
-            this.pbCongtrinh_admin.Location = new System.Drawing.Point(1401, 459);
+            this.pbCongtrinh_admin.Location = new System.Drawing.Point(1111, 318);
             this.pbCongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbCongtrinh_admin.Name = "pbCongtrinh_admin";
             this.pbCongtrinh_admin.Size = new System.Drawing.Size(225, 187);
+            this.pbCongtrinh_admin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCongtrinh_admin.TabIndex = 8;
             this.pbCongtrinh_admin.TabStop = false;
             this.pbCongtrinh_admin.Click += new System.EventHandler(this.pbCongtrinh_admin_Click);

@@ -117,7 +117,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupBox1);
             this.Name = "Baocao";
-            this.Text = "BaoCao_User";
+            this.Text = "BaoCao";
             this.Load += new System.EventHandler(this.BaoCao_User_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

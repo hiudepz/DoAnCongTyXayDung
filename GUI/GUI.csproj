@@ -139,12 +139,6 @@
       <DependentUpon>ChiPhiTongTheoIdCongTrinh.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\reportDanhSachVatTuVaTongChiPhi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\reportDanhSachVatTuVaTongChiPhi.Designer.cs">
-      <DependentUpon>reportDanhSachVatTuVaTongChiPhi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Report\rptDanhSachNhanCongTheoCongTrinh.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -266,9 +260,6 @@
     <EmbeddedResource Include="Report\ChiPhiTongTheoIdCongTrinh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ChiPhiTongTheoIdCongTrinh.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\reportDanhSachVatTuVaTongChiPhi.resx">
-      <DependentUpon>reportDanhSachVatTuVaTongChiPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rptDanhSachNhanCongTheoCongTrinh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

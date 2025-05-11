@@ -80,4 +80,9 @@ select * from NhanCong
 
 select * from CongTrinh_NhaThau
 
+select * from CongTrinh_VatTu
+
 select * from NguoiDung
+
+
+select * from VatTu

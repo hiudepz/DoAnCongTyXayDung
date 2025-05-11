@@ -200,12 +200,14 @@ namespace GUI.Admin
             if (dgvCongtrinh_admin.CurrentRow == null) return;
 
             int id = Convert.ToInt32(dgvCongtrinh_admin.CurrentRow.Cells["id"].Value);
-            if (MessageBox.Show("Bạn chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn chắc chắn muốn xóa, Nếu Yes bạn sẽ mất dư liệu liên quan tới công trình?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (ctrBLL.DeleteConstruction(id))
-                {
-                    dgvCongtrinh_admin.DataSource = ctrBLL.GetConstructionList();
-                }
+                ctrBLL.DeleteConstruction(id);
+                dgvCongtrinh_admin.DataSource = ctrBLL.GetConstructionList();
+                //if (ctrBLL.DeleteConstruction(id))
+                //{
+                //    dgvCongtrinh_admin.DataSource = ctrBLL.GetConstructionList();
+                //}
             }
         }
 

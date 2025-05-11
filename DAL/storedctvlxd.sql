@@ -63,7 +63,7 @@ EXEC sp_BaoCaoTongChiPhi N'Cầu Bình Lợi';
 
 ------------------------------
 CREATE OR ALTER PROC sp_DanhSachVatTuVaTongChiPhi
-    @tenCongTrinh NVARCHAR(100) = NULL
+    @CongTrinhId INT
 AS
 BEGIN
     -- Chi tiết từng vật tư đã sử dụng
@@ -78,7 +78,7 @@ BEGIN
         dbo.CongTrinh_VatTu ctvt
     INNER JOIN CongTrinh ct ON ctvt.cong_trinh_id = ct.id
     INNER JOIN VatTu vt ON ctvt.vat_tu_id = vt.id
-    WHERE @tenCongTrinh IS NULL OR ct.ten LIKE N'%' + @tenCongTrinh + '%'
+    WHERE ctvt.cong_trinh_id =@CongTrinhId 
 
     -- Tổng chi phí vật tư theo từng công trình
     SELECT 
@@ -87,20 +87,18 @@ BEGIN
     FROM 
         dbo.CongTrinh_VatTu ctvt
     INNER JOIN CongTrinh ct ON ctvt.cong_trinh_id = ct.id
-    WHERE @tenCongTrinh IS NULL OR ct.ten LIKE N'%' + @tenCongTrinh + '%'
+    WHERE ctvt.cong_trinh_id = @CongTrinhId
     GROUP BY ct.ten
 END;
 
-exec sp_DanhSachVatTuVaTongChiPhi N'';
+exec sp_DanhSachVatTuVaTongChiPhi '1';
 
 GO
 
 CREATE OR ALTER PROC sp_TimNhaThauTheoCongTrinh
-    @tenCongTrinh NVARCHAR(100)
+    @IdCongTrinh int
 AS
 BEGIN
-if @tenCongTrinh is null 
-begin 
  SELECT 
         ct.ten AS TenCongTrinh,
         nt.ten_cong_ty AS TenNhaThau,
@@ -112,25 +110,11 @@ begin
         CongTrinh ct
     INNER JOIN CongTrinh_NhaThau ctn ON ct.id = ctn.cong_trinh_id
     INNER JOIN NhaThau nt ON ctn.nha_thau_id = nt.id
+	where  ct.id = @IdCongTrinh 
 end
-else
-begin
-    SELECT 
-        ct.ten AS TenCongTrinh,
-        nt.ten_cong_ty AS TenNhaThau,
-        nt.dia_chi,
-        nt.so_dien_thoai,
-        nt.email,
-        ctn.vai_tro
-    FROM 
-        CongTrinh ct
-    INNER JOIN CongTrinh_NhaThau ctn ON ct.id = ctn.cong_trinh_id
-    INNER JOIN NhaThau nt ON ctn.nha_thau_id = nt.id
-    WHERE 
-        ct.ten LIKE '%' + @tenCongTrinh + '%';
-END
-end;
-EXEC sp_TimNhaThauTheoCongTrinh N'';
+
+
+EXEC sp_TimNhaThauTheoCongTrinh '1';
 select * from CongTrinh_NhaThau
 SELECT id, ten as ten_cong_trinh FROM CongTrinh;
 SELECT id, ten_cong_ty FROM NhaThau;
@@ -153,7 +137,7 @@ BEGIN
     WHERE pc.cong_trinh_id = @CongTrinhID
 END
 
-EXEC sp_DanhSachNhanCong_TheoCongTrinh N'1';
+EXEC sp_DanhSachNhanCong_TheoCongTrinh N'3';
 
 --TienDo_TheoCongTrinh
 CREATE PROCEDURE sp_TienDo_TheoCongTrinh

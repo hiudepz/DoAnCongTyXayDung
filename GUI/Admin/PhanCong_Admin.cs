@@ -65,7 +65,7 @@ namespace GUI.Admin
                         int id_CongTrinh = (int)cbbCongTrinh.SelectedValue;
 
                         // Anh có thể xử lý tiếp theo ý muốn, ví dụ:
-                        MessageBox.Show($"ID: {id_CongTrinh} ");
+                        //MessageBox.Show($"ID: {id_CongTrinh} ");
                         
                         //Add
                         var newMember = new PhanCong
@@ -80,12 +80,13 @@ namespace GUI.Admin
 
                         if (bllPHanCong.AddPhanCong(newMember))
                         {
-                            MessageBox.Show("Thêm thành công!");
+                            
                             dgvBangPhanCong.DataSource = bllPHanCong.GetPhanCongList(); // Refresh DataGridView
                         }
                     }
                 }
-                
+                MessageBox.Show("Thêm thành công!");
+
             }
             catch (Exception ex)
             {
@@ -103,18 +104,23 @@ namespace GUI.Admin
                 int nhanCongId = int.Parse(txtIdNhanCongvs.Text);
                 DateTime ngayBatDau = dtpstartvs.Value;
 
-               
-                bool result = bllPHanCong.DeletePhanCong(congTrinhId, nhanCongId, ngayBatDau);
+                DialogResult ds = MessageBox.Show("Bạn chắc chắn muốn Xóa", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (ds == DialogResult.Yes)
+                {
+                    bool result = bllPHanCong.DeletePhanCong(congTrinhId, nhanCongId, ngayBatDau);
+                    if (result)
+                    {
+                        MessageBox.Show("Xóa phân công thành công!");
+                        LoadDanhSachPhanCong(); // Refresh danh sách
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy phân công để xóa");
+                    }
+                }
+                
 
-                if (result)
-                {
-                    MessageBox.Show("Xóa phân công thành công!");
-                    LoadDanhSachPhanCong(); // Refresh danh sách
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy phân công để xóa");
-                }
+                
             }
             catch (Exception ex)
             {

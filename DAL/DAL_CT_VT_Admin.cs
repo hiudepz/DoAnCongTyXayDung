@@ -32,8 +32,8 @@ namespace DAL
                 if (entity != null)
                 {
                     db.CongTrinh_VatTus.DeleteOnSubmit(entity);
-                    db.SubmitChanges();
-                    return true;
+                db.SubmitChanges();
+                return true;
                 }
 
                 return false;
@@ -66,21 +66,21 @@ namespace DAL
         {
             try
             {
-                CongTrinh_VatTu entity = new CongTrinh_VatTu
-                {
-                    cong_trinh_id = what.cong_trinh_id,
-                    vat_tu_id = what.vat_tu_id,
+                //CongTrinh_VatTu entity = new CongTrinh_VatTu
+                //{
+                //    cong_trinh_id = what.cong_trinh_id,
+                //    vat_tu_id = what.vat_tu_id,
 
-                    so_luong = what.so_luong,
-                    don_gia = what.don_gia,
-                    ngay_su_dung = what.ngay_su_dung
-                };
+                //    so_luong = what.so_luong,
+                //    don_gia = what.don_gia,
+                //    ngay_su_dung = what.ngay_su_dung
+                //};
 
-                db.CongTrinh_VatTus.InsertOnSubmit(entity);
+                db.CongTrinh_VatTus.InsertOnSubmit(what);
                 db.SubmitChanges();
                 return true;
             }
-            catch
+            catch (Exception)
             {
                 return false;
             }

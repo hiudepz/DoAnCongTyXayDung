@@ -64,6 +64,7 @@
             this.pbVattu.Margin = new System.Windows.Forms.Padding(4);
             this.pbVattu.Name = "pbVattu";
             this.pbVattu.Size = new System.Drawing.Size(153, 121);
+            this.pbVattu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbVattu.TabIndex = 26;
             this.pbVattu.TabStop = false;
             this.pbVattu.Click += new System.EventHandler(this.pbVattu_Click);

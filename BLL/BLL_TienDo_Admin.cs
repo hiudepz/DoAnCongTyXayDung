@@ -29,7 +29,10 @@ namespace BLL
         public bool AddProgress(TienDo Progress)
         {
 
-
+            if(Progress.phan_tram_hoan_thanh <0 || Progress.phan_tram_hoan_thanh > 100)
+            {
+                throw new Exception("Phần trăm hoàn thành phải từ 0 đến 100");
+            }
             return ctrDal.AddProgress(Progress);
         }
 

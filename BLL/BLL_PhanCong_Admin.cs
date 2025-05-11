@@ -42,10 +42,7 @@ namespace BLL
         //}
         public bool DeletePhanCong(int congTrinhId, int nhanCongId, DateTime start)
         {
-            if (start > DateTime.Now)
-            {
-                throw new Exception("Không thể xóa phân công chưa bắt đầu");
-            }
+            
             return ctrDal.DeletePhanCong(congTrinhId, nhanCongId, start);
         }
     }

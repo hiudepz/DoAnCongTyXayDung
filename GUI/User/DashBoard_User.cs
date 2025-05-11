@@ -64,9 +64,7 @@ namespace GUI.User
 
         private void reportDanhSachVatTuVaTongChiPhiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportDanhSachVatTuVaTongChiPhi a = new reportDanhSachVatTuVaTongChiPhi();
-            a.MdiParent = this;
-            a.Show();
+           
         }
 
         private void bảngBáoCáoToolStripMenuItem_Click(object sender, EventArgs e)

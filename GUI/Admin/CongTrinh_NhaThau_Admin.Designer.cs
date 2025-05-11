@@ -147,7 +147,7 @@
             // 
             // btnTimcongtrinh_admin
             // 
-            this.btnTimcongtrinh_admin.Location = new System.Drawing.Point(1639, 415);
+            this.btnTimcongtrinh_admin.Location = new System.Drawing.Point(1648, 301);
             this.btnTimcongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimcongtrinh_admin.Name = "btnTimcongtrinh_admin";
             this.btnTimcongtrinh_admin.Size = new System.Drawing.Size(75, 23);
@@ -157,7 +157,7 @@
             // 
             // txtKeywordcongtrinh_admin
             // 
-            this.txtKeywordcongtrinh_admin.Location = new System.Drawing.Point(1504, 416);
+            this.txtKeywordcongtrinh_admin.Location = new System.Drawing.Point(1513, 302);
             this.txtKeywordcongtrinh_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKeywordcongtrinh_admin.Name = "txtKeywordcongtrinh_admin";
             this.txtKeywordcongtrinh_admin.Size = new System.Drawing.Size(129, 22);

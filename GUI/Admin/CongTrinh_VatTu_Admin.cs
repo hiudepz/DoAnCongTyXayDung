@@ -23,13 +23,13 @@ namespace GUI.Admin
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            decimal.TryParse(txtSoluong.Text, out decimal soLuong);
-            decimal.TryParse(txtDongia.Text, out decimal donGia);
-
-            DateTime ngaySuDung = dtpNgaysudung.Value;
+            
             try
             {
+                decimal.TryParse(txtSoluong.Text, out decimal soLuong);
+                decimal.TryParse(txtDongia.Text, out decimal donGia);
 
+                DateTime ngaySuDung = dtpNgaysudung.Value;
 
                 CongTrinh_VatTu dto = new CongTrinh_VatTu
                 {
@@ -47,9 +47,10 @@ namespace GUI.Admin
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
+                    MessageBox.Show("Thêm thất bại, có thể bạn đã thêm trùng ");
                 }
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show("Lỗi " + ex.Message);
             }

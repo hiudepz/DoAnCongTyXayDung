@@ -37,7 +37,7 @@ namespace DAL
             }
 
         }
-        
+
 
         // public List<PhanCong> GetByPhanCong()
         // {
@@ -54,10 +54,65 @@ namespace DAL
         //.Select(t => t.ten).ToList();
         // }
 
-        public bool AddPhanCong(PhanCong contractor) // them phan cong
+        //public bool AddPhanCong(PhanCong contractor) // them phan cong
+        //{
+        //    try
+        //    {
+        //        db.PhanCongs.InsertOnSubmit(contractor);
+        //        db.SubmitChanges();
+        //        return true;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        //public bool DeletePhanCong(int congTrinhId, int nhanCongId,DateTime start) //Xóa phân công
+        //{
+        //    try
+        //    {
+        //        var phanCong = db.PhanCongs.FirstOrDefault(p =>
+        //        p.cong_trinh_id == congTrinhId &&
+        //        p.nhan_cong_id == nhanCongId  &&
+        //        p.ngay_bat_dau == start);
+        //        if (phanCong != null)
+        //        {
+        //            db.PhanCongs.DeleteOnSubmit(phanCong);
+        //            db.SubmitChanges();
+        //            return true;
+        //        }
+        //        return false;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return false;
+        //    }
+        //}
+
+
+        //khac
+        public bool AddPhanCong(PhanCong contractor)
         {
             try
             {
+                // Làm tròn thời gian để so sánh chính xác theo ngày
+                DateTime startDate = contractor.ngay_bat_dau.Date;
+
+                // Kiểm tra trùng trước khi thêm
+                bool exists = db.PhanCongs.Any(p =>
+                    p.cong_trinh_id == contractor.cong_trinh_id &&
+                    p.nhan_cong_id == contractor.nhan_cong_id &&
+                    p.ngay_bat_dau.Date == startDate);
+
+                if (exists)
+                {
+                    return false; // Đã tồn tại phân công
+                }
+
+                // Gán lại thời gian làm tròn trước khi lưu (nếu cần)
+                contractor.ngay_bat_dau = startDate;
+
                 db.PhanCongs.InsertOnSubmit(contractor);
                 db.SubmitChanges();
                 return true;
@@ -68,20 +123,23 @@ namespace DAL
             }
         }
 
-        public bool DeletePhanCong(int congTrinhId, int nhanCongId,DateTime start) //Xóa phân công
+        public bool DeletePhanCong(int congTrinhId, int nhanCongId, DateTime start)
         {
             try
             {
                 var phanCong = db.PhanCongs.FirstOrDefault(p =>
-                p.cong_trinh_id == congTrinhId &&
-                p.nhan_cong_id == nhanCongId  &&
-                p.ngay_bat_dau == start);
+            p.cong_trinh_id == congTrinhId &&
+            p.nhan_cong_id == nhanCongId &&
+            p.ngay_bat_dau.Date == start.Date);
+
                 if (phanCong != null)
                 {
+                    // Bỏ kiểm tra ngày nếu bạn muốn xóa bất kỳ lúc nào
                     db.PhanCongs.DeleteOnSubmit(phanCong);
                     db.SubmitChanges();
                     return true;
                 }
+
                 return false;
             }
             catch (Exception)
@@ -89,6 +147,7 @@ namespace DAL
                 return false;
             }
         }
+
 
         // Update PhanCong
         //public bool UpdatePhanCong(PhanCong updatedPhanCong) //Sua

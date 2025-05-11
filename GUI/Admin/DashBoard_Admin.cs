@@ -1,4 +1,5 @@
-﻿using GUI.Report;
+﻿using GUI.Dn_Dk;
+using GUI.Report;
 using GUI.User;
 using System;
 using System.Collections.Generic;
@@ -70,9 +71,7 @@ namespace GUI.Admin
 
         private void reportDanhSachVatTuVaTongChiPhiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportDanhSachVatTuVaTongChiPhi a = new reportDanhSachVatTuVaTongChiPhi();
-            a.MdiParent = this;
-            a.Show();
+            
         }
 
         private void bảngBáoCáoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,12 +83,10 @@ namespace GUI.Admin
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult ds = MessageBox.Show("Bạn có muốn quay về trang đăng nhập", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult ds = MessageBox.Show("Bạn chắc chắn muốn thoát", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (ds == DialogResult.Yes)
             {
-                // Hiển thị lại form Login
-                this.Hide();
-                new Login().Show();
+                this.Close();
             }
         }
 
@@ -98,6 +95,25 @@ namespace GUI.Admin
             PhanCong_Admin a = new PhanCong_Admin();
             a.MdiParent = this;
             a.Show();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditPassWord a = new EditPassWord();
+            a.MdiParent = this;
+            a.Show();
+        }
+
+        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login a = new Login();
+            a.MdiParent = this;
+            a.Show();
+        }
+
+        private void hethongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

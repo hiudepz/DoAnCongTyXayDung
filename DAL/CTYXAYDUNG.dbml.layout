@@ -56,7 +56,7 @@
         <elementListCompartment Id="14616654-9cee-4829-bddd-95ddfb8a794e" absoluteBounds="1.3900000000000001, 12.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.375 : 5.88206021582031); (4.125 : 5.88206021582031)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3.375 : 5.88206021582031); (3.69791666666667 : 5.88206021582031 : JumpStart); (3.86458333333333 : 5.88206021582031 : JumpEnd); (4.125 : 5.88206021582031)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CTYXAYDUNGDataContext/CongTrinh/CongTrinh_CongTrinh_NhaThau" />
       <nodes>
         <classShapeMoniker Id="1827b642-039c-43f7-a6d5-8723749e45cf" />
