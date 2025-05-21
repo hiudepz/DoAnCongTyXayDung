@@ -357,5 +357,8 @@
   <ItemGroup>
     <None Include="Resources\OIP %281%29.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

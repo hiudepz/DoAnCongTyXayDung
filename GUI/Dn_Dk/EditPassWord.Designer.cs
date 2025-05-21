@@ -44,57 +44,60 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(491, 142);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(346, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 16);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Tên đăng nhập";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(369, 50);
+            this.label3.Location = new System.Drawing.Point(255, 32);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 33);
+            this.label3.Size = new System.Drawing.Size(137, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Đổi mật khẩu ";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(491, 198);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(346, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mật khẩu cũ";
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(620, 139);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTenDangNhap.Location = new System.Drawing.Point(443, 104);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(177, 22);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(134, 20);
             this.txtTenDangNhap.TabIndex = 8;
             // 
             // txtMatKhauCu
             // 
-            this.txtMatKhauCu.Location = new System.Drawing.Point(620, 194);
-            this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhauCu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMatKhauCu.Location = new System.Drawing.Point(443, 149);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.PasswordChar = '*';
-            this.txtMatKhauCu.Size = new System.Drawing.Size(177, 22);
+            this.txtMatKhauCu.Size = new System.Drawing.Size(134, 20);
             this.txtMatKhauCu.TabIndex = 7;
             // 
             // btnĐổiMK
             // 
-            this.btnĐổiMK.Location = new System.Drawing.Point(646, 351);
-            this.btnĐổiMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnĐổiMK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnĐổiMK.Location = new System.Drawing.Point(462, 276);
+            this.btnĐổiMK.Margin = new System.Windows.Forms.Padding(2);
             this.btnĐổiMK.Name = "btnĐổiMK";
-            this.btnĐổiMK.Size = new System.Drawing.Size(114, 45);
+            this.btnĐổiMK.Size = new System.Drawing.Size(86, 37);
             this.btnĐổiMK.TabIndex = 11;
             this.btnĐổiMK.Text = "Đổi mật khẩu ";
             this.btnĐổiMK.UseVisualStyleBackColor = true;
@@ -102,58 +105,59 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::GUI.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(140, 127);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(83, 94);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 277);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 225);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(491, 251);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(346, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 16);
+            this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Mật khẩu mới";
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(620, 247);
-            this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhauMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(443, 192);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(177, 22);
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(134, 20);
             this.txtMatKhauMoi.TabIndex = 7;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(491, 310);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(346, 243);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 16);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Xác nhận";
             // 
             // txtXacNhan
             // 
-            this.txtXacNhan.Location = new System.Drawing.Point(620, 306);
-            this.txtXacNhan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtXacNhan.Location = new System.Drawing.Point(443, 240);
             this.txtXacNhan.Name = "txtXacNhan";
             this.txtXacNhan.PasswordChar = '*';
-            this.txtXacNhan.Size = new System.Drawing.Size(177, 22);
+            this.txtXacNhan.Size = new System.Drawing.Size(134, 20);
             this.txtXacNhan.TabIndex = 7;
             // 
             // EditPassWord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 475);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(651, 386);
             this.Controls.Add(this.btnĐổiMK);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtXacNhan);
@@ -165,7 +169,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditPassWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditPassWord";
