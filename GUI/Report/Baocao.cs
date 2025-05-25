@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,29 +63,35 @@ namespace GUI.User
             string loaiBaoCao = cbbLoaiBaoCao.SelectedItem.ToString();
             ReportDocument report = new ReportDocument();
 
+            string reportDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Report");
+
+            int congTrinhId = Convert.ToInt32(cbbCongTrinh.SelectedValue);
+
             switch (loaiBaoCao)
             {
                 case "Danh sách nhân công theo công trình":
-                    report.Load(@"C:\Users\Nguyenthithanhthao\source\repos\hiudepz\DoAnCongTyXayDung\GUI\Report\rptDanhSachNhanCongTheoCongTrinh.rpt");
-                    report.SetParameterValue("@CongTrinhID", Convert.ToInt32(cbbCongTrinh.SelectedValue));
+                    report.Load(Path.Combine(reportDirectory, "rptDanhSachNhanCongTheoCongTrinh.rpt"));
+                    report.SetParameterValue("@CongTrinhID", congTrinhId);
                     break;
 
                 case "Báo cáo tiến độ theo công trình":
-                    report.Load(@"C:\Users\Nguyenthithanhthao\source\repos\hiudepz\DoAnCongTyXayDung\GUI\Report\rptTienDoCongTrinhTheoIdCongTrinh.rpt");
-                    report.SetParameterValue("@CongTrinhID", Convert.ToInt32(cbbCongTrinh.SelectedValue));
+                    report.Load(Path.Combine(reportDirectory, "rptTienDoCongTrinhTheoIdCongTrinh.rpt"));
+                    report.SetParameterValue("@CongTrinhID", congTrinhId);
                     break;
 
                 case "Báo cáo chi phí tổng":
-                    report.Load(@"C:\Users\Nguyenthithanhthao\source\repos\hiudepz\DoAnCongTyXayDung\GUI\Report\ChiPhiTongTheoIdCongTrinh.rpt");
-                    report.SetParameterValue("@CongTrinhID", Convert.ToInt32(cbbCongTrinh.SelectedValue));
+                    report.Load(Path.Combine(reportDirectory, "ChiPhiTongTheoIdCongTrinh.rpt"));
+                    report.SetParameterValue("@CongTrinhID", congTrinhId);
                     break;
+
                 case "Báo cáo danh sách vật tư và tổng chi phí theo công trình":
-                    report.Load(@"C:\Users\Nguyenthithanhthao\source\repos\hiudepz\DoAnCongTyXayDung\GUI\Report\rptDanhSachVatTuVaTongChiPhi.rpt");
-                    report.SetParameterValue("@CongTrinhID", Convert.ToInt32(cbbCongTrinh.SelectedValue));
+                    report.Load(Path.Combine(reportDirectory, "rptDanhSachVatTuVaTongChiPhi.rpt"));
+                    report.SetParameterValue("@CongTrinhID", congTrinhId);
                     break;
+
                 case "Báo cáo nhà thầu theo công trình":
-                    report.Load(@"C:\Users\Nguyenthithanhthao\source\repos\hiudepz\DoAnCongTyXayDung\GUI\Report\rptNhaThauCongTrinh.rpt");
-                    report.SetParameterValue("@IdCongTrinh", Convert.ToInt32(cbbCongTrinh.SelectedValue));
+                    report.Load(Path.Combine(reportDirectory, "rptNhaThauCongTrinh.rpt"));
+                    report.SetParameterValue("@IdCongTrinh", congTrinhId);
                     break;
             }
 
