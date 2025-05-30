@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_CT_NT_Admin
     {
-        CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
+        CTYXAYDUNGDataContext db = DB.GetContext();
         public List<DTO_CongTrinh_NhaThau> GetAllCTNT()
         {
             try

@@ -16,14 +16,14 @@ namespace GUI.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptDanhSachNhanCongTheoCongTrinh : ReportClass {
+    public class CrystalReport1 : ReportClass {
         
-        public rptDanhSachNhanCongTheoCongTrinh() {
+        public CrystalReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "rptDanhSachNhanCongTheoCongTrinh.rpt";
+                return "CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace GUI.Report {
         
         public override string FullResourceName {
             get {
-                return "GUI.Report.rptDanhSachNhanCongTheoCongTrinh.rpt";
+                return "GUI.Report.CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace GUI.Report {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptDanhSachNhanCongTheoCongTrinh : Component, ICachedReport {
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public CachedrptDanhSachNhanCongTheoCongTrinh() {
+        public CachedCrystalReport1() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace GUI.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptDanhSachNhanCongTheoCongTrinh rpt = new rptDanhSachNhanCongTheoCongTrinh();
+            CrystalReport1 rpt = new CrystalReport1();
             rpt.Site = this.Site;
             return rpt;
         }

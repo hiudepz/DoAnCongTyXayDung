@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_Nhathau_Admin
     {
-        private CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
+        private CTYXAYDUNGDataContext db = DB.GetContext();
         //dgvNhathaubencongtrinh_admin
 
         //public class NhaThauSimple
@@ -54,7 +54,7 @@ namespace DAL
 
             try
             {
-                using (var db = new CTYXAYDUNGDataContext())
+                using (var db = DB.GetContext())
                 {
                     return db.NhaThaus.ToList() ?? new List<NhaThau>();
                 }
@@ -105,7 +105,7 @@ namespace DAL
         {
             try
             {
-                using (var db = new CTYXAYDUNGDataContext()) // Thêm using để đảm bảo giải phóng tài nguyên
+                using (var db = DB.GetContext()) // Thêm using để đảm bảo giải phóng tài nguyên
                 {
                     var existing = db.NhaThaus.FirstOrDefault(ct => ct.id == updatedContractor.id);
                     if (existing != null)

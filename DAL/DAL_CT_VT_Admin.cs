@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DAL_CT_VT_Admin
     {
-        CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
+        CTYXAYDUNGDataContext db = DB.GetContext();
         public List<CongTrinh> GetAllCongTrinh()
         {
             return db.CongTrinhs.Distinct().ToList();

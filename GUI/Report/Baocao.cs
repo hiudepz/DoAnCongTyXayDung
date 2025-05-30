@@ -78,7 +78,7 @@ namespace GUI.User
                     report.Load(Path.Combine(reportDirectory, "rptTienDoCongTrinhTheoIdCongTrinh.rpt"));
                     report.SetParameterValue("@CongTrinhID", congTrinhId);
                     break;
-
+                        
                 case "Báo cáo chi phí tổng":
                     report.Load(Path.Combine(reportDirectory, "ChiPhiTongTheoIdCongTrinh.rpt"));
                     report.SetParameterValue("@CongTrinhID", congTrinhId);

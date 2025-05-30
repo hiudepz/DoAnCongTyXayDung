@@ -44,5 +44,17 @@ namespace DAL.Properties {
                 return ((string)(this["CongTyXayDungConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nguyenthithanhthao\\s" +
+            "ource\\repos\\hiudepz\\DoAnCongTyXayDung\\GUI\\CongTyXayDung.mdf;Integrated Security=" +
+            "True")]
+        public string CongTyXayDungConnectionString2 {
+            get {
+                return ((string)(this["CongTyXayDungConnectionString2"]));
+            }
+        }
     }
 }

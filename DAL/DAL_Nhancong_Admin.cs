@@ -8,7 +8,7 @@ namespace DAL
 {
     public class DAL_Nhancong_Admin
     {
-        CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
+        CTYXAYDUNGDataContext db = DB.GetContext();
 
         public List<NhanCong> GetAllMember()
         {
@@ -41,7 +41,7 @@ namespace DAL
 
             try
             {
-                using (var db = new CTYXAYDUNGDataContext())
+                using (var db = DB.GetContext())
                 {
                     return db.NhanCongs.ToList() ?? new List<NhanCong>();
                 }
@@ -109,7 +109,7 @@ namespace DAL
         {
             try
             {
-                using (var db = new CTYXAYDUNGDataContext()) // Thêm using để đảm bảo giải phóng tài nguyên
+                using (var db = DB.GetContext()) // Thêm using để đảm bảo giải phóng tài nguyên
                 {
                     var existing = db.NhanCongs.FirstOrDefault(ct => ct.id == updatedMember.id);
                     if (existing != null)

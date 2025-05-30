@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace DAL
 {
     public class DAL_Congtrinh_Admin
     {
-        private CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
+        private CTYXAYDUNGDataContext db = DB.GetContext();
 
         public List<CongTrinh> GetAllConstruction()
         {
@@ -17,7 +18,7 @@ namespace DAL
 
             try
             {
-                using (var db = new CTYXAYDUNGDataContext())
+                using (var db = DB.GetContext())
                 {
                     return db.CongTrinhs.ToList() ?? new List<CongTrinh>();
                 }
@@ -93,7 +94,7 @@ namespace DAL
         {
             try
             {
-                using (var db = new CTYXAYDUNGDataContext()) // Thêm using để đảm bảo giải phóng tài nguyên
+                using (var db = DB.GetContext()) // Thêm using để đảm bảo giải phóng tài nguyên
                 {
                     var existing = db.CongTrinhs.FirstOrDefault(ct => ct.id == updatedConstruction.id);
                     if (existing != null)

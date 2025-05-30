@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DAL_PhanCong_Admin
     {
-        private CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
+        private CTYXAYDUNGDataContext db = DB.GetContext();
 
         public List<DTO_PhanCong> GetAllPhanCong()
         {

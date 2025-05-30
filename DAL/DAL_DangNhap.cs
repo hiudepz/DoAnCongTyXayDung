@@ -8,13 +8,12 @@ namespace DAL
 {
     public class DAL_DangNhap
     {
-        CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
+        CTYXAYDUNGDataContext db = DB.GetContext();
         public NguoiDung GetByNguoiDung(string tenDangNhap,string matKhau)
         {
             
                 return db.NguoiDungs
                     .FirstOrDefault(nd => nd.ten_dang_nhap == tenDangNhap && nd.mat_khau == matKhau);
-            
         }
         public bool ThemNguoiDung(NguoiDung nd)
         {

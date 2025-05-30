@@ -76,11 +76,12 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.Size = new System.Drawing.Size(91, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Công Trình:";
             // 
@@ -113,16 +114,18 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(5, 250);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.Size = new System.Drawing.Size(69, 15);
             this.label8.TabIndex = 4;
             this.label8.Text = "Trạng Thái ";
             // 
             // dtpNgaybatdau_admin
             // 
+            this.dtpNgaybatdau_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpNgaybatdau_admin.Location = new System.Drawing.Point(116, 185);
             this.dtpNgaybatdau_admin.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgaybatdau_admin.Name = "dtpNgaybatdau_admin";
@@ -131,6 +134,7 @@
             // 
             // dtpNgayketthuc_admin
             // 
+            this.dtpNgayketthuc_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpNgayketthuc_admin.Location = new System.Drawing.Point(116, 219);
             this.dtpNgayketthuc_admin.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayketthuc_admin.Name = "dtpNgayketthuc_admin";
@@ -139,6 +143,7 @@
             // 
             // nudTongmucdautu_admin
             // 
+            this.nudTongmucdautu_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudTongmucdautu_admin.Location = new System.Drawing.Point(116, 152);
             this.nudTongmucdautu_admin.Margin = new System.Windows.Forms.Padding(2);
             this.nudTongmucdautu_admin.Maximum = new decimal(new int[] {
@@ -152,6 +157,7 @@
             // 
             // txtChudautu_admin
             // 
+            this.txtChudautu_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtChudautu_admin.Location = new System.Drawing.Point(116, 122);
             this.txtChudautu_admin.Margin = new System.Windows.Forms.Padding(2);
             this.txtChudautu_admin.Name = "txtChudautu_admin";
@@ -160,6 +166,7 @@
             // 
             // txtDiadiem_admin
             // 
+            this.txtDiadiem_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDiadiem_admin.Location = new System.Drawing.Point(116, 94);
             this.txtDiadiem_admin.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiadiem_admin.Name = "txtDiadiem_admin";
@@ -168,6 +175,7 @@
             // 
             // txtTencongtrinh_admin
             // 
+            this.txtTencongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTencongtrinh_admin.Location = new System.Drawing.Point(116, 59);
             this.txtTencongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
             this.txtTencongtrinh_admin.Name = "txtTencongtrinh_admin";
@@ -176,6 +184,7 @@
             // 
             // txtMacongtrinh_admin
             // 
+            this.txtMacongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMacongtrinh_admin.Enabled = false;
             this.txtMacongtrinh_admin.Location = new System.Drawing.Point(116, 25);
             this.txtMacongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
@@ -185,61 +194,67 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(4, 223);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 13);
+            this.label7.Size = new System.Drawing.Size(83, 15);
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày kết thúc:";
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(4, 190);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.Size = new System.Drawing.Size(82, 15);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày bắt đầu:";
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(0, 157);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.Size = new System.Drawing.Size(102, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tổng mức đầu tư:";
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(4, 127);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(69, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "Chủ đầu tư:";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(5, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Địa điểm:";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(5, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(94, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên Công Trình:";
             // 
@@ -273,6 +288,7 @@
             // 
             // btnThemnhathaucongtrinh_admin
             // 
+            this.btnThemnhathaucongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemnhathaucongtrinh_admin.Location = new System.Drawing.Point(58, 170);
             this.btnThemnhathaucongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemnhathaucongtrinh_admin.Name = "btnThemnhathaucongtrinh_admin";
@@ -284,6 +300,7 @@
             // 
             // cbbNhathaucongtrinh_admin
             // 
+            this.cbbNhathaucongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbNhathaucongtrinh_admin.FormattingEnabled = true;
             this.cbbNhathaucongtrinh_admin.Location = new System.Drawing.Point(54, 145);
             this.cbbNhathaucongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
@@ -293,6 +310,7 @@
             // 
             // dgvNhathaubencongtrinh_admin
             // 
+            this.dgvNhathaubencongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvNhathaubencongtrinh_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhathaubencongtrinh_admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhathaubencongtrinh_admin.Location = new System.Drawing.Point(54, 20);
@@ -306,11 +324,12 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(4, 152);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 13);
+            this.label14.Size = new System.Drawing.Size(60, 15);
             this.label14.TabIndex = 0;
             this.label14.Text = "Nhà thầu ";
             // 
@@ -356,6 +375,7 @@
             // 
             // cbbVatlieucongtrinh_admin
             // 
+            this.cbbVatlieucongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbVatlieucongtrinh_admin.FormattingEnabled = true;
             this.cbbVatlieucongtrinh_admin.Location = new System.Drawing.Point(56, 151);
             this.cbbVatlieucongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
@@ -365,6 +385,7 @@
             // 
             // btnThemvatlieucongtrinh_admin
             // 
+            this.btnThemvatlieucongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThemvatlieucongtrinh_admin.Location = new System.Drawing.Point(56, 176);
             this.btnThemvatlieucongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemvatlieucongtrinh_admin.Name = "btnThemvatlieucongtrinh_admin";
@@ -376,6 +397,7 @@
             // 
             // dgvVattubencongtrinh_admin
             // 
+            this.dgvVattubencongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvVattubencongtrinh_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVattubencongtrinh_admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVattubencongtrinh_admin.Location = new System.Drawing.Point(55, 17);
@@ -389,11 +411,12 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 154);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.Size = new System.Drawing.Size(51, 15);
             this.label9.TabIndex = 0;
             this.label9.Text = "Vật Liệu";
             // 
@@ -433,7 +456,7 @@
             // btnChonanhcongtrinh_admin
             // 
             this.btnChonanhcongtrinh_admin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnChonanhcongtrinh_admin.Location = new System.Drawing.Point(838, 455);
+            this.btnChonanhcongtrinh_admin.Location = new System.Drawing.Point(832, 404);
             this.btnChonanhcongtrinh_admin.Margin = new System.Windows.Forms.Padding(2);
             this.btnChonanhcongtrinh_admin.Name = "btnChonanhcongtrinh_admin";
             this.btnChonanhcongtrinh_admin.Size = new System.Drawing.Size(56, 19);

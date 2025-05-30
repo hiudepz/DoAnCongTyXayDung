@@ -12,7 +12,7 @@ namespace DAL
 {
     public class DAL_TienDo_Admin
     {
-        private CTYXAYDUNGDataContext db = new CTYXAYDUNGDataContext();
+        private CTYXAYDUNGDataContext db = DB.GetContext();
 
         public List<DTO_TienDo> GetAllProgress()
         {
@@ -40,7 +40,7 @@ namespace DAL
         }
         public List<TienDo> GetByTienDo()
         {
-            using (var db = new CTYXAYDUNGDataContext())
+            using (var db = DB.GetContext())
             {
                 return db.TienDos
                         .OrderBy(t => t.ngay_cap_nhat)
@@ -90,7 +90,7 @@ namespace DAL
         {
             try
             {
-                using (var db = new CTYXAYDUNGDataContext()) // Thêm using để đảm bảo giải phóng tài nguyên
+                using (var db = DB.GetContext()) // Thêm using để đảm bảo giải phóng tài nguyên
                 {
                     var existing = db.TienDos.FirstOrDefault(ct => ct.id == updatedProgress.id);
                     if (existing != null)
