@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 14" name="CTYXAYDUNG">
+  <DataContextMoniker Name="/CTYXAYDUNGDataContext" />
+  <nestedChildShapes>
+    <classShape Id="db90aab3-b241-4c06-a733-caf43b483c4f" absoluteBounds="0.75, 4.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/CongTrinh" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74fafc84-d05b-4961-b335-873e3de400bf" absoluteBounds="0.765, 4.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ce7b52cd-b419-4175-8e32-eb5c05755344" absoluteBounds="3.5, 5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/CongTrinh_NhaThau" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79bc5e67-14a6-4a3f-a642-23f7f311ec1b" absoluteBounds="3.515, 5.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d33d3d93-318e-45d0-8fd6-32c320b9f262" absoluteBounds="3.5, 7.75, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/CongTrinh_VatTu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1e6236e-38c3-41ff-87f0-64094a9bbe69" absoluteBounds="3.515, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19693cb6-2cbb-494c-a644-692e81946eae" absoluteBounds="6.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/NguoiDung" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6cf8a1f1-f5f1-41ea-993e-17e19627a699" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="58dff6b1-74d3-4733-b7e2-d91fd9c61329" absoluteBounds="0.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/NhanCong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8da8165-7fa0-463d-8b6c-f566de193724" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41b25ad4-1720-4e9c-848b-b987049de05a" absoluteBounds="0.75, 8.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/NhaThau" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ad81d82-7caa-4186-89cd-f352a7f60fc9" absoluteBounds="0.765, 9.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46c49189-ec95-4a05-a9ab-5b0936bb8173" absoluteBounds="3.5, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/PhanCong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c002846-ac1c-4c3b-921c-2d7a77eb5dc5" absoluteBounds="3.515, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4fe439c8-edde-46d7-bd5c-b3ea148b719f" absoluteBounds="3.5, 11.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/TienDo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c664652-7120-4c20-87ef-e6f3aed2c562" absoluteBounds="3.515, 12.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="093d1548-3a5a-4cc7-af13-21874e188287" absoluteBounds="0.75, 11.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CTYXAYDUNGDataContext/VatTu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05f1ef58-30db-4b8d-bb9a-8cea1119dc51" absoluteBounds="0.765, 12.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.69314697265625); (3.5 : 5.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CTYXAYDUNGDataContext/CongTrinh/CongTrinh_CongTrinh_NhaThau" />
+      <nodes>
+        <classShapeMoniker Id="db90aab3-b241-4c06-a733-caf43b483c4f" />
+        <classShapeMoniker Id="ce7b52cd-b419-4175-8e32-eb5c05755344" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.88701835596955); (3.1875 : 7.32451835596955); (3.1875 : 8.63544840494792); (3.5 : 8.63544840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CTYXAYDUNGDataContext/CongTrinh/CongTrinh_CongTrinh_VatTu" />
+      <nodes>
+        <classShapeMoniker Id="db90aab3-b241-4c06-a733-caf43b483c4f" />
+        <classShapeMoniker Id="d33d3d93-318e-45d0-8fd6-32c320b9f262" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.68807592307692); (3.06607443490112 : 8.3720014881758 : JumpStart); (3.24642556509888 : 8.19165035797804 : JumpEnd); (3.3125 : 8.12557592307692); (3.3125 : 6.07097245898438); (3.5 : 6.07097245898438)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CTYXAYDUNGDataContext/NhaThau/NhaThau_CongTrinh_NhaThau" />
+      <nodes>
+        <classShapeMoniker Id="41b25ad4-1720-4e9c-848b-b987049de05a" />
+        <classShapeMoniker Id="ce7b52cd-b419-4175-8e32-eb5c05755344" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.25153746153846); (3.125 : 3.87653746153846); (3.125 : 2.66429768880208); (3.5 : 2.66429768880208)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CTYXAYDUNGDataContext/CongTrinh/CongTrinh_PhanCong" />
+      <nodes>
+        <classShapeMoniker Id="db90aab3-b241-4c06-a733-caf43b483c4f" />
+        <classShapeMoniker Id="46c49189-ec95-4a05-a9ab-5b0936bb8173" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.19794840494792); (3.5 : 2.19794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CTYXAYDUNGDataContext/NhanCong/NhanCong_PhanCong" />
+      <nodes>
+        <classShapeMoniker Id="58dff6b1-74d3-4733-b7e2-d91fd9c61329" />
+        <classShapeMoniker Id="46c49189-ec95-4a05-a9ab-5b0936bb8173" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.71769230769231 : 6.98240397135417); (3.125 : 7.38971166366186); (3.125 : 12.6354484049479); (3.5 : 12.6354484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CTYXAYDUNGDataContext/CongTrinh/CongTrinh_TienDo" />
+      <nodes>
+        <classShapeMoniker Id="db90aab3-b241-4c06-a733-caf43b483c4f" />
+        <classShapeMoniker Id="4fe439c8-edde-46d7-bd5c-b3ea148b719f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.6573066923077); (3.06607443490112 : 11.3412322574066 : JumpStart); (3.18392556509888 : 11.2233811272088 : JumpEnd); (3.28125 : 11.1260566923077); (3.28125 : 9.10942460742188); (3.5 : 9.10942460742188)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CTYXAYDUNGDataContext/VatTu/VatTu_CongTrinh_VatTu" />
+      <nodes>
+        <classShapeMoniker Id="093d1548-3a5a-4cc7-af13-21874e188287" />
+        <classShapeMoniker Id="d33d3d93-318e-45d0-8fd6-32c320b9f262" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
